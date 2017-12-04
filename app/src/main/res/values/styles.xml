@@ -17,4 +17,13 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="MListView">
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:dividerHeight">1dip</item>
+        <item name="android:listSelector">#00000000</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:focusable">true</item>
+        <item name="android:fadingEdge">none</item>
+    </style>
 </resources>
