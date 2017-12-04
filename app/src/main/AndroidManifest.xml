@@ -65,6 +65,11 @@
                 <action android:name="com.baidu.location.service_v2.2"></action>
             </intent-filter>
         </service>
+        <service
+            android:name="com.baidu.trace.LBSTraceService"
+            android:enabled="true"
+            android:process=":remote">
+        </service>
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="Pwx8BNf1XgCSWXXR0FDZvzlK" />

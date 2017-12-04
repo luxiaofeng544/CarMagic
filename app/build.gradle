@@ -49,4 +49,8 @@ dependencies {
     implementation files('libs/httpmime-4.1.2.jar')
     implementation files('libs/jpush-android-3.1.0.jar')
     implementation files('libs/jcore-android-1.1.8.jar')
+    implementation files('libs/BaiduTraceSDK_v3_0_7.jar')
+    implementation files('libs/okhttp-3.8.1.jar')
+    implementation files('libs/okio-1.13.0.jar')
+    implementation files('libs/bos-android-sdk-1.0.3.jar')
 }
