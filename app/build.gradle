@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        releaseConfig {
+            keyAlias 'lemon'
+            keyPassword 'lxf881213'
+            storeFile file('app/src/main/lemon.keystore.jks')
+            storePassword 'lxf881213'
+        }
+    }
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.lemon.carmonitor"
@@ -19,7 +27,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.android.support:design:26.1.0'
@@ -31,4 +39,7 @@ dependencies {
     compile files('libs/jackson-all-1.9.0.jar')
     compile files('libs/gson-2.5.jar')
     compile 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation files('libs/IndoorscapeAlbumPlugin.jar')
+    implementation files('libs/httpmime-4.1.2.jar')
 }
