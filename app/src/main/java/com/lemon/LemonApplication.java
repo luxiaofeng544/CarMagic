@@ -2,6 +2,8 @@ package com.lemon;
 
 import android.app.Application;
 
+import com.baidu.mapapi.SDKInitializer;
+
 /**
  * 项目名称:  [Lemon]
  * 包:        [com.lemon]
@@ -20,5 +22,6 @@ public class LemonApplication extends Application {
         super.onCreate();
         //init base module
         ApplicationEngine.start(getApplicationContext());
+        SDKInitializer.initialize(getApplicationContext());
     }
 }
