@@ -13,6 +13,7 @@ import com.lemon.annotation.FieldView;
 import com.lemon.annotation.Layout;
 import com.lemon.annotation.OnClick;
 import com.lemon.bean.BeanFactory;
+import com.lemon.model.BaseResult;
 import com.lemon.net.ApiManager;
 import com.lemon.util.ParamUtils;
 
@@ -21,6 +22,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 /**
  * 项目名称:  [Lemon]
@@ -148,6 +151,11 @@ public abstract class LemonFragment extends Fragment {
                 }
             });
         }
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEventMainThread(BaseResult event) {
+
     }
 
     protected Handler handler = new Handler() {
