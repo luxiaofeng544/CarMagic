@@ -24,6 +24,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
 }
 
 dependencies {
@@ -42,4 +47,6 @@ dependencies {
     implementation files('libs/BaiduLBS_Android.jar')
     implementation files('libs/IndoorscapeAlbumPlugin.jar')
     implementation files('libs/httpmime-4.1.2.jar')
+    implementation files('libs/jpush-android-3.1.0.jar')
+    implementation files('libs/jcore-android-1.1.8.jar')
 }
