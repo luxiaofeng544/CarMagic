@@ -16,6 +16,8 @@ import com.lemon.config.Config;
 import com.lemon.util.PhoneUtil;
 
 import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 
 /**
@@ -75,6 +77,8 @@ public class WakeManager {
         }
     }
 
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(WakeUpEvent event){
         wakeUp(event.getDevSn());
     }

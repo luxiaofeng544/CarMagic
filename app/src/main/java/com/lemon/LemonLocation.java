@@ -24,6 +24,7 @@ import com.lemon.event.ToastEvent;
 import com.lemon.util.ParamUtils;
 
 import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 
 /**
@@ -61,12 +62,14 @@ public class LemonLocation {
         mLocClient.start();
     }
 
+    @Subscribe
     public void onEventAsync(StartLocationEvent event){
         if(!mLocClient.isStarted()) {
             mLocClient.start();
         }
     }
 
+    @Subscribe
     public void onEventAsync(StopLocationEvent event){
         mLocClient.stop();
     }

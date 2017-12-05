@@ -16,8 +16,8 @@ import com.lemon.annotation.Layout;
 import com.lemon.annotation.OnClick;
 import com.lemon.event.ActivityEvent;
 import com.lemon.event.StartLocationEvent;
+import com.lemon.event.ToastEvent;
 import com.lemon.model.BaseResult;
-import com.lemon.net.ApiManager;
 import com.lemon.util.ParamUtils;
 
 import java.lang.reflect.Field;
@@ -45,7 +45,7 @@ public abstract class LemonActivity extends Activity {
     protected Context mContext;
 
     protected LemonCacheManager cacheManager;
-    protected ApiManager apiManager;
+    protected LemonApiManager apiManager;
     protected LemonDaoManager daoManager;
     protected LemonMessage lemonMessage;
 
@@ -77,7 +77,7 @@ public abstract class LemonActivity extends Activity {
         EventBus.getDefault().register(this);
         EventBus.getDefault().post(new ActivityEvent(this));
         cacheManager = LemonContext.getBean(LemonCacheManager.class);
-        apiManager = LemonContext.getBean(ApiManager.class);
+        apiManager = LemonContext.getBean(LemonApiManager.class);
         daoManager = LemonContext.getBean(LemonDaoManager.class);
         lemonMessage = LemonContext.getBean(LemonMessage.class);
     }
@@ -222,6 +222,10 @@ public abstract class LemonActivity extends Activity {
     protected boolean isEditTextEmpty(int id) {
         String value = getEditTextValue(id);
         return ParamUtils.isEmpty(value);
+    }
+
+    public void toastMessage(String msg){
+        EventBus.getDefault().post(new ToastEvent(msg));
     }
 
     protected void toast(String msg) {

@@ -14,7 +14,6 @@ import com.lemon.annotation.Layout;
 import com.lemon.annotation.OnClick;
 import com.lemon.bean.BeanFactory;
 import com.lemon.model.BaseResult;
-import com.lemon.net.ApiManager;
 import com.lemon.util.ParamUtils;
 
 import java.lang.reflect.Field;
@@ -44,7 +43,7 @@ public abstract class LemonFragment extends Fragment {
 
     protected LemonDaoManager daoManager;
     protected LemonCacheManager cacheManager;
-    protected ApiManager apiManager;
+    protected LemonApiManager apiManager;
     protected Fragment mFragment;
     protected LemonMessage lemonMessage;
 
@@ -67,7 +66,7 @@ public abstract class LemonFragment extends Fragment {
     private void parentInit() {
         EventBus.getDefault().register(this);
         cacheManager = BeanFactory.getInstance().getBean(LemonCacheManager.class);
-        apiManager = BeanFactory.getInstance().getBean(ApiManager.class);
+        apiManager = BeanFactory.getInstance().getBean(LemonApiManager.class);
         daoManager = BeanFactory.getInstance().getBean(LemonDaoManager.class);
         lemonMessage = LemonContext.getBean(LemonMessage.class);
     }
