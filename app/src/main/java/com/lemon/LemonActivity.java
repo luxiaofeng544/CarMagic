@@ -52,6 +52,7 @@ public abstract class LemonActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        beforeSetLayout();
         injectLayout();
         setLayout();
         setContentView(layout);
@@ -61,6 +62,10 @@ public abstract class LemonActivity extends Activity {
         initView();
         initData();
         init();
+    }
+
+    public void beforeSetLayout(){
+
     }
 
     public <T> T findControl(int id) {

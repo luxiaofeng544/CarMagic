@@ -22,18 +22,23 @@ public class PanoActivity extends LemonActivity {
     public PanoramaView mPanoView;
 
     @Override
-    protected void initView() {
+    public void beforeSetLayout() {
         initBMapManager();
+    }
+
+    @Override
+    protected void initView() {
         double  lat = 24.786791864909;
         double lon = 113.30110631914;
-        mPanoView.setPanorama(lat,lon);
+//        mPanoView.setPanorama(lat,lon);
+        mPanoView.setPanorama("0100220000130817164838355J5");
     }
 
     public BMapManager mBMapManager = null;
 
     private void initBMapManager() {
         if(ParamUtils.isNull(mBMapManager)){
-            mBMapManager = new BMapManager(mContext);
+            mBMapManager = new BMapManager(getApplicationContext());
             mBMapManager.init(new PanoActivity.MyGeneralListener());
         }
         if (!mBMapManager.init(new MyGeneralListener())) {
