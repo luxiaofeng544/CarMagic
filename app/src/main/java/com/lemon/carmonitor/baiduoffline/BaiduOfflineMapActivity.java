@@ -367,7 +367,7 @@ public class BaiduOfflineMapActivity extends Activity
                         c.setCityInfo(itemCity);
                         itemList.add(c);
 
-                        proMunicipalities.size += itemCity.size;
+                        proMunicipalities.dataSize += itemCity.dataSize;
                         itemsAll.add(c);
                         if(hotCityIds.contains(itemCity.cityID)){
                             //添加到热门城市，保证与省份下的城市是一个对象
@@ -394,7 +394,7 @@ public class BaiduOfflineMapActivity extends Activity
                     proHot.cityName = "热门城市";
                     proHot.childCities = cs;
                     proHot.cityType = 1;
-                    proHot.size = size;
+                    proHot.dataSize = size;
 
                     OfflineMapItem item1 = new OfflineMapItem();
                     item1.setCityInfo(proHot);
