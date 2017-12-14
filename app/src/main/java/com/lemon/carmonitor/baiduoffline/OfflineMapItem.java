@@ -100,9 +100,9 @@ public class OfflineMapItem implements Comparable<OfflineMapItem>{
 		this.mDownInfo = mElement;
 	}
 
-	public int getSize() {
+	public long getSize() {
 		if(mCityInfo != null){
-			return mCityInfo.size;
+			return mCityInfo.dataSize;
 		}
 		return 0;
 	}
