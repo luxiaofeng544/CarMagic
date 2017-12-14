@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:drawable="@drawable/common_item_tri_pressed" />
+    <item android:state_checked="false" android:drawable="@drawable/common_item_tri_normal" />
+</selector>

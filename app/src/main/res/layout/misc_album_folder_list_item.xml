@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="5.0dip" style="@style/misc_album_list_item"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/misc_album_dir_item_image" android:background="@drawable/misc_album_pic_dir" android:paddingLeft="12.0dip" android:paddingTop="9.0dip" android:paddingRight="12.0dip" android:paddingBottom="17.0dip" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/ic_launcher" android:scaleType="fitXY" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_toRightOf="@id/misc_album_dir_item_image" android:layout_centerVertical="true">
+        <TextView android:textSize="10.0sp" android:id="@id/misc_album_dir_item_name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="8.0sp" android:textColor="#ff444444" android:layout_gravity="center" android:id="@id/misc_album_dir_item_count" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:src="@drawable/misc_album_dir_choose" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

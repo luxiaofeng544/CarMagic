@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/common_color_f5f5f5" style="@style/common_page_linear_vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include layout="@layout/device_route_top_item" />
+    <RelativeLayout android:gravity="center_vertical" android:background="@color/common_white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <LinearLayout android:gravity="center" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/abc_text_size_menu_material" android:textColor="@color/common_color_3e99ff" android:gravity="center" android:id="@id/changeday" android:layout_width="wrap_content" android:layout_height="fill_parent" android:drawableRight="@drawable/track_dropdown_icon" android:drawablePadding="@dimen/common_margin_10" />
+        </LinearLayout>
+        <me.drakeet.uiview.UIButton android:textSize="@dimen/abc_text_size_menu_material" android:textColor="@color/common_color_3e99ff" android:gravity="center_vertical" android:id="@id/lastday" android:background="@drawable/common_layout_border_blue_white_shape" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:textAllCaps="false" />
+        <me.drakeet.uiview.UIButton android:textSize="@dimen/abc_text_size_menu_material" android:textColor="@color/common_color_3e99ff" android:gravity="center_vertical" android:id="@id/nextday" android:background="@drawable/common_layout_border_blue_white_shape" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:layout_alignParentRight="true" android:textAllCaps="false" />
+    </RelativeLayout>
+    <View style="@style/line_horizontal" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/route_obd_title_info_layout" android:background="@drawable/route_title_info_shape" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="10.0dip">
+        <TextView android:gravity="center" android:id="@id/route_obd_title_info1" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <TextView android:gravity="center" android:id="@id/route_obd_title_info2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <TextView android:gravity="center" android:id="@id/route_obd_title_info3" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <TextView android:gravity="center" android:id="@id/route_obd_title_info4" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+    <include android:id="@id/comments_list" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/common_base_list" />
+</LinearLayout>

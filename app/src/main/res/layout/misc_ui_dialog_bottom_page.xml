@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/misc_ui_fence_list_menu_text_cancle" android:gravity="center" android:id="@id/misc_ui_bt_dialogbotoom_cancle" android:layout_alignParentBottom="true" style="@style/misc_ui_dialog_bottom" />
+    <ListView android:id="@id/misc_ui_list_dialogbotoom_menu" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:listSelector="@color/common_white_gray_selector" android:divider="@color/common_line" android:dividerHeight="@dimen/common_list_view_divider_height" android:layout_above="@id/misc_ui_bt_dialogbotoom_cancle" />
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/common_white" style="@style/common_layout_width_height_ff"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/app_main_fragment_container" style="@style/common_layout_width_height_m0" />
+    <View android:background="@color/common_color_90b1b1b1" android:layout_width="fill_parent" android:layout_height="0.8000001dip" />
+    <RadioGroup android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/radio_group" style="@style/common_layout_width_height_fw">
+        <RadioButton android:textColor="@color/main_home_selector_tv_color" android:id="@id/main_rb_home" android:drawableTop="@drawable/app_menu_home" style="@style/radio_btn_style" />
+        <RadioButton android:textColor="@color/main_home_selector_tv_color" android:id="@id/main_rb_list" android:drawableTop="@drawable/app_menu_list" style="@style/radio_btn_style" />
+        <RadioButton android:textColor="@color/main_home_selector_tv_color" android:id="@id/main_rb_alarm" android:drawableTop="@drawable/app_menu_alarm" style="@style/radio_btn_style" />
+        <RadioButton android:textColor="@color/main_home_selector_tv_color" android:id="@id/main_rb_me" android:drawableTop="@drawable/app_menu_mine" style="@style/radio_btn_style" />
+    </RadioGroup>
+</LinearLayout>

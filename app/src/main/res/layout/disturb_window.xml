@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/other_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    <ListView android:layout_gravity="center" android:id="@id/time_listview" android:background="@color/common_white" android:visibility="gone" android:layout_width="300.0dip" android:layout_height="220.0dip" android:layout_marginBottom="100.0dip" android:divider="@color/common_gray" android:dividerHeight="0.20000005dip" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/disturb_window_bottom_pop" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_alignParentBottom="true">
+        <FrameLayout android:id="@id/common_msg_notice1_layout" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/common_msg_notice1_tv" style="@style/setting_alarm_option_text_style" />
+            <CheckBox android:id="@id/common_msg_notice1_cb" style="@style/setting_alarm_option_checkbox_style" />
+        </FrameLayout>
+        <View android:visibility="gone" style="@style/common_line_horizontal" />
+        <LinearLayout android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip">
+            <TextView android:textSize="@dimen/common_font_size_16" android:textColor="@color/common_color_9b9b9b" android:gravity="center_vertical" android:id="@id/common_msg_start_tv" android:paddingLeft="17.0dip" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" style="@style/common_layout_width_height_0m" />
+            <TextView android:textSize="@dimen/common_font_size_14" android:textColor="@color/common_color_9b9b9b" android:gravity="center_vertical" android:id="@id/common_msg_time_tv1" android:background="@drawable/common_layout_border_white_gray" android:padding="5.0dip" android:drawableRight="@drawable/setting_msg_arrow_d" style="@style/common_layout_width_height_0m" />
+            <TextView android:textSize="@dimen/common_font_size_16" android:textColor="@color/common_color_9b9b9b" android:gravity="center_vertical" android:id="@id/common_msg_end_tv" android:paddingLeft="17.0dip" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:text="*********" style="@style/common_layout_width_height_0m" />
+            <TextView android:textSize="@dimen/common_font_size_14" android:textColor="@color/common_color_9b9b9b" android:gravity="center_vertical" android:id="@id/common_msg_time_tv2" android:background="@drawable/common_layout_border_white_gray" android:padding="5.0dip" android:layout_marginRight="@dimen/common_margin_5" android:drawableRight="@drawable/setting_msg_arrow_d" style="@style/common_layout_width_height_0m" />
+        </LinearLayout>
+        <me.drakeet.uiview.UIButton android:textSize="18.0sp" android:textColor="#ffffffff" android:layout_gravity="center_horizontal" android:id="@id/confirm" android:background="@drawable/common_right_button_bg_shape" android:paddingLeft="50.0dip" android:paddingTop="10.0dip" android:paddingRight="50.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="************" android:textAllCaps="false" />
+    </LinearLayout>
+</RelativeLayout>

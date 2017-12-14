@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <CheckBox android:textSize="@dimen/common_font_size_14" android:textColor="@color/common_gray_white_selector" android:gravity="center" android:id="@id/cb_tb_all" android:background="@drawable/device_list_left_half_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" android:button="@null" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            <View android:background="@color/common_text_1" android:visibility="gone" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="right" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <CheckBox android:textSize="@dimen/common_font_size_14" android:textColor="@color/common_gray_white_selector" android:gravity="center" android:id="@id/cb_tb_online" android:background="@drawable/device_list_center_bg_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" android:button="@null" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            <View android:background="@color/common_text_1" android:visibility="visible" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="right" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <CheckBox android:textSize="@dimen/common_font_size_14" android:textColor="@color/common_gray_white_selector" android:gravity="center" android:id="@id/cb_tb_offline" android:background="@drawable/device_list_center_bg_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" android:button="@null" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            <View android:background="@color/common_text_1" android:visibility="gone" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="right" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <CheckBox android:textSize="@dimen/common_font_size_14" android:textColor="@color/common_gray_white_selector" android:gravity="center" android:id="@id/cb_tb_activation" android:background="@drawable/device_list_right_half_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" android:button="@null" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            <View android:background="@color/common_text_1" android:visibility="gone" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

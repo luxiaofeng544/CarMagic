@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/map_and_panorama" style="@style/common_layout_width_height_mm"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <com.baidu.mapapi.map.MapView android:id="@id/map" android:clickable="true" android:layout_below="@id/nav_bar" style="@style/common_layout_width_height_mm" />
+    <com.jimi.app.views.MapControlView android:id="@id/control_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/nav_bar" android:layout_alignParentRight="true" app:trafficVisiable="false" app:panoramaVisiable="false" app:locationVisiable="false" />
+</RelativeLayout>

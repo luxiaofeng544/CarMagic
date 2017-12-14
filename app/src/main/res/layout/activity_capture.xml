@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <SurfaceView android:layout_gravity="center" android:id="@id/preview_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.ning.app.zxing.view.ViewfinderView android:id="@id/viewfinder_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <include android:id="@id/include1" android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_alignParentTop="true" layout="@layout/activity_title" />
+    </RelativeLayout>
+</FrameLayout>

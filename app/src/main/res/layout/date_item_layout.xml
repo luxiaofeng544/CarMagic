@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/calendar_parent" android:background="@color/common_white" android:paddingBottom="@dimen/common_padding_5" android:layout_width="40.0dip" android:layout_height="50.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0sp" android:textColor="#ff303030" android:gravity="center" android:id="@id/calendar_day" android:layout_width="25.0dip" android:layout_height="25.0dip" android:text="30" />
+    <ImageView android:gravity="center" android:id="@id/device_routeDate" android:visibility="invisible" android:layout_width="7.0dip" android:layout_height="7.0dip" android:src="@drawable/calandar_trace_black_point_shape" />
+</LinearLayout>

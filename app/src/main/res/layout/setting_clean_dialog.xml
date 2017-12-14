@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/setting_alert_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="120.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="@color/common_color_303030" android:gravity="center" android:layout_gravity="center" android:id="@id/notify_title" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <View style="@style/common_line_horizontal" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="@color/common_color_3e99ff" android:gravity="center" android:id="@id/tv_clean_confirm" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <View android:background="@color/new_common_horizontal_divider_90" android:layout_width="0.5dip" android:layout_height="fill_parent" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/common_color_3e99ff" android:gravity="center" android:id="@id/tv_clean_cancle" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

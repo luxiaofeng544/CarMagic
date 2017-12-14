@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/foot_parent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl" style="@style/common_layout_width_height_mm">
+        <LinearLayout android:orientation="vertical" android:id="@id/map_and_panorama" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/nav_bar">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0">
+                <LinearLayout android:orientation="vertical" android:id="@id/rl_map" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.baidu.lbsapi.panoramaview.PanoramaView android:id="@id/panorama_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                        <CheckBox android:layout_gravity="bottom|center|right" android:id="@id/panorama_full_screen_switch" android:background="@drawable/panorama_full_screen_switch_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:button="@null" />
+                    </com.baidu.lbsapi.panoramaview.PanoramaView>
+                    <com.baidu.mapapi.map.MapView android:id="@id/map" android:clickable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0" />
+                </LinearLayout>
+                <com.jimi.app.views.MapControlView android:id="@id/control_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" app:panoramaVisiable="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <com.jimi.app.views.SlideBottomPanel android:id="@id/main_home_slideView" android:layout_width="fill_parent" android:layout_height="fill_parent" app:sbp_background_layout="@layout/a_null_layout" app:sbp_title_height_no_display="245.0dip" app:sbp_panel_height="395.0dip">
+        <FrameLayout android:orientation="vertical" android:id="@id/main_home_bottom_framelayout" android:background="@color/common_transparent" android:layout_width="fill_parent" android:layout_height="395.0dip">
+            <ImageView android:layout_gravity="center|right|top" android:id="@id/main_home_foot_close" android:background="@drawable/main_home_foot_close" android:layout_marginRight="14.0dip" style="@style/common_layout_width_height_ww" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0dip">
+                <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <CheckBox android:layout_gravity="center" android:id="@id/main_home_foot_arrow_down" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/direction_bg" />
+                    <ImageView android:layout_gravity="center" android:id="@id/notice_anim_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" />
+                </FrameLayout>
+                <FrameLayout android:background="@drawable/common_big_bg_tr" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/main_home_foot_menu" android:layout_width="fill_parent" android:layout_height="140.0dip">
+                        <com.jimi.app.views.LineGridView android:id="@id/main_home_foot_controller" android:background="@drawable/common_layout_bottom_bg" android:layout_marginTop="1.0px" android:numColumns="4" android:divider="@null" style="@style/common_layout_width_height_mm" />
+                    </LinearLayout>
+                    <FrameLayout android:layout_gravity="top" android:id="@id/main_home_foot_show" android:background="@color/common_transparent" android:layout_width="fill_parent" android:layout_height="180.0dip">
+                        <FrameLayout android:id="@id/main_home_foot_show_content" android:background="@drawable/common_layout_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="6.0dip">
+                                <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                    <TextView android:textSize="@dimen/common_font_size_home_common" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/main_home_foot_title" android:background="@drawable/text_view_border" android:padding="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ssssssssssssssssssssssss" android:maxEms="7" android:singleLine="true" />
+                                    <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_weight="1.0">
+                                        <TextView android:textSize="@dimen/common_font_size_home_common" android:textColor="@color/common_color_686868" android:gravity="center" android:id="@id/main_home_foot_drive_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="在线" />
+                                        <TextView android:textSize="@dimen/common_font_size_home_common" android:textColor="@color/common_color_686868" android:ellipsize="end" android:id="@id/main_home_foot_stitic_time" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="wrwqfewafdsafdsas" android:lines="1" android:maxEms="8" />
+                                    </LinearLayout>
+                                    <LinearLayout android:gravity="right" android:id="@id/device_detail_battery_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                        <TextView android:textSize="@dimen/common_font_size_home_common" android:textColor="#ff000000" android:id="@id/device_detail_batteryView_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100%" />
+                                        <com.jimi.app.views.BatteryView android:layout_gravity="center_vertical" android:id="@id/device_detail_batteryView" android:layout_width="28.0dip" android:layout_height="12.0dip" android:layout_marginLeft="2.0dip" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout android:orientation="vertical" android:paddingTop="6.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                    <LinearLayout android:id="@id/iv_speed" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                        <TextView android:textSize="@dimen/common_font_size_home_common" android:id="@id/main_home_foot_acc_status" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:drawableLeft="@drawable/common_acc" android:drawablePadding="8.0dip" />
+                                        <TextView android:textSize="@dimen/common_font_size_home_common" android:id="@id/main_home_foot_device_speed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/common_speed" android:drawablePadding="8.0dip" />
+                                        <TextView android:textSize="@dimen/common_font_size_home_common" android:id="@id/main_home_foot_locate_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" />
+                                        <TextView android:textSize="@dimen/common_font_size_home_common" android:id="@id/main_home_foot_locate_num" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_weight="1.0" />
+                                    </LinearLayout>
+                                    <LinearLayout android:orientation="horizontal" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip">
+                                        <FrameLayout android:orientation="vertical" android:paddingRight="10.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0">
+                                            <LinearLayout android:gravity="center_vertical" android:layout_gravity="top" android:orientation="horizontal" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                                                <ImageView android:id="@id/iv_local" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_local" />
+                                                <TextView android:textSize="@dimen/common_font_size_home_common" android:ellipsize="end" android:id="@id/main_home_foot_locate_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="2016-11-02 11-22" android:maxLines="1" />
+                                            </LinearLayout>
+                                            <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip">
+                                                <ImageView android:id="@id/iv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_time" />
+                                                <TextView android:textSize="@dimen/common_font_size_home_common" android:ellipsize="end" android:id="@id/main_home_foot_communicate_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="2016-11-02 11-22" android:maxLines="1" />
+                                            </LinearLayout>
+                                        </FrameLayout>
+                                        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                                            <FrameLayout android:background="@drawable/home_slide_bottom_track_shape" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                                <TextView android:textSize="16.0dip" android:textColor="@color/common_white" android:ellipsize="end" android:layout_gravity="center" android:id="@id/main_home_foot_track" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:drawableLeft="@drawable/home_slide_bottom_track_icon" android:drawablePadding="5.0dip" />
+                                            </FrameLayout>
+                                            <FrameLayout android:background="@drawable/home_slide_bottom_trace_shape" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                                                <TextView android:textSize="16.0sp" android:textColor="@color/common_white" android:ellipsize="end" android:layout_gravity="center" android:id="@id/main_home_foot_orbit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:drawableLeft="@drawable/home_slide_bottom_trace_icon" android:drawablePadding="5.0dip" />
+                                            </FrameLayout>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                    <RelativeLayout android:id="@id/rl_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="6.0dip">
+                                        <TextView android:textSize="@dimen/common_font_size_home_common" android:textColor="#ff3edf28" android:autoLink="all" android:id="@id/main_home_foot_see_addr" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                                        <TextView android:textSize="@dimen/common_font_size_home_common" android:ellipsize="end" android:id="@id/main_home_foot_addr" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" />
+                                    </RelativeLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <FrameLayout android:layout_gravity="center|left" android:id="@id/main_home_foot_before_car" android:layout_width="50.0dip" android:layout_height="100.0dip">
+                                <ImageView android:layout_gravity="center|left" android:id="@id/iv_main_home_foot_before_car" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/common_last" />
+                            </FrameLayout>
+                            <FrameLayout android:layout_gravity="center|right" android:id="@id/main_home_foot_before_next" android:layout_width="50.0dip" android:layout_height="100.0dip">
+                                <ImageView android:layout_gravity="center|right" android:id="@id/iv_main_home_foot_before_next" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/common_next" />
+                            </FrameLayout>
+                        </FrameLayout>
+                        <com.jimi.app.views.LoadingView android:id="@id/device_home_foot_loadingview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    </FrameLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </com.jimi.app.views.SlideBottomPanel>
+</FrameLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/common_gray" style="@style/common_layout_width_height_mm"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include android:id="@id/command_bar_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" layout="@layout/common_search_bar_log" />
+    <FrameLayout android:id="@id/command_frame_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="12.0" />
+    <RadioGroup android:gravity="bottom|center" android:orientation="horizontal" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:layout_alignParentBottom="true">
+        <RadioButton android:textSize="@dimen/common_font_size_16" android:textColor="@color/common_gray_white_selector" android:gravity="center" android:id="@id/device_command_log_btn" android:background="@drawable/common_blue_gray_btn_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:button="@null" android:layout_weight="1.0" />
+        <RadioButton android:textSize="@dimen/common_font_size_16" android:textColor="@color/common_gray_white_selector" android:gravity="center" android:id="@id/device_command_off_btn" android:background="@drawable/common_blue_gray_btn_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:button="@null" android:layout_weight="1.0" />
+    </RadioGroup>
+</LinearLayout>

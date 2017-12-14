@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/device_control_fragment_container" android:background="@drawable/device_control_background" style="@style/common_layout_width_height_m0">
+        <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <include layout="@layout/device_control_fragment_inner" />
+    </LinearLayout>
+    <View style="@style/common_line_horizontal" />
+    <RadioGroup android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/radio_group" android:background="@color/common_transparent" style="@style/common_layout_width_height_fw">
+        <RadioButton android:textColor="@color/main_tab_selector_tv_color" android:id="@id/device_control_rb_set" android:paddingTop="@dimen/common_padding_5" android:drawableTop="@drawable/device_control_fortification_menu" style="@style/radio_btn_style" />
+        <RadioButton android:textColor="@color/main_tab_selector_tv_color" android:id="@id/device_control_rb_unset" android:paddingTop="@dimen/common_padding_5" android:drawableTop="@drawable/device_control_garrison_menu" style="@style/radio_btn_style" />
+        <RadioButton android:textColor="@color/main_tab_selector_tv_color" android:id="@id/device_control_rb_cutedwon" android:paddingTop="@dimen/common_padding_5" android:drawableTop="@drawable/device_control_fuelcut_menu" style="@style/radio_btn_style" />
+        <RadioButton android:textColor="@color/main_tab_selector_tv_color" android:id="@id/device_control_rb_findcar" android:paddingTop="@dimen/common_padding_5" android:drawableTop="@drawable/device_control_search_menu" style="@style/radio_btn_style" />
+    </RadioGroup>
+</LinearLayout>

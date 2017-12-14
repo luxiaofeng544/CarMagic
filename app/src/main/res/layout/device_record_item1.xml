@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/common_color_f5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/device_record_item_time" android:background="@color/common_color_f5f5f5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="10.0dip" android:text="2016-9-27 18:00:00" />
+    <LinearLayout android:gravity="center|right" android:orientation="horizontal" android:background="@color/common_color_f5f5f5" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <CheckBox android:layout_gravity="center|left" android:id="@id/device_record_item_cb" android:background="@drawable/delete_record_item_normal" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:button="@null" />
+        </LinearLayout>
+        <ImageView android:id="@id/device_record_item_fail" android:background="@drawable/device_record_command_send_fail" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginRight="5.0dip" />
+        <ProgressBar android:id="@id/device_record_item_sending" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginRight="5.0dip" android:indeterminateDrawable="@drawable/device_record_command_rotate" />
+        <TextView android:gravity="center" android:id="@id/device_record_item_command" android:background="@drawable/device_record_item_command_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.5dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="0.5dip" />
+    </LinearLayout>
+</LinearLayout>

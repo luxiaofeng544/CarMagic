@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="150" android:drawable="@drawable/refresh_car01" />
+    <item android:duration="150" android:drawable="@drawable/refresh_car02" />
+    <item android:duration="150" android:drawable="@drawable/refresh_car03" />
+    <item android:duration="150" android:drawable="@drawable/refresh_car04" />
+    <item android:duration="150" android:drawable="@drawable/refresh_car05" />
+    <item android:duration="150" android:drawable="@drawable/refresh_car06" />
+    <item android:duration="150" android:drawable="@drawable/refresh_car07" />
+    <item android:duration="150" android:drawable="@drawable/refresh_car08" />
+    <item android:duration="150" android:drawable="@drawable/refresh_car09" />
+    <item android:duration="150" android:drawable="@drawable/refresh_car10" />
+    <item android:duration="150" android:drawable="@drawable/refresh_car11" />
+    <item android:duration="150" android:drawable="@drawable/refresh_car12" />
+    <item android:duration="150" android:drawable="@drawable/refresh_car13" />
+    <item android:duration="150" android:drawable="@drawable/refresh_car14" />
+    <item android:duration="150" android:drawable="@drawable/refresh_car15" />
+    <item android:duration="150" android:drawable="@drawable/refresh_car16" />
+</animation-list>

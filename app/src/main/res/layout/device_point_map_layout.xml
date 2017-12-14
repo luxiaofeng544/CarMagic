@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/map_and_panorama" style="@style/common_layout_width_height_mm"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.baidu.mapapi.map.MapView android:id="@id/map" android:clickable="true" style="@style/common_layout_width_height_mm" />
+    <View android:id="@id/divice_point_bg" android:background="@color/map_backgroud" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="10.0dip" android:layout_marginTop="@dimen/common_margin_10" style="@style/common_layout_width_height_mw">
+        <RelativeLayout android:background="@color/common_white" android:layout_width="40.0dip" android:layout_height="40.0dip">
+            <TextView android:textSize="12.0sp" android:textColor="@color/common_black" android:gravity="center" android:id="@id/tv_locate_gps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableTop="@drawable/trace_locate_gps" android:drawablePadding="0.0dip" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:background="@color/common_white" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="16.0dip">
+            <TextView android:textSize="12.0sp" android:textColor="@color/common_black" android:gravity="center" android:id="@id/tv_locate_lbs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableTop="@drawable/trace_locate_lbs" android:drawablePadding="0.0dip" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:background="@color/common_white" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="16.0dip">
+            <TextView android:textSize="12.0sp" android:textColor="@color/common_black" android:gravity="center" android:id="@id/tv_locate_wifi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableTop="@drawable/trace_locate_wifi" android:drawablePadding="0.0dip" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/common_color_f5f5f5" android:paddingBottom="40.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/my_server_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/mine_account_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <TextView android:id="@id/mine_account_text" style="@style/service_provide_item_text_Style" />
+            <TextView android:id="@id/mine_account_tv" android:text="agdhag" style="@style/service_provide_item_content_text_Style" />
+        </LinearLayout>
+        <View android:background="@color/new_common_horizontal_divider" style="@style/common_line_horizontal" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/mine_command_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <TextView android:id="@id/mine_command_text" style="@style/service_provide_item_text_Style" />
+            <TextView android:id="@id/mine_name_tv" style="@style/service_provide_item_content_text_Style" />
+        </LinearLayout>
+        <View android:background="@color/new_common_horizontal_divider" style="@style/common_line_horizontal" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/mine_tel_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <TextView android:id="@id/mine_tel_text" style="@style/service_provide_item_text_Style" />
+            <TextView android:id="@id/mine_tel_tv" style="@style/service_provide_item_content_text_Style" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

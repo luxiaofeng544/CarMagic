@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" style="@style/common_page_linear_vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/setting_about_msg_layout" android:background="@drawable/touch_option_selector" android:padding="10.0dip" android:paddingRight="19.0dip" android:visibility="visible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/setting_notification_item" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/setting_page_msg" style="@style/common_operation_item_text_style" />
+            <ImageView android:layout_gravity="center|right" android:paddingTop="10.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_operation_item_arrow" />
+        </FrameLayout>
+        <View style="@style/common_line_horizontal1" />
+        <FrameLayout android:id="@id/setting_about_clear_layout" android:background="@drawable/touch_option_selector" android:padding="10.0dip" android:paddingRight="19.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/clear_cache" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/setting_page_clear" style="@style/common_operation_item_text_style" />
+            <TextView android:layout_gravity="center|right" android:id="@id/clear_cache_tv" android:paddingTop="10.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableRight="@drawable/common_operation_item_arrow" android:drawablePadding="@dimen/common_padding_10" />
+        </FrameLayout>
+        <View style="@style/common_line_horizontal1" />
+        <FrameLayout android:id="@id/setting_about_about_layout" android:background="@drawable/touch_option_selector" android:padding="10.0dip" android:paddingRight="19.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/item_about_us" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/setting_page_about" style="@style/common_operation_item_text_style" />
+            <ImageView android:layout_gravity="center|right" android:paddingTop="10.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_operation_item_arrow" />
+        </FrameLayout>
+        <View style="@style/common_line_horizontal1" />
+        <FrameLayout android:id="@id/setting_about_share_layout" android:background="@drawable/touch_option_selector" android:padding="10.0dip" android:paddingRight="19.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/item_app_share" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/setting_page_share" style="@style/common_operation_item_text_style" />
+            <ImageView android:layout_gravity="center|right" android:paddingTop="10.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_operation_item_arrow" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/show_web_map_layout" android:background="@drawable/touch_option_selector" android:paddingLeft="@dimen/common_margin_10" android:paddingRight="19.0dip" android:paddingBottom="@dimen/common_margin_10" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View style="@style/common_line_horizontal1" />
+            <TextView android:id="@id/item_switch_map" android:paddingLeft="@dimen/common_padding_5" android:layout_marginTop="@dimen/common_margin_7" android:drawableLeft="@drawable/switch_map_icon" style="@style/common_operation_item_text_style" />
+            <TextView android:layout_gravity="center|right" android:id="@id/current_map_type" android:paddingTop="@dimen/common_margin_10" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_margin_7" android:drawableRight="@drawable/common_operation_item_arrow" android:drawablePadding="5.0dip" />
+        </FrameLayout>
+        <View style="@style/common_line_horizontal" />
+    </LinearLayout>
+</LinearLayout>

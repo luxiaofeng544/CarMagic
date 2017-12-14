@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/activity_calandar" android:background="@color/common_color_f5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textSize="18.0sp" android:textColor="#ff686868" android:gravity="center" android:id="@id/text_sunday" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <TextView android:textSize="18.0sp" android:textColor="#ff686868" android:gravity="center" android:id="@id/text_monday" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <TextView android:textSize="18.0sp" android:textColor="#ff686868" android:gravity="center" android:id="@id/text_tuesday" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <TextView android:textSize="18.0sp" android:textColor="#ff686868" android:gravity="center" android:id="@id/text_wednesday" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <TextView android:textSize="18.0sp" android:textColor="#ff686868" android:gravity="center" android:id="@id/text_thursday" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <TextView android:textSize="18.0sp" android:textColor="#ff686868" android:gravity="center" android:id="@id/text_friday" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <TextView android:textSize="18.0sp" android:textColor="#ff686868" android:gravity="center" android:id="@id/text_saturday" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ListView android:id="@id/calendar_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" />
+</LinearLayout>

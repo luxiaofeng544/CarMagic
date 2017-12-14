@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="300" android:drawable="@drawable/slide_bottom_panel_down_1" />
+    <item android:duration="300" android:drawable="@drawable/slide_bottom_panel_down_2" />
+    <item android:duration="300" android:drawable="@drawable/slide_bottom_panel_down_3" />
+</animation-list>

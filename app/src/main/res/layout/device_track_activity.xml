@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/common_page_linear_vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/fl_parent" style="@style/common_layout_width_height_m0">
+        <LinearLayout android:orientation="vertical" android:id="@id/rl_map" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.baidu.lbsapi.panoramaview.PanoramaView android:id="@id/panorama_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <CheckBox android:layout_gravity="bottom|center|right" android:id="@id/panorama_full_screen_switch" android:background="@drawable/panorama_full_screen_switch_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:button="@null" />
+            </com.baidu.lbsapi.panoramaview.PanoramaView>
+            <com.baidu.mapapi.map.MapView android:id="@id/map" android:clickable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0" />
+        </LinearLayout>
+        <com.jimi.app.views.MapControlView android:id="@id/control_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentRight="true" app:panoramaVisiable="true" />
+        <com.jimi.app.views.SlideBottomPanel android:id="@id/device_track_share_slideView" android:layout_width="fill_parent" android:layout_height="fill_parent" app:sbp_background_layout="@layout/a_null_layout" app:sbp_title_height_no_display="80.0dip" app:sbp_panel_height="190.0dip">
+            <FrameLayout android:id="@id/device_track_share_bottom_framelayout" android:background="@color/common_transparent" android:layout_width="fill_parent" android:layout_height="190.0dip">
+                <LinearLayout android:orientation="vertical" android:id="@id/device_track_share_visible" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="70.0dip">
+                    <LinearLayout android:orientation="horizontal" android:layout_marginTop="@dimen/common_margin_10" style="@style/common_layout_width_height_mw">
+                        <TextView android:id="@id/device_track_location_time_tv" style="@style/common_item_acc" />
+                        <TextView android:textSize="@dimen/common_font_size_14" android:id="@id/device_track_share_foot_location_time" android:layout_marginLeft="@dimen/common_margin_5" android:text="2016.12.25  11:12:13" style="@style/common_layout_width_height_ww" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_marginTop="@dimen/common_margin_5" style="@style/common_layout_width_height_mw">
+                        <TextView android:id="@id/device_track_share_foot_communicate_tv" style="@style/common_item_acc" />
+                        <TextView android:textSize="@dimen/common_font_size_14" android:id="@id/device_track_share_foot_communicate_time" android:layout_marginLeft="@dimen/common_margin_5" android:text="2016.12.25  11:12:13" style="@style/common_layout_width_height_ww" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_marginTop="@dimen/common_margin_5" style="@style/common_layout_width_height_mw">
+                        <TextView android:id="@id/device_track_share_foot_address_tv" style="@style/common_item_acc" />
+                        <TextView android:textSize="@dimen/common_font_size_14" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/device_track_share_foot_addr" android:paddingBottom="@dimen/common_padding_5" android:visibility="visible" android:layout_marginLeft="@dimen/common_margin_5" android:maxLines="2" style="@style/common_layout_width_height_ww" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/device_track_share_invisible" android:background="@color/common_transparent" android:layout_width="fill_parent" android:layout_height="75.0dip">
+                    <LinearLayout android:orientation="vertical" android:id="@id/device_track_share_foot_show_content" android:background="@color/common_white" style="@style/common_layout_width_height_m0">
+                        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_margin_16">
+                            <RelativeLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip" style="@style/common_layout_width_height_mw">
+                                <TextView android:textSize="@dimen/common_font_size_14" android:textColor="#ff303030" android:ellipsize="end" android:id="@id/device_track_share_foot_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GT8-sssssssssssssssssssss" android:maxEms="12" android:singleLine="true" android:layout_centerVertical="true" />
+                                <TextView android:textSize="@dimen/common_font_size_14" android:id="@id/device_track_share_foot_drive_status" android:paddingLeft="@dimen/common_padding_5" android:paddingRight="@dimen/common_padding_5" android:text="离线10小时" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/commom_item_state" />
+                            </RelativeLayout>
+                            <FrameLayout android:layout_gravity="center|left" android:id="@id/device_track_share_foot_before_car" android:paddingLeft="8.0dip" android:layout_width="100.0dip" android:layout_height="20.0dip">
+                                <TextView android:layout_gravity="center|left" android:id="@id/tv_device_track_share_foot_before_car" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/common_last" />
+                            </FrameLayout>
+                            <FrameLayout android:layout_gravity="center|right" android:id="@id/device_track_share_foot_before_next" android:paddingRight="8.0dip" android:layout_width="100.0dip" android:layout_height="20.0dip">
+                                <TextView android:layout_gravity="center|right" android:id="@id/tv_device_track_share_foot_before_next" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/common_next" />
+                            </FrameLayout>
+                        </FrameLayout>
+                        <LinearLayout android:layout_marginTop="@dimen/common_margin_10" style="@style/common_layout_width_height_mw">
+                            <TextView android:id="@id/device_track_share_foot_acc" style="@style/common_item_acc" />
+                            <TextView android:textSize="@dimen/common_font_size_14" android:textColor="@color/common_text_2" android:id="@id/device_track_share_foot_acc_status" android:text="关闭" style="@style/commom_items" />
+                            <TextView android:textSize="@dimen/common_font_size_14" android:id="@id/tv_speed" style="@style/common_item_acc" />
+                            <TextView android:textSize="@dimen/common_font_size_14" android:textColor="@color/common_text_2" android:id="@id/device_track_share_foot_device_speed" android:text="10km/h" style="@style/commom_items" />
+                            <TextView android:textSize="@dimen/common_font_size_14" android:id="@id/device_track_share_foot_locate_type" android:layout_marginLeft="15.0dip" android:text="" style="@style/common_item_acc" />
+                            <TextView android:textSize="@dimen/common_font_size_14" android:textColor="@color/common_text_2" android:id="@id/main_home_foot_locate_num" android:text="" style="@style/commom_items" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </com.jimi.app.views.SlideBottomPanel>
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/ll_bottom_parent" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="46.0dip">
+        <View style="@style/common_line_horizontal2" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_track_bottom" android:layout_width="fill_parent" android:layout_height="45.0dip">
+            <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textSize="17.0sp" android:textColor="@color/common_font_item_right" android:gravity="center" android:id="@id/tv_detail" android:layout_width="wrap_content" android:layout_height="fill_parent" android:drawableLeft="@drawable/trace_detail_nomal" android:drawablePadding="8.0dip" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/device_track_share_layout" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="17.0sp" android:textColor="@color/common_font_item_right" android:id="@id/tv_common_share" android:drawableLeft="@drawable/device_track_share" android:drawablePadding="8.0dip" android:layout_centerInParent="true" style="@style/common_layout_width_height_ww" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

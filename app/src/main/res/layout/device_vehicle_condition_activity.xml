@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:orientation="vertical" android:background="@drawable/views_top_nav_bar_bg" android:layout_width="fill_parent" android:layout_height="200.0dip">
+        <include layout="@layout/views_vehicle_condition_bar" />
+        <ImageView android:background="@drawable/common_vehicle_condition_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/device_vehicle_condition" />
+</LinearLayout>

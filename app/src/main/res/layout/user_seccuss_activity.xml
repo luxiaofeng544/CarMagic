@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:background="@color/common_white" style="@style/user_register_success">
+        <com.jimi.app.views.CircleImageView android:id="@id/user_login_head_icon" android:layout_width="@dimen/user_head_icon_size" android:layout_height="@dimen/user_head_icon_size" android:layout_marginTop="50.0dip" android:src="@drawable/user_seccuss" android:layout_centerHorizontal="true" CI:border_width="2.0dip" CI:border_color="@color/common_white" xmlns:CI="http://schemas.android.com/apk/res-auto" />
+        <TextView android:id="@id/user_register_success_tip" android:layout_marginTop="20.0dip" android:layout_below="@id/user_login_head_icon" android:layout_centerInParent="true" style="@style/common_layout_width_height_ww" />
+        <LinearLayout android:orientation="horizontal" android:layout_marginTop="10.0dip" android:layout_below="@id/user_register_success_tip" style="@style/common_layout_width_height_ww">
+            <TextView android:textColor="@color/common_text_1" android:id="@id/regest_time_tv" android:layout_marginLeft="@dimen/common_margin_10" style="@style/common_layout_width_height_ww" />
+            <TextView android:id="@id/regest_add_device" android:layout_marginLeft="@dimen/common_margin_5" android:layout_below="@id/user_login_head_icon" style="@style/common_layout_width_height_ww" />
+            <TextView android:textColor="@color/common_text_1" android:id="@id/user_register_success_to_add" android:layout_marginLeft="@dimen/common_margin_10" style="@style/common_layout_width_height_ww" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

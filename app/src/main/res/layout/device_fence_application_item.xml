@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:clickable="true" style="@style/common_layout_width_height_fw"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/fence_itembackground_shape" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip">
+        <include layout="@layout/common_selected_item" />
+        <View android:background="#ffb1b1b1" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <LinearLayout android:orientation="horizontal" android:padding="10.0dip" style="@style/common_layout_width_height_fw">
+            <RelativeLayout style="@style/common_layout_width_height_0w">
+                <TextView android:textSize="@dimen/common_font_size_14" android:textColor="#ff303030" android:id="@id/device_application_list_item_history" android:layout_centerInParent="true" style="@style/common_layout_width_height_ww" />
+            </RelativeLayout>
+            <View android:background="#ffb1b1b1" style="@style/common_line_vertical2" />
+            <RelativeLayout style="@style/common_layout_width_height_0w">
+                <CheckBox android:textSize="@dimen/common_font_size_14" android:textColor="#ff303030" android:gravity="center_horizontal" android:id="@id/device_list_item_command" android:clickable="true" android:button="@null" android:drawableLeft="@drawable/device_application_item_in" android:drawablePadding="@dimen/common_padding_10" android:layout_centerInParent="true" style="@style/common_layout_width_height_ww" />
+            </RelativeLayout>
+            <RelativeLayout style="@style/common_layout_width_height_0w">
+                <CheckBox android:textSize="@dimen/common_font_size_14" android:textColor="#ff303030" android:gravity="center_horizontal" android:id="@id/device_application_list_item_more" android:clickable="true" android:button="@null" android:drawableLeft="@drawable/device_application_item_in" android:drawablePadding="@dimen/common_padding_10" android:layout_centerInParent="true" style="@style/common_layout_width_height_ww" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

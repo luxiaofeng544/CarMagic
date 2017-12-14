@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/version_update_frame" android:background="@drawable/version_update_dialog_bg" android:layout_width="280.0dip" android:layout_height="wrap_content" android:layout_centerInParent="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:textColor="#ff008bea" android:id="@id/version_update_wait_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip" />
+    <View android:background="#ff008bea" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <TextView android:textSize="16.0sp" android:textColor="#ff000000" android:id="@id/version" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="15.0dip" />
+    <ProgressBar android:id="@id/download_progress" android:background="#ffffffff" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="25.0dip" android:layout_marginRight="20.0dip" android:maxHeight="20.0dip" android:max="100" android:progress="0" android:progressDrawable="@drawable/progressbar" android:minHeight="20.0dip" style="?android:attr/progressBarStyleHorizontal" />
+    <TextView android:textColor="#ff1784fb" android:gravity="right" android:id="@id/load_percent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="25.0dip" android:text="0%" />
+    <View android:background="#90b1b1b1" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <View android:id="@id/devider" android:background="#90b1b1b1" android:layout_width="0.5dip" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+        <TextView android:textColor="#ff1784fb" android:gravity="center" android:id="@id/fill_hidden" android:background="@drawable/version_update_hidden_bg_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/devider" android:onClick="onClick" android:textAllCaps="false" />
+        <TextView android:textColor="#ff1784fb" android:gravity="center" android:id="@id/fill_cancle" android:background="@drawable/version_update_hidden_bg_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/devider" android:onClick="onClick" android:textAllCaps="false" />
+    </RelativeLayout>
+</LinearLayout>

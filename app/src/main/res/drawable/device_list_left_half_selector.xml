@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:drawable="@drawable/device_list_blue_bg_half_corners_left_shap" />
+    <item android:state_checked="false" android:drawable="@drawable/device_list_blue_border_while_bg_left_half_corners_shap" />
+</selector>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/common_color_f5f5f5" android:paddingBottom="@dimen/common_margin_10" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View style="@style/common_line_horizontal_new" />
+    <RelativeLayout android:gravity="center_vertical" android:background="@color/common_white" android:paddingTop="@dimen/common_margin_10" android:paddingBottom="@dimen/common_margin_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/warn_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/device_vehicle_malfunction_item_erro_big" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/common_color_303030" android:id="@id/tvCode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="" android:lines="1" android:layout_toRightOf="@id/warn_icon" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/common_color_848383" android:id="@id/tvTime" android:paddingRight="@dimen/common_margin_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="" android:lines="1" android:layout_alignParentRight="true" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/common_color_848383" android:id="@id/tvTypeLeft" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:text="" android:layout_toRightOf="@id/warn_icon" android:layout_below="@id/tvCode" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/common_color_848383" android:id="@id/tvType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:text="" android:layout_toRightOf="@id/tvTypeLeft" android:layout_below="@id/tvCode" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/common_color_848383" android:id="@id/tvAddressLeft" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:text="" android:layout_toRightOf="@id/warn_icon" android:layout_below="@id/tvType" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/common_color_848383" android:id="@id/tvAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:text="" android:layout_toRightOf="@id/tvAddressLeft" android:layout_below="@id/tvType" />
+    </RelativeLayout>
+    <View style="@style/common_line_horizontal_new" />
+</LinearLayout>

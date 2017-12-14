@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/id_qrcode" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_qrcode" android:padding="10.0dip" android:layout_width="110.0dip" android:layout_height="110.0dip" android:src="@drawable/qrcode" />
+        <TextView android:textColor="@color/common_text_2" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="扫一扫二维码图片，下载App" />
+        <View android:background="#ffbfbfbf" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    </LinearLayout>
+    <GridView android:gravity="center" android:id="@id/share_gridView" android:background="#fff5f5f5" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:listSelector="@android:color/transparent" android:horizontalSpacing="8.0dip" android:verticalSpacing="16.0dip" android:numColumns="4" android:layout_weight="1.0" />
+    <View android:background="#ffbfbfbf" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <TextView android:textSize="18.0sp" android:textColor="@drawable/common_text_color_black" android:gravity="center" android:id="@id/share_cancel" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="40.0dip" />
+</LinearLayout>

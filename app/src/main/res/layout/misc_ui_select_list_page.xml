@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/misc_ui_selectlist_title" android:background="#ff00a0ff" android:layout_width="fill_parent" android:layout_height="54.0dip">
+        <TextView android:textSize="22.0sp" android:textColor="@android:color/white" android:id="@id/misc_ui_selectlist_title_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="返回" android:layout_centerVertical="true" />
+        <TextView android:textSize="24.0sp" android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="发送" android:layout_centerInParent="true" />
+        <TextView android:textSize="22.0sp" android:textColor="@android:color/white" android:id="@id/misc_ui_text_selectlist_title_commit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:text="完成" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <Button android:id="@id/misc_ui_selectlist_checkall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="全选" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:textAllCaps="false" />
+    <ListView android:id="@id/misc_ui_select_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/misc_ui_selectlist_checkall" android:layout_below="@id/misc_ui_selectlist_title" />
+</RelativeLayout>

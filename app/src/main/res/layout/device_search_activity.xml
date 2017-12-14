@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/common_gray" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include layout="@layout/common_search_device_bar" />
+    <ListView android:id="@id/device_search_listview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@color/common_color_dcdcdc" android:dividerHeight="1.0px" />
+</LinearLayout>

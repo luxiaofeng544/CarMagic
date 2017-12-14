@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textColor="@color/common_mark_location" android:gravity="center" android:id="@id/view_marker_text" android:background="@drawable/device_home_mark_bg_location" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

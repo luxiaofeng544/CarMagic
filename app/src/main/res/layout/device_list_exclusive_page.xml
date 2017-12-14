@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/common_page_linear_vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_margin="10.0dip">
+        <com.jimi.app.views.CustomTabLayout android:id="@id/ct_tab" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <android.support.v4.view.ViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

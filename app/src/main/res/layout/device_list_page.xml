@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/common_page_linear_vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <android.support.design.widget.TabLayout android:id="@id/tab_bar" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="fill_parent" app:tabIndicatorColor="@color/common_blue" app:tabTextAppearance="@style/tab_text_style" app:tabSelectedTextColor="@color/common_blue" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_tab" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:gravity="right" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <View android:background="#ffc0c0c0" android:visibility="invisible" android:layout_width="0.5dip" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="right" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <View android:background="#ffc0c0c0" android:visibility="invisible" android:layout_width="0.5dip" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="right" android:id="@id/tab_splitlines" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <View android:background="#ffc0c0c0" android:visibility="invisible" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="right" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <View android:background="#ffc0c0c0" android:visibility="invisible" android:layout_width="0.5dip" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" />
+            </RelativeLayout>
+        </LinearLayout>
+        <View android:background="@color/common_color_90b1b1b1" android:layout_width="fill_parent" android:layout_height="1.5dip" android:layout_alignBottom="@id/ll_tab" />
+    </RelativeLayout>
+    <android.support.v4.view.ViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

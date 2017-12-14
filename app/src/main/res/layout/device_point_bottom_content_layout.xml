@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/common_transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/device_track_share_foot_arrow_up" android:background="@color/common_transparent" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <CheckBox android:id="@id/device_track_share_foot_arrow_down" android:background="@drawable/main_foot_arrow_bg_selector" android:button="@null" android:layout_centerInParent="true" style="@style/common_layout_width_height_ww" />
+    </RelativeLayout>
+    <include layout="@layout/device_track_point_history_paly_bar" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="#eeffffff" android:layout_width="fill_parent" android:layout_height="10.0dip">
+        <View style="@style/common_line_horizontal" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="#eeffffff" android:paddingLeft="20.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="30.0dip">
+        <TextView android:textSize="15.0sp" android:textColor="#ff303030" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/track_hint_device_name" android:paddingTop="5.0dip" android:paddingRight="3.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:maxEms="7" android:singleLine="true" android:layout_weight="1.0" />
+        <TextView android:textSize="15.0sp" android:textColor="#fff10627" android:gravity="center_vertical" android:id="@id/change_time" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:singleLine="true" />
+        <TextView android:textSize="15.0sp" android:textColor="#fff10627" android:gravity="center_vertical" android:id="@id/trace_select_point" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:singleLine="true" android:drawableRight="@drawable/trace_rid_right_arrow" android:drawablePadding="3.0dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="#eeffffff" android:layout_width="fill_parent" android:layout_height="30.0dip">
+        <LinearLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0">
+            <TextView android:textSize="15.0sp" android:textColor="#ff686868" android:id="@id/main_home_foot_acc" android:layout_marginLeft="15.0dip" style="@style/common_item_acc" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff686868" android:id="@id/trace_point_foot_no" android:text="" style="@style/commom_items" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff686868" android:id="@id/tv_position_mode" android:layout_marginLeft="25.0dip" style="@style/common_item_acc" />
+            <TextView android:textSize="13.0sp" android:textColor="#ff686868" android:id="@id/main_trace_locate_type" android:text="" style="@style/commom_items" />
+        </LinearLayout>
+        <me.drakeet.uiview.UIButton android:textSize="12.0sp" android:textColor="@color/common_white" android:gravity="center" android:id="@id/main_home_foot_orbit" android:background="@drawable/main_foot_item_right_shape" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_marginTop="@dimen/common_margin_5" android:layout_marginRight="10.0dip" android:layout_marginBottom="@dimen/common_margin_5" android:layout_weight="1.0" android:textAllCaps="false" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:background="#eeffffff" android:layout_width="fill_parent" android:layout_height="30.0dip">
+        <TextView android:textSize="15.0sp" android:textColor="#ff686868" android:id="@id/tv_position" android:layout_marginLeft="15.0dip" style="@style/common_item_acc" />
+        <TextView android:textSize="15.0sp" android:textColor="#ff686868" android:id="@id/main_trace_update_time" android:text="" style="@style/commom_items" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:background="#eeffffff" android:layout_width="fill_parent" android:layout_height="42.0dip">
+        <TextView android:enabled="false" android:textSize="15.0sp" android:textColor="#ff4bde1c" android:id="@id/main_trace_foot_see_addr" android:layout_marginLeft="15.0dip" style="@style/common_item_acc" />
+        <TextView android:textSize="13.0sp" android:textColor="#ff686868" android:gravity="center_vertical" android:id="@id/main_trace_foot_addr" android:visibility="invisible" android:layout_marginLeft="15.0dip" android:text="" android:maxLines="2" style="@style/commom_items" />
+    </LinearLayout>
+</LinearLayout>

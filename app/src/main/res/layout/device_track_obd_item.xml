@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#eeffffff" android:layout_width="fill_parent" android:layout_height="190.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/device_track_address" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10.0dip">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingBottom="10.0dip" style="@style/common_layout_width_height_m0">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_margin_10" android:layout_marginTop="@dimen/common_margin_10" android:layout_marginBottom="@dimen/common_margin_10" android:src="@drawable/track_marker_start" />
+            <LinearLayout android:orientation="vertical" android:background="#90ffffff" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="15.0sp" android:textColor="#ff303030" android:id="@id/device_segment_addr1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_margin_10" android:text="" />
+                <TextView android:textSize="14.0sp" android:textColor="#ff686868" android:id="@id/device_segment_date1" android:layout_marginLeft="@dimen/common_margin_10" android:text="asjflsalkfklsfglksdglhnglsnhglsdglkdsnhgf" style="@style/commom_items" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="13.0dip" android:layout_marginRight="13.0dip" android:src="@drawable/dotted_line" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="10.0dip" style="@style/common_layout_width_height_m0">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_margin_10" android:layout_marginTop="@dimen/common_margin_10" android:layout_marginBottom="@dimen/common_margin_10" android:src="@drawable/track_marker_end" />
+            <LinearLayout android:orientation="vertical" android:background="#90ffffff" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="15.0sp" android:textColor="#ff303030" android:id="@id/device_segment_addr2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_margin_10" android:text="" />
+                <TextView android:textSize="14.0sp" android:textColor="#ff686868" android:id="@id/device_segment_date2" android:layout_marginLeft="@dimen/common_margin_10" android:text="" style="@style/commom_items" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textColor="#ffff5d00" android:gravity="center" android:id="@id/obd_score_view" android:background="@drawable/slide_bottom_pingfen_bg" android:layout_width="60.0dip" android:layout_height="60.0dip" android:text="100\n分" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/common_transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/calendar_date_top" android:background="@drawable/calendar_title_bg_shape" android:paddingLeft="17.199982dip" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <TextView android:textSize="20.0sp" android:textColor="#ff3e99ff" android:layout_gravity="center_vertical" android:id="@id/calendar_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2016年12月" />
+    </LinearLayout>
+    <com.jimi.app.views.DeviceCalendarView android:id="@id/calendar_view" android:background="@color/common_white" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@color/common_transparent" android:cacheColorHint="#00000000" />
+</LinearLayout>

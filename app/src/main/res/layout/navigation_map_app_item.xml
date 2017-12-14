@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:background="@color/common_white" android:padding="10.0dip" style="@style/common_layout_width_height_mw"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center_vertical" android:id="@id/navigation_list_item_img" style="@style/common_layout_width_height_ww" />
+    <TextView android:textSize="@dimen/common_font_size_16" android:textColor="@color/common_item_text_gray" android:gravity="center" android:id="@id/navigation_list_item_text" android:layout_marginLeft="@dimen/common_margin_20" android:layout_marginTop="@dimen/common_padding_5" style="@style/common_layout_width_height_ww" />
+</LinearLayout>

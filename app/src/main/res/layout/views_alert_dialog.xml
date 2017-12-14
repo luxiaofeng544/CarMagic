@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/setting_alert_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="120.0dip">
+        <TextView android:textSize="16.0sp" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/views_msg" android:background="@color/common_white" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/warn_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:src="@drawable/views_ic_alert" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View style="@style/common_line_horizontal" />
+    <LinearLayout style="@style/common_layout_width_height_fw">
+        <Button android:textSize="18.0sp" android:textColor="@color/common_color_3e99ff" android:gravity="center" android:id="@id/views_ok" android:background="@color/common_transparent" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:textAllCaps="false" style="@style/common_layout_width_height_0w" />
+        <View android:background="#ffb1b1b1" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <Button android:textSize="18.0sp" android:textColor="@color/common_color_3e99ff" android:gravity="center" android:id="@id/views_cancel" android:background="@color/common_transparent" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:textAllCaps="false" style="@style/common_layout_width_height_0w" />
+    </LinearLayout>
+</LinearLayout>

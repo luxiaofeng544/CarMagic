@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/common_page_linear_vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <WebView android:id="@id/device_switch_webView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/nav_bar" />
+    <View android:id="@id/device_null_view" android:background="@color/common_white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/nav_bar" />
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="50.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/group_parent" android:paddingLeft="16.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_centerVertical="true">
+            <ImageView android:id="@id/iv_groupaddimg" android:background="@drawable/selected_up_down" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <RelativeLayout android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="@color/common_color_303030" android:id="@id/tv_groupname" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="默认分组" android:singleLine="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <ProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_margin="8.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff686868" android:id="@id/tv_total" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:text="" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <View android:layout_alignParentBottom="true" style="@style/common_line_horizontal" />
+    </RelativeLayout>
+</RelativeLayout>

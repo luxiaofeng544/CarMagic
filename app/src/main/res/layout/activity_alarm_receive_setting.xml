@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/activity_alarm_receive_setting" android:background="@color/common_gray_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/alarm_receive_setting_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:layout_marginTop="10.0dip" style="@style/common_line_horizontal" />
+        <include layout="@layout/alarm_setting_activity_header" />
+        <TextView android:textSize="@dimen/common_text_size_13" android:textColor="#ff8f8f8f" android:id="@id/tv_alert_notify" android:background="#fff5f5f5" android:paddingLeft="17.0dip" android:paddingTop="7.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <View style="@style/common_line_horizontal" />
+    </LinearLayout>
+    <include layout="@layout/common_base_list" />
+</LinearLayout>

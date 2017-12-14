@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/views_nav_layout" android:background="@color/common_transparent" android:layout_width="fill_parent" android:layout_height="@dimen/views_nav_bar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/views_nav_background" android:background="@drawable/views_top_nav_bar_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/left_content" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/common_margin_10" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <ImageButton android:id="@id/views_nav_menu_btn" android:background="@null" android:padding="@dimen/common_margin_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_back_selector" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/views_nav_left_right_text_size" android:textColor="@drawable/common_text_color_whait" android:gravity="center_vertical" android:id="@id/views_nav_back_btn" android:paddingTop="7.0dip" android:paddingRight="10.0dip" android:paddingBottom="7.0dip" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/views_nav_left_bar" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/common_margin_15" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <Button android:textSize="@dimen/views_nav_title_text_size" android:textColor="@color/common_white" android:id="@id/views_nav_title" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:textAllCaps="false" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/views_nav_center_bar" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    </LinearLayout>
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/common_margin_20" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/views_nav_right_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <Button android:textSize="@dimen/views_nav_left_right_text_size" android:textColor="@drawable/common_text_color_whait" android:gravity="center|right" android:id="@id/views_nav_right_btn" android:background="@null" android:paddingTop="7.0dip" android:paddingBottom="7.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="false" />
+        <ImageView android:id="@id/views_nav_right_iv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:scaleType="center" android:layout_toRightOf="@id/views_nav_right_bar" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/dialog_parent" android:background="@drawable/command_dialog_bag" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:textColor="#ff303030" android:gravity="center" android:id="@id/dialog_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_centerHorizontal="true" />
+    <TextView android:background="@drawable/line" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="15.0dip" />
+    <EditText android:textSize="15.0sp" android:textColorHint="#ffdddddd" android:id="@id/et_content" android:background="@drawable/input_bg" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:inputType="textPassword" android:textCursorDrawable="@drawable/login_cursor" />
+    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip">
+        <Button android:textSize="18.0sp" android:textColor="#ff303030" android:gravity="center" android:id="@id/views_negative" android:background="@drawable/btn_cancle_bg" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="false" />
+        <Button android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/view_positive" android:background="@drawable/btn_ok_bg" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:textAllCaps="false" />
+    </RelativeLayout>
+</LinearLayout>

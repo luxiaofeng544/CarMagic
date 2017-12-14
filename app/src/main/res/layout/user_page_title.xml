@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/common_layout_border_white_gray_no_corner" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginBottom="@dimen/common_margin_20"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/common_gray_blue_selector" android:id="@id/user_input_page_title_left" style="@style/common_user_input_page_title" />
+    <ImageView style="@style/common_user_input_page_arrow" />
+    <TextView android:textColor="@color/common_gray_blue_selector" android:id="@id/user_input_page_title_right" style="@style/common_user_input_page_title" />
+</LinearLayout>

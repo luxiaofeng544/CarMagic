@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/common_page_linear_vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:id="@id/device_command_sos_layout" android:background="@drawable/touch_option_selector" android:paddingRight="19.0dip" android:clickable="true" style="@style/common_layout_width_height_fw"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:id="@id/device_command_sos_tv" android:layout_alignParentLeft="true" style="@style/new_CommonLeft_text_Style" />
+        <TextView android:textColor="@color/common_font_item_right" android:id="@id/device_command_sos_status" android:text="成功" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/common_operation_item_right" />
+    </RelativeLayout>
+    <View style="@style/common_line_horizontal2" />
+    <RelativeLayout android:id="@id/device_command_send_layout" android:background="@drawable/touch_option_selector" android:paddingRight="19.0dip" android:clickable="true" style="@style/common_layout_width_height_fw"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:id="@id/text_send_type" android:layout_alignParentLeft="true" style="@style/new_CommonLeft_text_Style" />
+        <TextView android:textColor="@color/common_color_8f8f8f" android:id="@id/device_command_send_tv" android:text="在线发送" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/common_operation_item_right" />
+    </RelativeLayout>
+    <View style="@style/common_line_horizontal2" />
+    <LinearLayout android:id="@id/device_command_commands_layout" android:background="@drawable/touch_option_selector" android:paddingRight="19.0dip" android:clickable="true" style="@style/common_layout_width_height_fw"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:id="@id/text_command" android:layout_weight="1.0" android:layout_alignParentLeft="true" style="@style/new_CommonLeft_text_Style" />
+        <TextView android:textColor="@color/common_color_8f8f8f" android:id="@id/device_command_commands_tv" android:maxWidth="200.0dip" android:text="" android:layout_alignParentRight="true" style="@style/common_operation_item_right" />
+    </LinearLayout>
+    <View style="@style/common_line_horizontal2" />
+    <RelativeLayout android:id="@id/device_command_time_layout" android:background="@drawable/touch_option_selector" android:paddingRight="19.0dip" android:clickable="true" style="@style/common_layout_width_height_fw"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:id="@id/send_time" android:layout_alignParentLeft="true" style="@style/new_CommonLeft_text_Style" />
+        <TextView android:textColor="@color/common_color_8f8f8f" android:id="@id/device_command_time_tv" android:text="201538" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/common_operation_item_right" />
+    </RelativeLayout>
+    <View style="@style/common_line_horizontal2" />
+    <RelativeLayout android:id="@id/device_command_imei_layout" android:background="@drawable/touch_option_selector" android:paddingRight="19.0dip" android:clickable="true" style="@style/common_layout_width_height_fw"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:id="@id/text_imie" android:layout_alignParentLeft="true" style="@style/new_CommonLeft_text_Style" />
+        <TextView android:textColor="@color/common_color_8f8f8f" android:id="@id/device_command_imei_tv" android:text="888888999745454" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/common_operation_item_right" />
+    </RelativeLayout>
+    <View style="@style/common_line_horizontal2" />
+    <LinearLayout android:id="@id/device_command_result_layout" android:background="@drawable/touch_option_selector" android:paddingRight="19.0dip" android:clickable="true" style="@style/common_layout_width_height_fw"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:id="@id/text_content" android:singleLine="true" android:layout_weight="1.0" android:layout_alignParentLeft="true" style="@style/new_CommonLeft_text_Style" />
+        <TextView android:textColor="@color/common_color_8f8f8f" android:id="@id/device_command_result_tv" android:maxWidth="200.0dip" android:text="" android:layout_alignParentRight="true" style="@style/common_operation_item_right" />
+    </LinearLayout>
+    <View style="@style/common_line_horizontal2" />
+    <RelativeLayout android:id="@id/device_command_perform_layout" android:background="@drawable/touch_option_selector" android:paddingRight="19.0dip" android:clickable="true" style="@style/common_layout_width_height_fw"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:id="@id/text_perform" android:layout_alignParentLeft="true" style="@style/new_CommonLeft_text_Style" />
+        <TextView android:textColor="@color/common_color_8f8f8f" android:id="@id/device_command_perform_tv" android:text="APP" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/common_operation_item_right" />
+    </RelativeLayout>
+    <View style="@style/common_line_horizontal2" />
+    <RelativeLayout android:id="@id/device_command_down_layout" android:background="@drawable/touch_option_selector" android:paddingRight="19.0dip" android:clickable="true" style="@style/common_layout_width_height_fw"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:id="@id/text_sender" android:layout_alignParentLeft="true" style="@style/new_CommonLeft_text_Style" />
+        <TextView android:textColor="@color/common_color_8f8f8f" android:id="@id/device_command_down_tv" android:text="admin" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/common_operation_item_right" />
+    </RelativeLayout>
+</LinearLayout>

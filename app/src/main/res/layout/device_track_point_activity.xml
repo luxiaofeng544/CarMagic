@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/device_trace_point_map_layout" />
+    <com.jimi.app.views.SlideBottomPanel android:id="@id/device_track_share_slideView" android:layout_width="fill_parent" android:layout_height="fill_parent" app:sbp_background_layout="@layout/a_null_layout" app:sbp_title_height_no_display="150.0dip" app:sbp_panel_height="280.0dip">
+        <FrameLayout android:id="@id/device_track_share_bottom_framelayout" android:background="@color/common_transparent" android:layout_width="fill_parent" android:layout_height="280.0dip">
+            <LinearLayout android:orientation="vertical" android:id="@id/device_track_share_visible" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="150.0dip" android:layout_marginTop="150.0dip">
+                <include layout="@layout/device_track_point_item" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/device_track_share_invisible" android:background="@color/common_transparent" android:layout_width="fill_parent" android:layout_height="280.0dip">
+                <LinearLayout android:orientation="vertical" android:id="@id/device_track_share_foot_show" android:layout_width="fill_parent" android:layout_height="150.0dip">
+                    <RelativeLayout android:orientation="horizontal" android:id="@id/device_track_share_foot_arrow_up" android:background="@color/common_transparent" style="@style/common_layout_width_height_mw">
+                        <CheckBox android:id="@id/device_track_share_foot_arrow_down" android:background="@drawable/main_foot_arrow_bg_selector" android:button="@null" android:layout_below="@id/main_home_foot_close" android:layout_centerInParent="true" style="@style/common_layout_width_height_ww" />
+                    </RelativeLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@id/main_home_foot_show_content" android:background="@color/common_white" style="@style/common_layout_width_height_mm">
+                        <include layout="@layout/device_track_point_history_paly_bar" />
+                        <LinearLayout style="@style/common_layout_width_height_mm">
+                            <LinearLayout android:orientation="vertical" style="@style/common_layout_width_height_0m7">
+                                <LinearLayout android:layout_marginTop="@dimen/common_margin_10" style="@style/common_layout_width_height_mw">
+                                    <TextView android:id="@id/main_home_foot_acc" android:layout_marginLeft="15.0dip" style="@style/common_item_acc" />
+                                    <TextView android:id="@id/main_home_foot_acc_status" android:text="" style="@style/commom_items" />
+                                    <TextView android:id="@id/tv_speed" android:layout_marginLeft="15.0dip" style="@style/common_item_acc" />
+                                    <TextView android:id="@id/main_home_foot_device_speed" android:text="" style="@style/commom_items" />
+                                </LinearLayout>
+                                <LinearLayout android:orientation="horizontal" android:layout_marginTop="@dimen/common_margin_10" style="@style/common_layout_width_height_mw">
+                                    <TextView android:id="@id/main_home_foot_see_addr" android:layout_marginLeft="15.0dip" style="@style/common_item_acc" />
+                                    <TextView android:id="@id/main_home_foot_communicate_time" android:text="" style="@style/commom_items" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/common_margin_10" android:paddingRight="@dimen/common_margin_10" style="@style/common_layout_width_height_0m2">
+                                <me.drakeet.uiview.UIButton android:gravity="center" android:id="@id/device_show_or_hide_track" android:layout_marginTop="@dimen/common_margin_5" android:layout_marginBottom="@dimen/common_margin_5" android:textAllCaps="false" style="@style/common_item_button" />
+                                <me.drakeet.uiview.UIButton android:gravity="center" android:id="@id/main_home_foot_orbit" android:layout_marginTop="@dimen/common_margin_5" android:layout_marginBottom="@dimen/common_margin_5" android:textAllCaps="false" style="@style/common_item_button" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </com.jimi.app.views.SlideBottomPanel>
+</FrameLayout>

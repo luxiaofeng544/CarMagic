@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/common_layout_width_height_mm"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include android:id="@id/search_bar_layout" layout="@layout/common_search_bar" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/search_bar_layout" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+        <RelativeLayout style="@style/common_layout_width_height_m0">
+            <com.baidu.mapapi.map.MapView android:id="@id/map" android:clickable="true" style="@style/common_layout_width_height_mm" />
+            <com.jimi.app.views.MapControlView android:id="@id/control_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60.0dip" android:layout_marginRight="@dimen/common_margin_10" android:layout_alignParentRight="true" app:changeVisiable="false" app:trafficVisiable="false" app:panoramaVisiable="false" />
+            <com.jimi.app.views.FenceView android:id="@id/fence_view" android:layout_centerInParent="true" style="@style/common_layout_width_height_ww" />
+        </RelativeLayout>
+        <include layout="@layout/device_fence_add_foot" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/common_transparent" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center|left" android:id="@id/view_marker_text" android:background="@drawable/device_home_mark_bg_online" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="120.0dip" android:text="" android:singleLine="true" />
+    <com.jimi.app.views.RotateImageView android:id="@id/view_marker_img" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/device_home_mark_offline" />
+</LinearLayout>

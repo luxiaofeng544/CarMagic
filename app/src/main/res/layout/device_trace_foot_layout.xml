@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/common_white" android:paddingLeft="5.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="330.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/device_trace_fast_rl" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="@dimen/common_margin_10">
+        <ImageView android:layout_gravity="center_vertical" android:padding="@dimen/common_margin_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/device_trace_fast_time" />
+        <LinearLayout android:layout_gravity="center_vertical" android:paddingLeft="15.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="5.0">
+            <RadioGroup android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/common_layout_group" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <RadioButton android:id="@id/common_layout_radi1" style="@style/quick_time_selected_style" />
+                <RadioButton android:id="@id/common_layout_radi2" style="@style/quick_time_selected_style" />
+                <RadioButton android:id="@id/common_layout_radi4" style="@style/quick_time_selected_style" />
+                <RadioButton android:textSize="15.0sp" android:textColor="@drawable/radiobutton_text_color" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/common_layout_radi5" android:background="@drawable/widget_no_click_color_selector" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@null" android:singleLine="true" android:layout_weight="0.5" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:layout_marginTop="10.0dip" android:layout_marginBottom="@dimen/common_margin_10" style="@style/common_line_horizontal" />
+    <LinearLayout android:id="@id/device_trace_start_rl" android:layout_width="fill_parent" android:layout_height="40.0dip"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:layout_gravity="center_vertical" android:padding="@dimen/common_margin_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/device_trace_start_time" />
+        <RelativeLayout android:id="@id/start_time_selected" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="5.0" android:layout_centerVertical="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/selected_up_down" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff686868" android:gravity="center" android:id="@id/device_search_text" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="15.0dip" android:text="2016-12-16 13:30:13" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:layout_marginTop="10.0dip" android:layout_marginBottom="@dimen/common_margin_10" style="@style/common_line_horizontal" />
+    <LinearLayout android:id="@id/device_trace_end_rl" android:layout_width="fill_parent" android:layout_height="40.0dip"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:layout_gravity="center_vertical" android:padding="@dimen/common_margin_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/device_trace_end_time" />
+        <RelativeLayout android:id="@id/end_time_selected" android:paddingLeft="15.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="5.0" android:layout_centerVertical="true">
+            <TextView android:textSize="14.0sp" android:textColor="#ff686868" android:gravity="center" android:id="@id/device_trace_end_text" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="2016-12-16 13:13:13" android:singleLine="true" android:layout_centerVertical="true" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/selected_up_down" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:layout_marginTop="10.0dip" android:layout_marginBottom="@dimen/common_margin_10" style="@style/common_line_horizontal" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/device_trace_choose_rl" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <ImageView android:layout_gravity="center_vertical" android:padding="@dimen/common_margin_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/device_trace_choose_device" />
+        <RelativeLayout android:id="@id/device_selected" android:paddingLeft="15.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="5.0">
+            <TextView android:gravity="center" android:id="@id/device_trace_choose_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:drawableRight="@drawable/selected_drop_down" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff686868" android:gravity="center_vertical" android:id="@id/device_trace_choose_text" android:paddingRight="40.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:layout_marginTop="10.0dip" android:layout_marginBottom="@dimen/common_margin_10" style="@style/common_line_horizontal" />
+    <RelativeLayout android:id="@id/device_trace_button_rl" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="@dimen/common_margin_10" style="@style/common_margin_5_left_right"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="horizontal" android:paddingBottom="@dimen/common_padding_10" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerInParent="true" style="@style/common_margin_20_left_right">
+            <TextView android:textSize="16.0sp" android:textColor="@color/common_white" android:gravity="center" android:id="@id/device_trace_button_tv_left" android:background="@drawable/time_picker_background" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/common_margin_10" />
+            <TextView android:textSize="16.0sp" android:textColor="#ff686868" android:gravity="center" android:id="@id/device_trace_button_tv_right" android:background="@drawable/device_search_background" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/common_margin_40" android:layout_alignParentLeft="true" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

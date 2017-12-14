@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/common_blue_gray_btn_selector2" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/common_item_selected_rl" android:paddingLeft="20.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageView android:id="@id/device_list_item_car_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/device_list_icon" android:layout_centerVertical="true" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/common_color_9a9a9a" android:id="@id/device_list_item_car_imei" android:visibility="gone" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:text="IMEI:12341548" android:layout_toRightOf="@id/device_list_item_car_img" android:layout_below="@id/device_list_item_car_img" style="@style/common_layout_width_height_ww" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/common_color_303030" android:id="@id/device_list_item_car_name" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="jkahdjkadnhjkasdkjadjksjdj" android:singleLine="true" android:layout_toLeftOf="@id/common_list_item_checked_iv" android:layout_toRightOf="@id/device_list_item_car_img" android:layout_centerVertical="true" />
+        <CheckBox android:id="@id/common_list_item_checked_iv" android:background="@drawable/child_select" android:visibility="visible" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:button="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <View android:id="@id/child_divider" android:background="@color/common_color_9c9c9c" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="15.0dip" android:layout_toRightOf="@id/device_list_item_car_img" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <View android:id="@id/ui_require_divider" android:background="@color/common_color_9c9c9c" android:visibility="gone" style="@style/common_line_horizontal_new" />
+</LinearLayout>

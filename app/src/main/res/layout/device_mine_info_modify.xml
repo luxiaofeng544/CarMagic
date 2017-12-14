@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/common_page_linear_vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:layout_marginTop="10.0dip" style="@style/common_line_horizontal" />
+    <RelativeLayout android:id="@id/mine_account_layout" android:background="@color/common_white" android:paddingRight="20.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/common_margin_50">
+        <TextView android:textColor="@color/common_color_303030" android:gravity="center_vertical" android:id="@id/mine_account_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:text="***" android:layout_centerVertical="true" />
+        <com.jimi.app.views.ContainsEmojiEditText android:textColor="@color/common_color_9b9b9b" android:id="@id/mine_account_content_text" android:background="@color/common_white" android:padding="@dimen/common_padding_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="***" android:singleLine="true" android:maxLength="50" android:layout_toRightOf="@id/mine_account_text" android:layout_centerVertical="true" android:textCursorDrawable="@drawable/login_cursor" style="@style/common_operation_item_text_style" />
+    </RelativeLayout>
+    <View style="@style/common_line_horizontal" />
+    <Button android:textSize="16.0sp" android:layout_gravity="center_vertical" android:id="@id/bt_confirm" android:layout_marginTop="180.0dip" android:text="***" android:onClick="comfirm" android:textAllCaps="false" style="@style/common_button" />
+</LinearLayout>

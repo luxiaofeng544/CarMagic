@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/common_transparent" android:layout_width="fill_parent" android:layout_height="169.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/device_track_share_foot_arrow_up" android:background="@color/common_transparent" style="@style/common_layout_width_height_mw">
+        <CheckBox android:id="@id/device_track_share_foot_arrow_down" android:background="@drawable/main_foot_arrow_bg_selector" android:button="@null" android:layout_below="@id/main_home_foot_close" android:layout_centerInParent="true" style="@style/common_layout_width_height_ww" />
+    </RelativeLayout>
+    <include layout="@layout/device_track_history_paly_bar" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="#eeffffff" android:layout_width="fill_parent" android:layout_height="10.0dip">
+        <View style="@style/common_line_horizontal" />
+    </LinearLayout>
+    <RelativeLayout android:background="#eeffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/obd_bottom_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <TextView android:gravity="center" android:id="@id/obd_bottom_info1" android:background="#00ffffff" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <TextView android:gravity="center" android:id="@id/obd_bottom_info2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <TextView android:gravity="center" android:id="@id/obd_bottom_info3" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <TextView android:gravity="center" android:id="@id/obd_bottom_info4" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <TextView android:gravity="center" android:id="@id/obd_bottom_info5" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <TextView android:gravity="center" android:id="@id/obd_bottom_info6" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <TextView android:gravity="center" android:id="@id/obd_bottom_info7" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <TextView android:gravity="center" android:id="@id/obd_bottom_info8" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

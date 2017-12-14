@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/fence_itembackground_shape" android:layout_width="fill_parent" android:layout_height="120.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/device_add_item_rl" android:padding="10.0sp" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/device_add_list_item_family_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/device_list_item_car" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:layout_marginLeft="10.0dip" style="@style/common_layout_width_height_0w">
+            <LinearLayout style="@style/common_layout_width_height_mm">
+                <TextView android:textSize="16.0sp" android:textColor="#ff303030" android:id="@id/device_add_list_item_family_name" android:text="" android:singleLine="true" style="@style/common_layout_width_height_0w" />
+                <TextView android:textSize="@dimen/common_font_size_12" android:textColor="#ff8f8f8f" android:id="@id/device_add_list_item_family_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_margin_20" android:layout_marginRight="@dimen/common_margin_10" android:text="" android:layout_toRightOf="@id/device_list_item_car_name" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/common_font_size_14" android:textColor="#ff8f8f8f" android:id="@id/device_add_list_item_family_imei" android:layout_marginTop="10.0dip" android:text="" android:layout_alignParentLeft="true" style="@style/common_layout_width_height_ww" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/new_common_horizontal_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <RelativeLayout style="@style/common_layout_width_height_0w">
+            <TextView android:textSize="@dimen/common_font_size_14" android:textColor="@drawable/common_text_color_2" android:gravity="center_vertical" android:id="@id/device_add_list_item_edit" android:clickable="true" android:drawableTop="@drawable/device_edit_item_normal" android:drawablePadding="@dimen/common_padding_5" android:layout_centerInParent="true" style="@style/common_layout_width_height_ww" />
+        </RelativeLayout>
+        <RelativeLayout style="@style/common_layout_width_height_0w">
+            <TextView android:textSize="@dimen/common_font_size_14" android:textColor="@color/common_color_686868" android:gravity="center_vertical" android:id="@id/device_add_list_item_add" android:clickable="true" android:drawableTop="@drawable/device_add_item_normal" android:drawablePadding="@dimen/common_padding_5" android:layout_centerInParent="true" style="@style/common_layout_width_height_ww" />
+        </RelativeLayout>
+        <RelativeLayout style="@style/common_layout_width_height_0w">
+            <TextView android:textSize="@dimen/common_font_size_14" android:textColor="@color/common_color_686868" android:gravity="center_vertical" android:id="@id/device_add_list_item_del" android:clickable="true" android:drawableTop="@drawable/device_delete_item_normal" android:drawablePadding="@dimen/common_padding_5" android:layout_centerInParent="true" style="@style/common_layout_width_height_ww" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

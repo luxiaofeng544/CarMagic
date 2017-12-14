@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:background="#ffffffef" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/device_map_foot_search_bar_layout" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_margin_20" android:layout_marginTop="@dimen/common_margin_60" android:layout_marginRight="@dimen/common_margin_20">
+        <include layout="@layout/common_seekbar_zoom_in_out" />
+    </LinearLayout>
+    <RelativeLayout android:background="@color/common_white" android:visibility="gone" android:layout_alignParentBottom="true" style="@style/common_layout_width_height_mw">
+        <include layout="@layout/device_fence_add_foot" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/search_result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/search_result_background" android:background="#50000000" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <View style="@style/line_horizontal" />
+            <RelativeLayout android:id="@id/device_fence_foot_my_locate" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/common_margin_10">
+                <TextView android:textSize="@dimen/common_font_size_16" android:textStyle="bold" android:textColor="@color/common_item_font_black" android:id="@id/device_fence_my_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+                <TextView android:textSize="@dimen/common_font_size_16" android:textStyle="bold" android:textColor="@color/common_item_gray_text" android:id="@id/device_fence_poi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@id/device_fence_my_location" />
+                <TextView android:textSize="@dimen/common_font_size_14" android:textStyle="bold" android:textColor="@color/common_item_gray_text" android:id="@id/device_fence_my_addr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:text="" android:layout_below="@id/device_fence_my_location" />
+            </RelativeLayout>
+            <View style="@style/line_horizontal" />
+            <com.jimi.app.views.pulltorefresh.PullToRefreshListView android:id="@id/list" android:background="@color/common_white" android:padding="0.0px" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="0.0px" android:drawSelectorOnTop="false" android:cacheColorHint="@null" android:divider="@color/common_line" android:dividerHeight="1.0dip" android:fastScrollEnabled="false" android:headerDividersEnabled="false" android:footerDividersEnabled="false" android:smoothScrollbar="true" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

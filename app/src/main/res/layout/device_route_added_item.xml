@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="55.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/common_item_selected_rl" android:background="@drawable/common_blue_gray_btn_selector2" android:layout_width="fill_parent" android:layout_height="55.0dip">
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_car" android:paddingLeft="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/device_list_item_car_img" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/device_list_item_car" />
+            <RelativeLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:textSize="14.0sp" android:textColor="@color/common_color_5a5a5a" android:id="@id/device_list_item_car_name" android:layout_width="250.0dip" android:layout_height="wrap_content" android:text="家" android:singleLine="true" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/common_color_9a9a9a" android:id="@id/device_list_item_car_imei" android:layout_marginTop="5.0dip" android:text="IMEI:12341548" style="@style/common_layout_width_height_ww" />
+                    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/common_color_9a9a9a" android:id="@id/device_list_item_car_location" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="方圆500米" />
+                </LinearLayout>
+                <View android:id="@id/custom_child_divider" android:layout_alignParentBottom="true" style="@style/common_line_horizontal" />
+            </RelativeLayout>
+        </LinearLayout>
+        <CheckBox android:id="@id/common_list_item_checked_iv" android:background="@drawable/common_item_tri" android:paddingRight="5.0dip" android:paddingBottom="12.0dip" android:visibility="visible" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:drawableRight="@drawable/device_apply_arrow" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <View android:id="@id/ui_added" android:visibility="gone" android:layout_alignParentBottom="true" style="@style/common_line_horizontal" />
+    </RelativeLayout>
+</RelativeLayout>

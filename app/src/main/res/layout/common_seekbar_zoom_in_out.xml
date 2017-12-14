@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:background="@drawable/common_white_roundedrectangle_shape" android:layout_width="fill_parent" android:layout_height="40.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/common_text_size_12" android:textColor="#ff686868" android:gravity="center_vertical" android:id="@id/fence_minus" android:padding="@dimen/common_padding_5" android:button="@null" android:text="200米" android:drawableLeft="@drawable/common_seekbar_out" android:drawablePadding="@dimen/common_padding_5" style="@style/common_layout_width_height_ww" />
+    <SeekBar android:id="@id/fence_progress" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:maxHeight="2.0dip" android:progressDrawable="@drawable/common_seekbar_selector" android:minHeight="2.0dip" android:thumb="@drawable/common_seekbar_circle" style="@style/common_layout_width_height_0w" />
+    <TextView android:textSize="@dimen/common_text_size_12" android:textColor="#ff686868" android:gravity="center" android:id="@id/fence_plus" android:padding="@dimen/common_padding_5" android:text="300米" android:drawableRight="@drawable/common_seekbar_in" android:drawablePadding="@dimen/common_padding_5" style="@style/common_layout_width_height_ww" />
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/common_page_linear_vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include layout="@layout/common_search_bar_no_left" />
+    <RelativeLayout android:id="@id/rl_local_video" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.jimi.app.views.pulltorefresh.PullToRefreshListView android:id="@id/common_listview" android:background="@color/common_color_f5f5f5" android:layout_width="fill_parent" android:layout_height="0.0dip" android:divider="@null" android:layout_weight="1.0" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/device_alarm_delete_contral_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/common_font_size_18" android:textColor="#ffff0000" android:gravity="center" android:id="@id/device_alarm_delete_contral_delete" android:padding="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="删除" android:layout_weight="1.0" />
+                <View style="@style/common_line_vertical_mp1" />
+                <TextView android:textSize="@dimen/common_font_size_18" android:gravity="center" android:id="@id/device_alarm_delete_contral_clear" android:padding="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="清空" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.jimi.app.views.LoadingView android:id="@id/common_loadingview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+</LinearLayout>

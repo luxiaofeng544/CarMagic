@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/common_color_f5f5f5" style="@style/common_page_linear_vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:id="@id/mine_icon_layout" android:background="@drawable/touch_option_selector" android:paddingRight="19.0dip" android:visibility="gone" android:clickable="true" style="@style/common_layout_width_height_fw">
+        <com.jimi.app.views.CircleImageView android:id="@id/mine_icon_imageView" android:padding="@dimen/common_padding_5" android:paddingLeft="@dimen/common_padding_5" android:layout_marginLeft="@dimen/common_margin_20" android:layout_marginTop="@dimen/common_margin_10" android:layout_marginBottom="@dimen/common_margin_10" android:src="@drawable/device_mine_info_icon" style="@style/common_operation_item_text_style" />
+        <TextView android:id="@id/tv_replace_icon" android:padding="@dimen/common_padding_5" android:text="***" android:layout_toRightOf="@id/mine_icon_imageView" android:layout_centerVertical="true" style="@style/common_operation_item_text_style" />
+        <TextView android:drawableRight="@drawable/common_operation_item_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/common_operation_item_right" />
+    </RelativeLayout>
+    <View android:layout_marginTop="15.0dip" style="@style/common_line_horizontal_new" />
+    <LinearLayout android:id="@id/mine_account_layout" style="@style/device_mineInfo_item_Style">
+        <TextView android:id="@id/mine_account_text" android:text="***" style="@style/new_CommonLeft_text_Style" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff8f8f8f" android:gravity="center|right" android:layout_gravity="center_vertical" android:id="@id/mine_account_tv" android:paddingRight="40.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View android:layout_marginLeft="15.0dip" style="@style/common_line_horizontal_new" />
+    <LinearLayout android:id="@id/mine_command_layout" style="@style/device_mineInfo_item_Style">
+        <TextView android:id="@id/mine_command_text" android:text="***" style="@style/new_CommonLeft_text_Style" />
+        <TextView android:id="@id/mine_nick_tv" android:text="哈哈哈哈" style="@style/newCommon_RightText_Style" />
+    </LinearLayout>
+    <View android:layout_marginLeft="15.0dip" style="@style/common_line_horizontal_new" />
+    <LinearLayout android:id="@id/mine_tel_layout" style="@style/device_mineInfo_item_Style">
+        <TextView android:id="@id/mine_tel_text" android:text="***" style="@style/new_CommonLeft_text_Style" />
+        <TextView android:id="@id/mine_tel_tv" android:text="13588888999" style="@style/newCommon_RightText_Style" />
+    </LinearLayout>
+    <View android:layout_marginLeft="15.0dip" style="@style/common_line_horizontal_new" />
+    <LinearLayout android:id="@id/mine_email_layout" style="@style/device_mineInfo_item_Style">
+        <TextView android:id="@id/mine_email_text" android:text="***" style="@style/new_CommonLeft_text_Style" />
+        <TextView android:id="@id/mine_email_tv" android:text="3163132@qq.com" style="@style/newCommon_RightText_Style" />
+    </LinearLayout>
+    <View style="@style/common_line_horizontal_new" />
+    <View android:layout_marginTop="15.0dip" style="@style/common_line_horizontal_new" />
+    <LinearLayout android:id="@id/mine_feedback_layout" style="@style/device_mineInfo_item_Style">
+        <TextView android:id="@id/mine_pwd_tv" android:text="***" style="@style/new_CommonLeft_text_Style" />
+        <TextView android:drawableRight="@drawable/common_operation_item_arrow" style="@style/newCommon_RightText_Style" />
+    </LinearLayout>
+    <View style="@style/common_line_horizontal_new" />
+    <TextView android:textSize="16.0sp" android:textColor="#ff1c99e7" android:gravity="center" android:id="@id/mine_exit_bt" android:background="@drawable/common_bg_shape" android:padding="15.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="***" />
+</LinearLayout>

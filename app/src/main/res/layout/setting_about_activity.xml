@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/common_gray" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:id="@id/setting_about_rl" android:padding="50.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/nav_bar">
+        <ImageView android:id="@id/setting_about_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/about_icon" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/common_font_size_16" android:textColor="@color/common_black" android:id="@id/setting_about_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/app_name" android:layout_below="@id/setting_about_logo" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/common_font_size_16" android:textColor="@color/common_color_686868" android:id="@id/tv_now_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/setting_about_version" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <View android:id="@id/about_line1" android:layout_below="@id/setting_about_rl" style="@style/device_edit_line_horizontal" />
+    <RelativeLayout android:id="@id/setting_about_layout" android:background="@drawable/touch_option_selector" android:padding="12.0dip" android:paddingRight="19.0dip" android:clickable="true" android:layout_below="@id/about_line1" style="@style/common_layout_width_height_fw">
+        <TextView android:textColor="@color/common_blue" android:id="@id/setting_about_tv" android:padding="@dimen/common_padding_5" android:paddingLeft="@dimen/common_padding_5" style="@style/common_operation_item_text_style" />
+        <TextView android:textColor="@color/common_back_gray" android:id="@id/setting_about_tv1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableRight="@drawable/common_operation_item_arrow" android:layout_alignParentRight="true" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/about_to" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <TextView android:textColor="@color/common_white" android:gravity="center_horizontal" android:id="@id/setting_about_btn" android:background="@drawable/common_button_red_bg_shape" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="new" android:layout_toLeftOf="@id/setting_about_tv1" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:id="@id/about_line2" android:layout_below="@id/setting_about_layout" style="@style/device_edit_line_horizontal" />
+    <FrameLayout android:id="@id/setting_function_layout" android:background="@drawable/touch_option_selector" android:padding="12.0dip" android:paddingRight="19.0dip" android:clickable="true" android:layout_below="@id/about_line2" style="@style/common_layout_width_height_fw">
+        <TextView android:textColor="@color/common_blue" android:id="@id/setting_function_tv" android:padding="5.0dip" android:paddingLeft="@dimen/common_padding_5" style="@style/common_operation_item_text_style" />
+        <TextView android:drawableRight="@drawable/about_to" android:layout_alignParentRight="true" style="@style/common_operation_item_right" />
+    </FrameLayout>
+    <View android:id="@id/about_line3" android:layout_below="@id/setting_function_layout" style="@style/common_line_horizontal" />
+    <FrameLayout android:id="@id/privacy_policy_layout" android:background="@drawable/touch_option_selector" android:padding="12.0dip" android:paddingRight="19.0dip" android:visibility="gone" android:clickable="true" android:layout_below="@id/about_line3" style="@style/common_layout_width_height_fw">
+        <TextView android:textColor="@color/common_blue" android:id="@id/privacy_policy_tv" android:padding="@dimen/common_padding_5" android:paddingLeft="@dimen/common_padding_5" style="@style/common_operation_item_text_style" />
+        <TextView android:drawableRight="@drawable/about_to" android:layout_alignParentRight="true" style="@style/common_operation_item_right" />
+    </FrameLayout>
+</RelativeLayout>

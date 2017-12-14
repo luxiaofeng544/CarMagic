@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <WebView android:id="@id/homefragment_webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageButton android:id="@id/account_swich" android:background="@drawable/account_swich" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_margin_10" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" />
+        <com.jimi.app.views.SlideBottomPanel android:id="@id/main_home_slideView" android:layout_width="fill_parent" android:layout_height="fill_parent" app:sbp_background_layout="@layout/a_null_layout" app:sbp_title_height_no_display="275.0dip" app:sbp_panel_height="@dimen/bottom_window_all_high">
+            <FrameLayout android:orientation="vertical" android:id="@id/main_home_bottom_framelayout" android:background="@color/common_transparent" android:layout_width="fill_parent" android:layout_height="@dimen/bottom_window_all_high">
+                <ImageView android:layout_gravity="center|right|top" android:id="@id/main_home_foot_close" android:background="@drawable/main_home_foot_close" android:layout_marginRight="20.0dip" style="@style/common_layout_width_height_ww" />
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0dip">
+                    <CheckBox android:gravity="top" android:layout_gravity="center_horizontal" android:id="@id/main_home_foot_arrow_down" android:background="@drawable/main_foot_arrow_bg_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" />
+                    <FrameLayout android:background="@drawable/common_big_bg_tr" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="18.099976dip">
+                        <LinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/main_home_foot_menu" android:background="@drawable/common_layout_bottom_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="228.0dip">
+                            <com.jimi.app.views.LineGridView android:id="@id/main_home_foot_controller" android:background="@drawable/common_layout_bottom_bg" android:layout_marginTop="1.0px" android:numColumns="4" android:divider="@null" style="@style/common_layout_width_height_mm" />
+                        </LinearLayout>
+                        <FrameLayout android:id="@id/main_home_foot_show" android:background="@color/common_transparent" android:layout_width="fill_parent" android:layout_height="@dimen/bottom_window_display_high">
+                            <FrameLayout android:id="@id/main_home_foot_show_content" android:background="@drawable/common_layout_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="8.0dip">
+                                    <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                        <TextView android:textSize="@dimen/common_font_size_home_common" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/main_home_foot_title" android:background="@drawable/text_view_border" android:padding="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ssssssssssssssssssssssss" android:maxEms="7" android:singleLine="true" />
+                                        <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_weight="1.0">
+                                            <TextView android:textSize="@dimen/common_font_size_home_common" android:textColor="@color/common_color_686868" android:gravity="center" android:id="@id/main_home_foot_drive_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="在线" />
+                                            <TextView android:textSize="@dimen/common_font_size_home_common" android:textColor="@color/common_color_686868" android:ellipsize="end" android:id="@id/main_home_foot_stitic_time" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="wrwqfewafdsafdsas" android:lines="1" android:maxEms="8" />
+                                        </LinearLayout>
+                                        <LinearLayout android:gravity="right" android:id="@id/device_detail_battery_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                            <TextView android:textSize="@dimen/common_font_size_home_common" android:textColor="#ff000000" android:id="@id/device_detail_batteryView_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100%" />
+                                            <com.jimi.app.views.BatteryView android:layout_gravity="center_vertical" android:id="@id/device_detail_batteryView" android:layout_width="28.0dip" android:layout_height="12.0dip" android:layout_marginLeft="2.0dip" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                    <RelativeLayout android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                        <LinearLayout android:id="@id/iv_speed" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                            <TextView android:textSize="@dimen/common_font_size_home_common" android:id="@id/main_home_foot_acc_status" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:drawableLeft="@drawable/common_acc" android:drawablePadding="8.0dip" />
+                                            <TextView android:textSize="@dimen/common_font_size_home_common" android:id="@id/main_home_foot_device_speed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/common_speed" android:drawablePadding="8.0dip" />
+                                            <TextView android:textSize="@dimen/common_font_size_home_common" android:id="@id/main_home_foot_locate_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" />
+                                            <TextView android:textSize="@dimen/common_font_size_home_common" android:id="@id/main_home_foot_locate_num" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_weight="1.0" />
+                                        </LinearLayout>
+                                        <ImageView android:id="@id/iv_local" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:src="@drawable/common_local" android:layout_below="@id/iv_speed" />
+                                        <TextView android:textSize="@dimen/common_font_size_home_common" android:id="@id/main_home_foot_locate_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:text="2016-11-02 11-22" android:layout_toRightOf="@id/iv_local" android:layout_below="@id/iv_speed" />
+                                        <ImageView android:id="@id/iv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:src="@drawable/common_time" android:layout_below="@id/iv_local" />
+                                        <TextView android:textSize="@dimen/common_font_size_home_common" android:id="@id/main_home_foot_communicate_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:text="2016-11-02 11-22" android:layout_toRightOf="@id/iv_time" android:layout_below="@id/iv_local" />
+                                        <RelativeLayout android:id="@id/rl_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_toRightOf="@id/iv_time" android:layout_below="@id/iv_time">
+                                            <TextView android:textSize="@dimen/common_font_size_home_common" android:textColor="#ff3edf28" android:autoLink="all" android:id="@id/main_home_foot_see_addr" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                                            <TextView android:textSize="@dimen/common_font_size_home_common" android:id="@id/main_home_foot_addr" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="科学" />
+                                        </RelativeLayout>
+                                        <TextView android:textColor="@color/common_color_5ac8cf" android:id="@id/main_home_foot_track" android:background="@drawable/map_track_text_selector" android:paddingRight="@dimen/common_padding_10" android:layout_marginLeft="16.0dip" android:drawableLeft="@drawable/common_track" android:layout_below="@id/rl_address" android:layout_alignParentLeft="true" style="@style/home_map_trace_text_style" />
+                                        <TextView android:textColor="@color/common_color_fd8475" android:id="@id/main_home_foot_orbit" android:background="@drawable/map_trace_text_selector" android:paddingRight="@dimen/common_padding_10" android:layout_marginRight="16.0dip" android:drawableLeft="@drawable/common_trace" android:layout_below="@id/rl_address" android:layout_alignParentRight="true" style="@style/home_map_trace_text_style" />
+                                    </RelativeLayout>
+                                </LinearLayout>
+                                <FrameLayout android:layout_gravity="center|left" android:id="@id/main_home_foot_before_car" android:layout_width="50.0dip" android:layout_height="100.0dip">
+                                    <ImageView android:layout_gravity="center|left" android:id="@id/iv_main_home_foot_before_car" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/common_last" />
+                                </FrameLayout>
+                                <FrameLayout android:layout_gravity="center|right" android:id="@id/main_home_foot_before_next" android:layout_width="50.0dip" android:layout_height="100.0dip">
+                                    <ImageView android:layout_gravity="center|right" android:id="@id/iv_main_home_foot_before_next" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/common_next" />
+                                </FrameLayout>
+                            </FrameLayout>
+                            <com.jimi.app.views.LoadingView android:id="@id/device_home_foot_loadingview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                        </FrameLayout>
+                    </FrameLayout>
+                </FrameLayout>
+            </FrameLayout>
+        </com.jimi.app.views.SlideBottomPanel>
+    </RelativeLayout>
+</LinearLayout>

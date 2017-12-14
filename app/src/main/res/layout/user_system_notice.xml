@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:background="@color/transparent_88" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:background="@color/common_transparent" android:layout_width="fill_parent" android:layout_height="300.0dip" android:layout_marginLeft="35.0dip" android:layout_marginRight="25.0dip">
+        <ImageView android:background="@drawable/system_notice_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" />
+        <TextView android:textSize="22.0sp" android:textStyle="bold" android:textColor="@color/common_white" android:gravity="center_horizontal" android:id="@id/system_title" android:paddingTop="60.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="系统公告" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/common_color_252525" android:gravity="center_horizontal" android:id="@id/system_content" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="70.0dip" android:layout_marginRight="10.0dip" android:text="系统公告000卡萨丁几哈手机打开了大接口家0！" android:layout_below="@id/system_title" />
+        <ImageView android:id="@id/system_close" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="17.0dip" android:src="@drawable/system_notice_close" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</RelativeLayout>

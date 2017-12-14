@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout style="@style/common_layout_width_height_mm"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/map_and_panorama" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/nav_bar">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0">
+                <com.baidu.mapapi.map.MapView android:id="@id/map" android:clickable="true" style="@style/common_layout_width_height_mm" />
+                <com.jimi.app.views.MapControlView android:id="@id/control_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" app:panoramaVisiable="false" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:background="@drawable/message_alarm_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/common_font_size_12" android:textColor="@color/common_white" android:gravity="center_horizontal" android:id="@id/track_hint_device_name" android:background="@color/manifest_transparent_background" android:padding="@dimen/common_padding_10" android:text="" style="@style/common_layout_width_height_mm" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/map_and_panorama" style="@style/common_layout_width_height_mm"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.baidu.mapapi.map.MapView android:id="@id/map" android:clickable="true" style="@style/common_layout_width_height_mm" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/common_color_3e99ff" android:gravity="center" android:id="@id/main_home_refresh_text" android:background="@drawable/home_refsh" android:paddingLeft="@dimen/common_padding_10" android:paddingRight="@dimen/common_padding_10" android:visibility="gone" android:layout_marginTop="@dimen/common_margin_15" android:text="" android:maxEms="15" android:singleLine="true" android:layout_centerHorizontal="true" style="@style/common_layout_width_height_ww" />
+    <ImageView android:id="@id/iv_sousuo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="@dimen/common_margin_10" android:src="@drawable/souye_sousuo" />
+    <ImageView android:id="@id/iv_refresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="@dimen/common_margin_10" android:src="@drawable/home_refresh_but" android:layout_below="@id/iv_sousuo" />
+    <ImageButton android:id="@id/account_swich" android:background="@drawable/account_swich" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_margin_10" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" />
+    <com.jimi.app.views.MapControlView android:id="@id/control_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:layout_below="@id/account_swich" android:layout_alignParentRight="true" app:panoramaVisiable="false" />
+</RelativeLayout>

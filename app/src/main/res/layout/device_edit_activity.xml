@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/common_page_linear_vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/device_edit_layout" android:background="@drawable/touch_option_selector" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" style="@style/common_layout_width_height_fw">
+        <TextView android:textColor="@color/common_font_item_left" android:id="@id/tv_device_name" android:layout_margin="@dimen/common_padding_5" android:layout_alignParentLeft="true" style="@style/common_operation_item_left" />
+        <com.jimi.app.views.ContainsEmojiEditText android:textColor="@color/common_color_c8c8c8" android:id="@id/device_edit_layout_plate" android:background="@null" android:paddingRight="@dimen/common_margin_20" android:singleLine="true" android:maxLength="50" android:textCursorDrawable="@drawable/login_cursor" style="@style/common_operation_item_right_edit" />
+    </LinearLayout>
+    <View style="@style/device_edit_line_horizontal" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/device_edit_car_layout" android:background="@drawable/touch_option_selector" android:clickable="true" style="@style/common_layout_width_height_fw">
+        <TextView android:textColor="@color/common_font_item_left" android:id="@id/tv_car_tim" android:layout_alignParentLeft="true" style="@style/common_operation_item_left" />
+        <com.jimi.app.views.ContainsEmojiEditText android:textColor="@color/common_color_c8c8c8" android:id="@id/device_edit_layout_car_num" android:background="@null" android:paddingRight="@dimen/common_margin_20" android:singleLine="true" android:maxLength="50" android:layout_centerVertical="true" android:textCursorDrawable="@drawable/login_cursor" style="@style/common_operation_item_right_edit" />
+    </LinearLayout>
+    <View style="@style/device_edit_line_horizontal" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/device_edit_sim_layout" android:background="@drawable/touch_option_selector" android:clickable="true" style="@style/common_layout_width_height_fw">
+        <TextView android:textColor="@color/common_font_item_left" android:id="@id/tv_sim_tim" android:layout_alignParentLeft="true" style="@style/common_operation_item_left" />
+        <com.jimi.app.views.ContainsEmojiEditText android:textColor="@color/common_color_c8c8c8" android:id="@id/device_edit_layout_sim_num" android:background="@null" android:paddingRight="@dimen/common_margin_20" android:singleLine="true" android:maxLength="25" android:layout_centerVertical="true" android:inputType="number" android:textCursorDrawable="@drawable/login_cursor" style="@style/common_operation_item_right_edit" />
+    </LinearLayout>
+    <View style="@style/device_edit_line_horizontal" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/device_edit_driver_layout" android:background="@drawable/touch_option_selector" android:clickable="true" style="@style/common_layout_width_height_fw">
+        <TextView android:textColor="@color/common_font_item_left" android:id="@id/tv_driver_name" android:layout_alignParentLeft="true" style="@style/common_operation_item_left" />
+        <com.jimi.app.views.ContainsEmojiEditText android:textColor="@color/common_color_c8c8c8" android:id="@id/device_edit_layout_driver" android:background="@null" android:paddingRight="@dimen/common_margin_20" android:singleLine="true" android:maxLength="20" android:textCursorDrawable="@drawable/login_cursor" style="@style/common_operation_item_right_edit" />
+    </LinearLayout>
+    <View style="@style/device_edit_line_horizontal" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/device_edit_communication_layout" android:background="@drawable/touch_option_selector" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" style="@style/common_layout_width_height_fw">
+        <TextView android:textColor="@color/common_font_item_left" android:id="@id/tv_phone" android:layout_alignParentLeft="true" style="@style/common_operation_item_left" />
+        <com.jimi.app.views.ContainsEmojiEditText android:textColor="@color/common_color_c8c8c8" android:id="@id/device_edit_layout_phone" android:background="@null" android:paddingRight="@dimen/common_margin_20" android:singleLine="true" android:maxLength="20" android:textCursorDrawable="@drawable/login_cursor" style="@style/common_operation_item_right_edit" />
+    </LinearLayout>
+    <View style="@style/device_edit_line_horizontal" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/device_edit_icon_layout" android:background="@drawable/touch_option_selector" android:paddingRight="19.0dip" style="@style/common_layout_width_height_fw">
+        <TextView android:textSize="16.0sp" android:textColor="@color/common_font_item_left" android:layout_gravity="left" android:id="@id/device_edit_icon_tv" android:padding="10.0dip" android:layout_marginLeft="@dimen/common_margin_5" android:drawablePadding="@dimen/common_margin_10" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/common_layout_width_height_ww" />
+        <GridView android:gravity="left" android:id="@id/device_edit_icon" android:layout_margin="5.0dip" android:horizontalSpacing="6.0dip" android:verticalSpacing="6.0dip" android:stretchMode="columnWidth" android:columnWidth="60.0dip" android:numColumns="6" style="@style/common_layout_width_height_ww" />
+    </LinearLayout>
+    <View style="@style/device_edit_line_horizontal" />
+    <Button android:textSize="18.0sp" android:layout_gravity="bottom" android:id="@id/device_edit_layout_save" android:layout_marginBottom="@dimen/common_margin_20" android:textAllCaps="false" style="@style/common_button" />
+</LinearLayout>

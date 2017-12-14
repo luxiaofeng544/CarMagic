@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/activity_device_record" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="8.0">
+            <RelativeLayout android:id="@id/rl_local_video" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.jimi.app.views.pulltorefresh.PullToRefreshListView android:id="@id/common_listview" android:background="@color/common_color_f5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" />
+                <com.jimi.app.views.LoadingView android:id="@id/common_loadingview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <View style="@style/line_horizontal" />
+        <RelativeLayout android:gravity="center" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <Button android:enabled="true" android:textSize="16.0sp" android:textColor="@color/common_white" android:id="@id/bt_send" android:background="@drawable/device_send_record_command" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="10.0dip" android:onClick="selectTime" android:textAllCaps="false" />
+            <LinearLayout android:id="@id/device_record_control_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="16.0sp" android:gravity="center" android:id="@id/tv_cancel" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="cancle" />
+                <View style="@style/common_line_vertical" />
+                <TextView android:textSize="16.0sp" android:textColor="#ffff0000" android:gravity="center" android:id="@id/tv_delete" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="delete" />
+                <View style="@style/common_line_vertical" />
+                <TextView android:textSize="16.0sp" android:textColor="#ffff0000" android:gravity="center" android:id="@id/tv_clear" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="clear" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

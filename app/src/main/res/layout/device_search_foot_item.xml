@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/common_font_size_18" android:textColor="@color/common_color_5a5a5a" android:id="@id/device_fence_search_key" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="高新中一道" />
+    <TextView android:textColor="@color/common_color_9a9a9a" android:id="@id/device_fence_search_addr" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="高新中一道高新中一道高新中一道" />
+</LinearLayout>

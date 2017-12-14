@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="70.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioButton android:textColor="@color/calendar_date_text_color_selector" android:gravity="center" android:id="@id/select_one" android:background="@drawable/calendar_title_blue_selector" android:layout_width="30.0dip" android:layout_height="30.0dip" android:button="@null" android:text="1" />
+    <RadioButton android:textColor="@color/calendar_date_text_color_selector" android:gravity="center" android:id="@id/two" android:background="@drawable/calendar_title_blue_selector" android:layout_width="30.0dip" android:layout_height="30.0dip" android:button="@null" android:text="2" />
+    <RadioButton android:textColor="@color/calendar_date_text_color_selector" android:gravity="center" android:id="@id/select_three" android:background="@drawable/calendar_title_blue_selector" android:layout_width="30.0dip" android:layout_height="30.0dip" android:button="@null" android:text="3" />
+    <RadioButton android:textColor="@color/calendar_date_text_color_selector" android:gravity="center" android:id="@id/select_four" android:background="@drawable/calendar_title_blue_selector" android:layout_width="30.0dip" android:layout_height="30.0dip" android:button="@null" android:text="4" />
+    <RadioButton android:textColor="@color/calendar_date_text_color_selector" android:gravity="center" android:id="@id/select_five" android:background="@drawable/calendar_title_blue_selector" android:layout_width="30.0dip" android:layout_height="30.0dip" android:button="@null" android:text="5" />
+</RadioGroup>

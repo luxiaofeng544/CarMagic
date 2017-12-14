@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/common_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jimi.app.views.NavigationView android:id="@id/nav_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:scrollbars="vertical" android:fadingEdge="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="60.0dip">
+        <LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/device_detail_bg_shape" android:paddingLeft="8.0dip" android:paddingTop="6.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:id="@id/device_detail_device_layout" android:background="@drawable/touch_option_selector" android:clickable="true" android:layout_marginRight="8.0dip" style="@style/device_detail_item_layout_width_height_fw">
+                    <TextView android:id="@id/tv_Name" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/device_detail_device" style="@style/common_operation_item_text_style" />
+                    <TextView android:gravity="right" android:id="@id/device_detail_device_tv" android:layout_width="fill_parent" style="@style/common_operation_item_right" />
+                </LinearLayout>
+                <View style="@style/common_line_horizontal3" />
+                <LinearLayout android:orientation="horizontal" android:layout_marginRight="8.0dip" style="@style/device_detail_item_layout_width_height_fw">
+                    <TextView android:id="@id/tv_device_type" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/device_type_icon" style="@style/common_operation_item_text_style" />
+                    <TextView android:gravity="right" android:id="@id/device_type_info" android:layout_width="fill_parent" style="@style/common_operation_item_right" />
+                </LinearLayout>
+                <View style="@style/common_line_horizontal3" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/device_detail_imei_layout" android:background="@drawable/touch_option_selector" android:clickable="true" android:layout_marginRight="8.0dip" style="@style/device_detail_item_layout_width_height_fw">
+                    <TextView android:id="@id/tv_imei" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/device_detail_imei" style="@style/common_operation_item_text_style" />
+                    <TextView android:gravity="right" android:id="@id/device_detail_imei_tv" android:layout_width="fill_parent" android:text="" style="@style/common_operation_item_right" />
+                </LinearLayout>
+                <View android:id="@id/device_detail_sim_line" style="@style/common_line_horizontal3" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/device_detail_sim_layout" android:background="@drawable/touch_option_selector" android:clickable="true" android:layout_marginRight="8.0dip" style="@style/device_detail_item_layout_width_height_fw">
+                    <TextView android:id="@id/tv_sim" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/device_detail_sim" style="@style/common_operation_item_text_style" />
+                    <TextView android:gravity="right" android:id="@id/device_detail_sim_tv" android:layout_width="fill_parent" android:text="" style="@style/common_operation_item_right" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/device_detail_bg_shape" android:paddingLeft="8.0dip" android:paddingTop="5.5dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <LinearLayout android:id="@id/device_detail_battery_layout" android:background="@drawable/touch_option_selector" android:visibility="gone" android:layout_marginRight="8.0dip" style="@style/device_detail_item_layout_width_height_fw">
+                    <TextView android:id="@id/tv_battery" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/device_detail_power" style="@style/common_operation_item_text_style" />
+                    <TextView android:gravity="right" android:id="@id/device_detail_batteryView_can_use" android:layout_width="fill_parent" android:text="" style="@style/common_operation_item_right" />
+                </LinearLayout>
+                <View android:id="@id/v_line" style="@style/common_line_horizontal3" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/device_detail_state_layout" android:background="@drawable/touch_option_selector" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:clickable="true" android:layout_marginRight="8.0dip" style="@style/device_detail_item_layout_width_height_fw">
+                    <TextView android:id="@id/tv_status" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/device_detail_state" style="@style/common_operation_item_text_style" />
+                    <TextView android:gravity="right" android:id="@id/device_detail_state_tv" android:layout_width="fill_parent" android:text="" style="@style/common_operation_item_right" />
+                </LinearLayout>
+                <View style="@style/common_line_horizontal3" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/device_detail_acc_layout" android:background="@drawable/touch_option_selector" android:clickable="true" android:layout_marginRight="8.0dip" style="@style/device_detail_item_layout_width_height_fw">
+                    <TextView android:id="@id/tv_acc" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/common_acc" style="@style/common_operation_item_text_style" />
+                    <TextView android:gravity="right" android:id="@id/device_detail_acc_tv" android:layout_width="fill_parent" android:text=" " style="@style/common_operation_item_right" />
+                </LinearLayout>
+                <View style="@style/common_line_horizontal3" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/device_detail_location_layout" android:background="@drawable/touch_option_selector" android:clickable="true" android:layout_marginRight="8.0dip" style="@style/device_detail_item_layout_width_height_fw">
+                    <TextView android:id="@id/tv_position_time" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/device_detail_location" style="@style/common_operation_item_text_style" />
+                    <TextView android:gravity="right" android:id="@id/device_detail_location_tv" android:layout_width="fill_parent" android:text=" " style="@style/common_operation_item_right" />
+                </LinearLayout>
+                <View style="@style/common_line_horizontal3" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/device_detail_communication_layout" android:background="@drawable/touch_option_selector" android:clickable="true" android:layout_marginRight="8.0dip" style="@style/device_detail_item_layout_width_height_fw">
+                    <TextView android:id="@id/tv_update_time" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/device_detail_telephone" style="@style/common_operation_item_text_style" />
+                    <TextView android:gravity="right" android:id="@id/device_detail_communication_tv" android:layout_width="fill_parent" android:text=" " style="@style/common_operation_item_right" />
+                </LinearLayout>
+                <View style="@style/common_line_horizontal3" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/device_detail_v_layout" android:background="@drawable/touch_option_selector" android:clickable="true" android:layout_marginRight="8.0dip" style="@style/device_detail_item_layout_width_height_fw">
+                    <TextView android:id="@id/tv_speed" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/device_detail_v" style="@style/common_operation_item_text_style" />
+                    <TextView android:gravity="right" android:id="@id/device_detail_v_tv" android:layout_width="fill_parent" android:text="" style="@style/common_operation_item_right" />
+                </LinearLayout>
+                <View style="@style/common_line_horizontal3" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/device_detail_lat_layout" android:background="@drawable/touch_option_selector" android:clickable="true" android:layout_marginRight="8.0dip" style="@style/device_detail_item_layout_width_height_fw">
+                    <TextView android:id="@id/tv_lat" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/device_detail_lng" style="@style/common_operation_item_text_style" />
+                    <TextView android:gravity="right" android:id="@id/device_detail_lat_tv" android:layout_width="fill_parent" android:layout_marginLeft="12.0dip" style="@style/common_operation_item_right" />
+                </LinearLayout>
+                <View style="@style/common_line_horizontal3" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/device_detail_lng_layout" android:background="@drawable/touch_option_selector" android:clickable="true" android:layout_marginRight="8.0dip" style="@style/device_detail_item_layout_width_height_fw">
+                    <TextView android:id="@id/tv_lng" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/device_detail_lat" style="@style/common_operation_item_text_style" />
+                    <TextView android:gravity="right" android:id="@id/device_detail_lng_tv" android:layout_width="fill_parent" android:layout_marginLeft="12.0dip" style="@style/common_operation_item_right" />
+                </LinearLayout>
+                <View style="@style/common_line_horizontal3" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/device_detail_setting_layout" android:background="@drawable/touch_option_selector" android:clickable="true" android:layout_marginRight="8.0dip" style="@style/device_detail_item_layout_width_height_fw">
+                    <TextView android:id="@id/tv_address" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/device_detail_address" style="@style/common_operation_item_text_style" />
+                    <TextView android:gravity="left" android:id="@id/device_detail_setting_tv" android:layout_width="fill_parent" android:layout_marginLeft="12.0dip" style="@style/common_operation_item_right" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/device_detail_bg_shape" android:paddingLeft="8.0dip" android:paddingTop="5.5dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <LinearLayout android:orientation="horizontal" android:id="@id/device_detail_end_layout" android:background="@drawable/touch_option_selector" android:clickable="true" android:layout_marginRight="8.0dip" style="@style/device_detail_item_layout_width_height_fw">
+                    <TextView android:id="@id/tv_expiration" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/device_detail_end" style="@style/common_operation_item_text_style" />
+                    <TextView android:gravity="right" android:id="@id/device_detail_end_tv" android:layout_width="fill_parent" android:text=" " style="@style/common_operation_item_right" />
+                </LinearLayout>
+                <View style="@style/common_line_horizontal3" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/device_detail_num_layout" android:background="@drawable/touch_option_selector" android:clickable="true" android:layout_marginRight="8.0dip" style="@style/device_detail_item_layout_width_height_fw">
+                    <TextView android:id="@id/tv_car_tim" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/device_detail_num" style="@style/common_operation_item_text_style" />
+                    <TextView android:gravity="right" android:id="@id/device_detail_num_tv" android:layout_width="fill_parent" android:text=" " style="@style/common_operation_item_right" />
+                </LinearLayout>
+                <View style="@style/common_line_horizontal3" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/device_detail_drivers_layout" android:background="@drawable/touch_option_selector" android:clickable="true" android:layout_marginRight="8.0dip" style="@style/device_detail_item_layout_width_height_fw">
+                    <TextView android:id="@id/tv_diver_name" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/device_detail_drivers" style="@style/common_operation_item_text_style" />
+                    <TextView android:gravity="right" android:id="@id/device_detail_drivers_tv" android:layout_width="fill_parent" android:text="" style="@style/common_operation_item_right" />
+                </LinearLayout>
+                <View style="@style/common_line_horizontal3" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/device_detail_communications_layout" android:background="@drawable/touch_option_selector" android:clickable="true" android:layout_marginRight="8.0dip" style="@style/device_detail_item_layout_width_height_fw">
+                    <TextView android:id="@id/tv_phone_num" android:paddingLeft="@dimen/common_padding_5" android:drawableLeft="@drawable/device_detail_communications" style="@style/common_operation_item_text_style" />
+                    <TextView android:gravity="right" android:id="@id/device_detail_communications_tv" android:layout_width="fill_parent" android:text=" " style="@style/common_operation_item_right" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

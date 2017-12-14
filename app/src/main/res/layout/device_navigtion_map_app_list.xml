@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/common_transparent" style="@style/common_layout_width_height_mm"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/common_input_bg_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:textSize="16.0sp" android:textColor="@color/common_item_text_gray" android:layout_gravity="center" android:id="@id/device_navigation_list_title" android:paddingTop="@dimen/common_padding_10" android:paddingBottom="@dimen/common_padding_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_margin_30" android:layout_marginRight="@dimen/common_margin_30" android:text="***" />
+        <View style="@style/line_horizontal" />
+        <ListView android:id="@id/device_navigation_list_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@color/common_line" android:dividerHeight="1.0dip" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom|center" android:orientation="vertical" android:background="#66808080" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0sp" android:textColor="@color/common_black" android:layout_gravity="center|left" android:id="@id/views_left_cancel_text" android:paddingLeft="11.0dip" android:paddingTop="14.0dip" android:paddingBottom="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/views_button_blue_normal" android:layout_gravity="center" android:id="@id/views_title_text" android:paddingTop="14.0dip" android:paddingBottom="14.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/common_black" android:layout_gravity="center|right" android:id="@id/id_right_ok_text" android:paddingTop="14.0dip" android:paddingRight="10.0dip" android:paddingBottom="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <TextView android:layout_gravity="bottom" android:background="@color/common_gray" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:background="@color/common_white" android:paddingTop="16.0dip" android:paddingBottom="40.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.jimi.app.views.wheelview.views.WheelView android:id="@id/views_year" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <com.jimi.app.views.wheelview.views.WheelView android:id="@id/views_month" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <com.jimi.app.views.wheelview.views.WheelView android:id="@id/views_date" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

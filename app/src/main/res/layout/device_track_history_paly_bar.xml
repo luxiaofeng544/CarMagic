@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:background="#eeffffff" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="35.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:id="@id/play" android:layout_marginRight="8.0dip" android:button="@null" android:text="@null" android:drawableLeft="@drawable/views_playback_checkbox_selector" style="@style/common_layout_width_height_ww" />
+    <SeekBar android:id="@id/playback_sb" android:paddingLeft="15.0dip" android:paddingRight="12.0dip" android:maxHeight="2.0dip" android:progress="0" android:progressDrawable="@drawable/device_seekbar_selector" android:minHeight="2.0dip" android:thumb="@drawable/common_seekbar_progress" style="@style/common_layout_width_height_0w" />
+    <TextView android:textColor="@color/common_bg_1" android:gravity="center" android:id="@id/progress_tv" android:padding="@dimen/common_padding_1" android:layout_marginLeft="8.0dip" android:drawableLeft="@drawable/common_seekbar_v" android:drawablePadding="@dimen/common_padding_5" style="@style/common_layout_width_height_ww" />
+</LinearLayout>

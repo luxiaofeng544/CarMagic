@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/device_trace_map_layout" />
+    <com.jimi.app.views.SlideBottomPanel android:id="@id/device_track_share_slideView" android:layout_width="fill_parent" android:layout_height="fill_parent" app:sbp_background_layout="@layout/a_null_layout" app:sbp_title_height_no_display="169.0dip" app:sbp_panel_height="359.0dip">
+        <FrameLayout android:id="@id/device_track_share_bottom_framelayout" android:background="@color/common_transparent" android:layout_width="fill_parent" android:layout_height="359.0dip">
+            <LinearLayout android:orientation="vertical" android:id="@id/device_track_share_visible" android:background="@color/common_transparent" android:layout_width="fill_parent" android:layout_height="190.0dip" android:layout_marginTop="169.0dip">
+                <include layout="@layout/device_track_obd_item" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/device_track_share_foot_show" android:background="@color/common_transparent" android:layout_width="fill_parent" android:layout_height="170.0dip">
+                <include layout="@layout/device_check_slidebottompanel_bottom_obd_layout" />
+            </LinearLayout>
+        </FrameLayout>
+    </com.jimi.app.views.SlideBottomPanel>
+</FrameLayout>

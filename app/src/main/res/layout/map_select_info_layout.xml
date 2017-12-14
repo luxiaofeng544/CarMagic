@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="180.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/map_baidu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip">
+        <ImageView android:id="@id/map_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/baidu_map_icon" android:layout_centerVertical="true" />
+        <TextView android:textColor="#ffffffff" android:id="@id/title_map" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="百度地图" android:layout_toRightOf="@id/map_icon" android:layout_centerVertical="true" />
+        <View android:id="@id/map_devider" android:background="@drawable/line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_toRightOf="@id/map_icon" android:layout_below="@id/title_map" />
+    </RelativeLayout>
+</LinearLayout>

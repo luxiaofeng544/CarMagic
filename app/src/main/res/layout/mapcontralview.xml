@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/change_parent" android:background="@drawable/main_home_btn_backgroud" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+        <CheckBox android:gravity="center" android:id="@id/id_change" android:background="@drawable/home_map_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/traffic_parent" android:background="@drawable/main_home_btn_backgroud" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/change_parent" android:layout_alignParentRight="true">
+        <CheckBox android:textColor="@color/common_white" android:gravity="center" android:id="@id/id_traffic" android:background="@drawable/home_map_road_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/panorama_parent" android:background="@drawable/main_home_btn_backgroud" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/traffic_parent" android:layout_alignParentRight="true">
+        <CheckBox android:textColor="@color/common_white" android:gravity="center" android:id="@id/id_panorama" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/home_map_panorama_selector" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/id_zoom" android:background="@drawable/main_home_map_scale_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <ImageButton android:id="@id/id_zoom_in" android:background="@null" android:padding="10.0dip" android:src="@drawable/main_home_map_scale_in_selector" style="@style/common_layout_width_height_m0" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/main_home_map_scale_line" />
+        <ImageButton android:id="@id/id_zoom_out" android:background="@null" android:padding="10.0dip" android:src="@drawable/main_home_map_scale_out_selector" style="@style/common_layout_width_height_m0" />
+    </LinearLayout>
+    <me.drakeet.uiview.UIImageView android:id="@id/id_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/main_home_map_location" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>
