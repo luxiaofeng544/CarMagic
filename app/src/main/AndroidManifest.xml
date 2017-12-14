@@ -90,7 +90,7 @@
         </service>
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="Pwx8BNf1XgCSWXXR0FDZvzlK" />
+            android:value="TDq8NEH6ySBOBOcF2qCvAA6V3fjHhS4L" />
 
         <!-- JPUSH -->
         <!-- Required SDK核心功能-->
