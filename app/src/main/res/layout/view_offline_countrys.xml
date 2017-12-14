@@ -5,7 +5,7 @@
     android:layout_height="match_parent" >
 
     <!-- 搜索部分 -->
-    <com.csq.baiduoffline.MySearchView
+    <com.lemon.carmonitor.baiduoffline.MySearchView
         android:id="@+id/svAll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

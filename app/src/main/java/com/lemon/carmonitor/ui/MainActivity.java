@@ -6,6 +6,7 @@ import com.lemon.LemonActivity;
 import com.lemon.annotation.Layout;
 import com.lemon.annotation.OnClick;
 import com.lemon.carmonitor.R;
+import com.lemon.carmonitor.baiduoffline.BaiduOfflineMapActivity;
 
 
 @Layout(id=R.layout.activity_main)
@@ -15,7 +16,7 @@ public class MainActivity extends LemonActivity {
     @OnClick(id=R.id.btnMap)
     public void mapClick(){
         toastMessage("mapClick");
-        startNextActivity(BaiduMapActivity.class,false);
+        startNextActivity(BaiduOfflineMapActivity.class,false);
     }
 
     @OnClick(id=R.id.btnPanoMap)
