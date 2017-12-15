@@ -23,14 +23,18 @@ import com.baidu.mapapi.map.offline.MKOLSearchRecord;
 import com.baidu.mapapi.map.offline.MKOLUpdateElement;
 import com.baidu.mapapi.map.offline.MKOfflineMap;
 import com.baidu.mapapi.map.offline.MKOfflineMapListener;
+import com.lemon.LemonActivity;
+import com.lemon.LemonContext;
+import com.lemon.LemonMessage;
+import com.lemon.annotation.Layout;
 import com.lemon.carmonitor.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
-
-public class BaiduOfflineMapActivity extends Activity 
+@Layout(id=R.layout.activity_offline_map)
+public class BaiduOfflineMapActivity extends LemonActivity
 	implements MKOfflineMapListener, OnOfflineItemStatusChangeListener {
 
 	// ------------------------ Constants ------------------------
@@ -65,21 +69,16 @@ public class BaiduOfflineMapActivity extends Activity
 	// ----------------------- Constructors ----------------------
 
 	// -------- Methods for/from SuperClass/Interfaces -----------
-	
+
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_offline_map);
-		
+	protected void initView() {
 		// 初始化离线地图管理
 		mOffline = new MKOfflineMap();
 		mOffline.init(this);
-		
 		initViews();
-		
 		viewpager.setCurrentItem(1);
 	}
-	
+
 	private boolean isResumed = false;
 	@Override
 	protected void onResume() {
@@ -467,6 +466,7 @@ public class BaiduOfflineMapActivity extends Activity
 				if (!isWake && item.getStatus() == MKOLUpdateElement.WAITING) {
 					int id = item.getCityId();
 					if (id > 0) {
+						LemonContext.getBean(LemonMessage.class).sendMessage("下载的cityid:"+item.getCityId()+",name:"+item.getCityName());
 						mOffline.start(id);
 					}
 					isWake = true;

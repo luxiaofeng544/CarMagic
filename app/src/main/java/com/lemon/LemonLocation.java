@@ -88,7 +88,7 @@ public class LemonLocation {
             //取经纬度
             currentLocation = location;
             if(!isFindLocation){
-                isFindLocation = true;
+//                isFindLocation = true;
                 findLocation(new LatLng(currentLocation.getLatitude(),currentLocation.getLongitude()));
             }
             EventBus.getDefault().post(new CurrentLocationEvent(location));
@@ -116,6 +116,7 @@ public class LemonLocation {
                 }
                 if(!ParamUtils.isEmpty(result.getAddress())){
                     locationInfo = result.getAddress();
+                    LemonContext.getBean(LemonMessage.class).sendMessage("百度地图获取到的位置信息  ->  "+result.getAddress()+"    :   "+result.getCityCode() );
                 }
             }
         };
