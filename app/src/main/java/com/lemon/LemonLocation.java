@@ -18,6 +18,7 @@ import com.lemon.annotation.Autowired;
 import com.lemon.annotation.Component;
 import com.lemon.annotation.InitMethod;
 import com.lemon.event.CurrentLocationEvent;
+import com.lemon.event.OfflineMapEvent;
 import com.lemon.event.StartLocationEvent;
 import com.lemon.event.StopLocationEvent;
 import com.lemon.event.ToastEvent;
@@ -88,7 +89,7 @@ public class LemonLocation {
             //取经纬度
             currentLocation = location;
             if(!isFindLocation){
-//                isFindLocation = true;
+                isFindLocation = true;
                 findLocation(new LatLng(currentLocation.getLatitude(),currentLocation.getLongitude()));
             }
             EventBus.getDefault().post(new CurrentLocationEvent(location));
@@ -103,26 +104,22 @@ public class LemonLocation {
         OnGetGeoCoderResultListener listener = new OnGetGeoCoderResultListener() {
             @Override
             public void onGetGeoCodeResult(GeoCodeResult geoCodeResult) {
-
             }
 
             // 反地理编码查询结果回调函数
             @Override
             public void onGetReverseGeoCodeResult(ReverseGeoCodeResult result) {
-                if (result == null
-                        || result.error != SearchResult.ERRORNO.NO_ERROR) {
-                    // 没有检测到结果
-                    EventBus.getDefault().post(new ToastEvent("抱歉，未能找到结果"));
+                if (result == null || result.error != SearchResult.ERRORNO.NO_ERROR) {// 没有检测到结果
+                    EventBus.getDefault().post(new ToastEvent("抱歉，未能找到位置信息"));
                 }
                 if(!ParamUtils.isEmpty(result.getAddress())){
                     locationInfo = result.getAddress();
-                    LemonContext.getBean(LemonMessage.class).sendMessage("百度地图获取到的位置信息  ->  "+result.getAddress()+"    :   "+result.getCityCode() );
+                    EventBus.getDefault().post(new OfflineMapEvent(result));
                 }
             }
         };
         // 设置地理编码检索监听者
         geoCoder.setOnGetGeoCodeResultListener(listener);
-        //
         geoCoder.reverseGeoCode(new ReverseGeoCodeOption().location(latLng));
     }
 

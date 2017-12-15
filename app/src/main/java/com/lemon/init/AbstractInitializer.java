@@ -1,5 +1,7 @@
 package com.lemon.init;
 
+import android.content.Context;
+
 /**
  * 项目名称:  [Lemon]
  * 包:        [com.lemon.init]
@@ -12,5 +14,6 @@ package com.lemon.init;
  * 版本:      [v1.0]
  */
 public abstract class AbstractInitializer {
+    public Context mContext;
     public abstract Object initialize(Object... objects) throws Exception;
 }

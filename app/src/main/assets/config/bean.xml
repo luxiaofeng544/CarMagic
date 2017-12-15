@@ -5,11 +5,15 @@
         <property name="initializers">
             <list>
                 <entity type="ref" value="preMethodInitializer"></entity>
+                <entity type="ref" value="offlineMapInitializer"></entity>
             </list>
         </property>
     </bean>
 
     <bean name="preMethodInitializer" class="com.lemon.init.PreMethodInitializer" />
+    <bean name="offlineMapInitializer" class="com.lemon.init.OfflineMapInitializer">
+        <property name="mContext" value-ref="mContext" />
+    </bean>
     <bean name="netEngine" class="com.lemon.net.NetEngine">
         <property name="mContext" value-ref="mContext" />
         <property name="paramConverterMap">
