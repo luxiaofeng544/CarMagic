@@ -35,8 +35,8 @@ public class OfflineMapInitializer  extends AbstractInitializer implements MKOff
             if(record.cityID == event.getItem().getCityCode()){
                 isDownload = !isDownload;
                 break;
-            }
-        }
+    }
+}
 
         if(!isDownload){
             mOffline.start(event.getItem().getCityCode());
