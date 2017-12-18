@@ -31,7 +31,7 @@ public class BaiduMapInitializer extends AbstractInitializer implements MKOfflin
         EventBus.getDefault().register(this);
         mOffline = new MKOfflineMap();
         mOffline.init(this);
-        handler.sendEmptyMessageDelayed(0,6000);
+        handler.sendEmptyMessageDelayed(0,60000);
         return null;
     }
 
@@ -50,7 +50,17 @@ public class BaiduMapInitializer extends AbstractInitializer implements MKOfflin
         boolean isDownload = false;
         for (MKOLUpdateElement record:cities){
             if(record.cityID == event.getItem().getCityCode()){
-                isDownload = !isDownload;
+                if(record.status == MKOLUpdateElement.FINISHED){
+                    isDownload = !isDownload;
+                    if(record.update){
+                        mOffline.update(record.cityID);
+                    }
+                }else if(record.status == MKOLUpdateElement.DOWNLOADING){
+                    mOffline.start(record.cityID);
+                }else{
+                    mOffline.remove(record.cityID);
+                    record.status = MKOLUpdateElement.UNDEFINED;
+                }
                 break;
             }
         }
@@ -65,6 +75,24 @@ public class BaiduMapInitializer extends AbstractInitializer implements MKOfflin
     @Override
     public void onGetOfflineMapState(int type, int state) {
         Log.d("BaiduMapInitializer", String.format("add offlinemap type:%d ,state:%d",type, state));
+        switch (type) {
+            case MKOfflineMap.TYPE_DOWNLOAD_UPDATE:
+                MKOLUpdateElement update = mOffline.getUpdateInfo(state);
+                Log.d("BaiduMapInitializer", String.format("下载比例 :%d , 下载状态:%d",update.ratio,update.status));
+                if(update.ratio == 100){
+                    Log.d("BaiduMapInitializer", String.format("下载比例 :%d , 下载状态:%d",update.ratio,update.status));
+                }
+                break;
+
+            case MKOfflineMap.TYPE_NEW_OFFLINE:
+                // 有新离线地图安装
+                Log.d("OfflineDemo", String.format("add offlinemap num:%d", state));
+                break;
+
+            case MKOfflineMap.TYPE_VER_UPDATE:
+                // 版本更新提示
+                break;
+        }
     }
 
     protected Handler handler = new Handler() {
