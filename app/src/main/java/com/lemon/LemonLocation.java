@@ -7,6 +7,7 @@ import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
+import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.search.core.SearchResult;
 import com.baidu.mapapi.search.geocode.GeoCodeResult;
@@ -49,10 +50,12 @@ public class LemonLocation {
     public BDLocation currentLocation;
     public String locationInfo = "";
     private boolean downloadOfflineMap = false;
+    private boolean findAddress = false;
 
     @InitMethod
     public void init(){
         EventBus.getDefault().register(this);
+        SDKInitializer.initialize(mContext);
         mLocClient = new LocationClient(mContext);
         mLocClient.registerLocationListener(myListener);
         LocationClientOption option = new LocationClientOption();
@@ -66,10 +69,11 @@ public class LemonLocation {
 
     @Subscribe
     public void onEventAsync(StartLocationEvent event){
+        downloadOfflineMap = event.isDownloadOfflineMap();
+        findAddress = event.isFindAddress();
         if(!mLocClient.isStarted()) {
             mLocClient.start();
         }
-        downloadOfflineMap = event.isDownloadOfflineMap();
     }
 
     @Subscribe
@@ -90,8 +94,7 @@ public class LemonLocation {
         public void onReceiveLocation(BDLocation location) {
             //取经纬度
             currentLocation = location;
-            if(!isFindLocation){
-                isFindLocation = true;
+            if(findAddress || downloadOfflineMap){
                 findLocation(new LatLng(currentLocation.getLatitude(),currentLocation.getLongitude()));
             }
             EventBus.getDefault().post(new CurrentLocationEvent(location));

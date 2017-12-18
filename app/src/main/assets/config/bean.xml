@@ -5,13 +5,15 @@
         <property name="initializers">
             <list>
                 <entity type="ref" value="preMethodInitializer"></entity>
-                <entity type="ref" value="offlineMapInitializer"></entity>
+                <entity type="ref" value="baiduMapInitializer"></entity>
             </list>
         </property>
     </bean>
 
-    <bean name="preMethodInitializer" class="com.lemon.init.PreMethodInitializer" />
-    <bean name="offlineMapInitializer" class="com.lemon.init.OfflineMapInitializer">
+    <bean name="preMethodInitializer" class="com.lemon.init.PreMethodInitializer" >
+        <property name="mContext" value-ref="mContext" />
+    </bean>
+    <bean name="baiduMapInitializer" class="com.lemon.init.BaiduMapInitializer">
         <property name="mContext" value-ref="mContext" />
     </bean>
     <bean name="netEngine" class="com.lemon.net.NetEngine">

@@ -1,8 +1,11 @@
 package com.lemon.init;
 
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 
 import com.baidu.mapapi.NetworkUtil;
+import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.offline.MKOLUpdateElement;
 import com.baidu.mapapi.map.offline.MKOfflineMap;
 import com.baidu.mapapi.map.offline.MKOfflineMapListener;
@@ -20,7 +23,7 @@ import java.util.List;
 /**
  *
  */
-public class OfflineMapInitializer  extends AbstractInitializer implements MKOfflineMapListener {
+public class BaiduMapInitializer extends AbstractInitializer implements MKOfflineMapListener {
 
     private MKOfflineMap mOffline;
     private int time = 0;
@@ -30,7 +33,7 @@ public class OfflineMapInitializer  extends AbstractInitializer implements MKOff
         EventBus.getDefault().register(this);
         mOffline = new MKOfflineMap();
         mOffline.init(this);
-        EventBus.getDefault().post(new StartLocationEvent(true));
+        handler.sendEmptyMessageDelayed(0,1000);
         return null;
     }
 
@@ -38,7 +41,7 @@ public class OfflineMapInitializer  extends AbstractInitializer implements MKOff
     public void onEventAsync(OfflineMapEvent event){
         if(ParamUtils.isNull(event.getItem())){
             if(time<= Config.getIntValue("max_location_times")){
-                EventBus.getDefault().post(new StartLocationEvent(true));
+                handler.sendEmptyMessageDelayed(0,10000);
             }
             time++;
             return;
@@ -63,6 +66,13 @@ public class OfflineMapInitializer  extends AbstractInitializer implements MKOff
 
     @Override
     public void onGetOfflineMapState(int type, int state) {
-        Log.d("OfflineMapInitializer", String.format("add offlinemap type:%d ,state:%d",type, state));
+        Log.d("BaiduMapInitializer", String.format("add offlinemap type:%d ,state:%d",type, state));
     }
+
+    protected Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            EventBus.getDefault().post(new StartLocationEvent(true));
+        }
+    };
 }

@@ -14,12 +14,21 @@ package com.lemon.event;
 public class StartLocationEvent {
 
     private boolean downloadOfflineMap = false;
+    private boolean findAddress = false;
 
     public StartLocationEvent() {
     }
 
     public StartLocationEvent(boolean downloadOfflineMap) {
         this.downloadOfflineMap = downloadOfflineMap;
+    }
+
+    public boolean isFindAddress() {
+        return findAddress;
+    }
+
+    public void setFindAddress(boolean findAddress) {
+        this.findAddress = findAddress;
     }
 
     public boolean isDownloadOfflineMap() {

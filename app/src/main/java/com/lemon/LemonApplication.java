@@ -22,6 +22,5 @@ public class LemonApplication extends Application {
         super.onCreate();
         //init base module
         ApplicationEngine.start(getApplicationContext());
-        SDKInitializer.initialize(getApplicationContext());
     }
 }
