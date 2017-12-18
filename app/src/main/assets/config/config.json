@@ -34,5 +34,6 @@
   "refresh_time":"15",
   "wake_sms":"false",
   "server_fence_alarm":"true",
-  "location_refresh":"120"
+  "location_refresh":"120",
+  "max_location_times":10
 }

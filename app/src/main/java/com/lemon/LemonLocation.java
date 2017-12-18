@@ -48,6 +48,7 @@ public class LemonLocation {
     private static final int TIMEOUT = 2*60*1000;
     public BDLocation currentLocation;
     public String locationInfo = "";
+    private boolean downloadOfflineMap = false;
 
     @InitMethod
     public void init(){
@@ -68,6 +69,7 @@ public class LemonLocation {
         if(!mLocClient.isStarted()) {
             mLocClient.start();
         }
+        downloadOfflineMap = event.isDownloadOfflineMap();
     }
 
     @Subscribe
@@ -114,7 +116,13 @@ public class LemonLocation {
                 }
                 if(!ParamUtils.isEmpty(result.getAddress())){
                     locationInfo = result.getAddress();
-                    EventBus.getDefault().post(new OfflineMapEvent(result));
+                    if(downloadOfflineMap){
+                        EventBus.getDefault().post(new OfflineMapEvent(result));
+                    }
+                }else{
+                    if(downloadOfflineMap){
+                        EventBus.getDefault().post(new OfflineMapEvent());
+                    }
                 }
             }
         };

@@ -12,4 +12,21 @@ package com.lemon.event;
  * 版本:      [v1.0]
  */
 public class StartLocationEvent {
+
+    private boolean downloadOfflineMap = false;
+
+    public StartLocationEvent() {
+    }
+
+    public StartLocationEvent(boolean downloadOfflineMap) {
+        this.downloadOfflineMap = downloadOfflineMap;
+    }
+
+    public boolean isDownloadOfflineMap() {
+        return downloadOfflineMap;
+    }
+
+    public void setDownloadOfflineMap(boolean downloadOfflineMap) {
+        downloadOfflineMap = downloadOfflineMap;
+    }
 }
