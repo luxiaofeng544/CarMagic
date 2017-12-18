@@ -4,8 +4,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 
-import com.baidu.mapapi.NetworkUtil;
-import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.offline.MKOLUpdateElement;
 import com.baidu.mapapi.map.offline.MKOfflineMap;
 import com.baidu.mapapi.map.offline.MKOfflineMapListener;
@@ -33,7 +31,7 @@ public class BaiduMapInitializer extends AbstractInitializer implements MKOfflin
         EventBus.getDefault().register(this);
         mOffline = new MKOfflineMap();
         mOffline.init(this);
-        handler.sendEmptyMessageDelayed(0,1000);
+        handler.sendEmptyMessageDelayed(0,6000);
         return null;
     }
 
