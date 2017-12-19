@@ -20,6 +20,12 @@ android {
         ndk {
             abiFilters 'armeabi'
         }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : "com.lemon.carmonitor",
+                JPUSH_APPKEY : "4fcdc82deb4d957607c5f1a7", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
     }
     buildTypes {
         release {
@@ -54,4 +60,6 @@ dependencies {
     implementation files('libs/okhttp-3.8.1.jar')
     implementation files('libs/okio-1.13.0.jar')
     implementation files('libs/bos-android-sdk-1.0.3.jar')
+    compile 'cn.jiguang.sdk:jpush:3.1.0'
+    compile 'cn.jiguang.sdk:jcore:1.1.8'
 }
