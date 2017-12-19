@@ -15,6 +15,7 @@ import com.lemon.util.ParamUtils;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.List;
 
@@ -31,11 +32,10 @@ public class BaiduMapInitializer extends AbstractInitializer implements MKOfflin
         EventBus.getDefault().register(this);
         mOffline = new MKOfflineMap();
         mOffline.init(this);
-        handler.sendEmptyMessageDelayed(0,60000);
         return null;
     }
 
-    @Subscribe
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventAsync(OfflineMapEvent event){
         if(ParamUtils.isNull(event.getItem())){
             if(time<= Config.getIntValue("max_location_times")){
