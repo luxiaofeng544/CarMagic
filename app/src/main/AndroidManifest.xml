@@ -189,5 +189,16 @@
                 <category android:name="com.lemon.carmonitor" />
             </intent-filter>
         </receiver>
+
+        <!-- Umeng -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="56f24a5967e58eab45000f06" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Self2" >
+        </meta-data>
+
     </application>
 </manifest>
