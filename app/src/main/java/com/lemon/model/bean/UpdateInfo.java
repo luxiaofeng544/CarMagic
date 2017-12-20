@@ -28,7 +28,7 @@ public class UpdateInfo {
     private String versionCode;
     private String versionDescription;
     private String versionDownUrl;
-    private String isForce;
+    private String isForce = "false";
 
     public void setVersionName(String versionName) {
         this.versionName = versionName;
