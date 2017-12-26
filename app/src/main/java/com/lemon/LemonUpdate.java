@@ -1,5 +1,6 @@
 package com.lemon;
 
+import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -18,6 +19,7 @@ import android.widget.Toast;
 import com.lemon.annotation.Autowired;
 import com.lemon.annotation.Component;
 import com.lemon.annotation.InitMethod;
+import com.lemon.event.ToastEvent;
 import com.lemon.model.StatusCode;
 import com.lemon.model.bean.UpdateInfo;
 import com.lemon.model.result.AppUpdateResult;
@@ -136,9 +138,9 @@ public class LemonUpdate {
             if(curVersionCode < Integer.parseInt(updateInfo.getVersionCode())){
                 apkUrl = updateInfo.getVersionDownUrl();
                 updateMsg = updateInfo.getVersionDescription();
-                showNoticeDialog();
+                showNoticeNewDialog(updateInfo.getIsForce().equals("true"));
             }else{
-                showLatestOrFailDialog(DIALOG_TYPE_LATEST);
+                EventBus.getDefault().post(new ToastEvent("版本号:"+updateInfo.getVersionName()+" 是最新版本"));
             }
         }
     }
@@ -153,6 +155,35 @@ public class LemonUpdate {
         } else if (dialogType == DIALOG_TYPE_FAIL) {
             Toast.makeText(mContext,"无法获取版本更新信息",Toast.LENGTH_SHORT).show();
         }
+    }
+
+
+    /**
+     * 显示版本更新通知对话框
+     */
+    private void showNoticeNewDialog(boolean force){
+        AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+        builder.setTitle("软件版本更新");
+        builder.setMessage(updateMsg);
+        builder.setPositiveButton("立即更新", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(apkUrl));
+                it.setClassName("com.android.browser", "com.android.browser.BrowserActivity");
+                mContext.startActivity(it);
+            }
+        });
+        if(!force) {
+            builder.setNegativeButton("以后再说", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+        }
+        noticeDialog = builder.create();
+        noticeDialog.show();
     }
 
     /**
