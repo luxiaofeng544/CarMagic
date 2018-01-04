@@ -4,6 +4,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnMap"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="弹出 SlideBottomPanel1"/>
+        <Button
+            android:id="@+id/btnPanoMap"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="弹出 SlideBottomPanel2"/>
+        <Button
+            android:id="@+id/btnShow"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show"/>
+        <Button
+            android:id="@+id/btnClose"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Close"/>
+
+    </LinearLayout>
+
     <me.next.slidebottompanel.SlideBottomPanel
         android:id="@+id/sbv"
         android:layout_width="match_parent"

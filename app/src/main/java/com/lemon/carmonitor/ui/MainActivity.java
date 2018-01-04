@@ -2,6 +2,7 @@ package com.lemon.carmonitor.ui;
 
 
 import android.os.Message;
+import android.view.View;
 
 import com.lemon.LemonActivity;
 import com.lemon.annotation.FieldView;
@@ -23,13 +24,12 @@ public class MainActivity extends LemonActivity {
 
     @Override
     protected void initData() {
-        handler.sendEmptyMessageDelayed(0,1000);
+        //handler.sendEmptyMessageDelayed(0,1000);
     }
 
     @OnClick(id=R.id.btnMap)
     public void mapClick(){
         toastMessage("mapClick");
-        //startNextActivity(BaiduOfflineMapActivity.class,false);
         slideBottomPanel.hide();
     }
 
@@ -37,6 +37,18 @@ public class MainActivity extends LemonActivity {
     public void panoClick(){
         toastMessage("panoClick");
         slideBottomPanel.displayPanel();
+    }
+
+    @OnClick(id=R.id.btnShow)
+    public void showClick(){
+        toastMessage("showClick");
+        slideBottomPanel.setVisibility(View.VISIBLE);
+    }
+
+    @OnClick(id=R.id.btnClose)
+    public void closeClick(){
+        toastMessage("closeClick");
+        slideBottomPanel.setVisibility(View.GONE);
     }
 
     @Override
