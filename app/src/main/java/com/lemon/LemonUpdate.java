@@ -16,6 +16,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.afollestad.materialdialogs.DialogAction;
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.lemon.annotation.Autowired;
 import com.lemon.annotation.Component;
 import com.lemon.annotation.InitMethod;
@@ -162,6 +164,31 @@ public class LemonUpdate {
      * 显示版本更新通知对话框
      */
     private void showNoticeNewDialog(boolean force){
+        MaterialDialog.Builder builder =new MaterialDialog.Builder(mContext);
+        builder.title("发现新版本");
+        builder.content(updateMsg);
+        builder.positiveText("立即更新");
+        builder.onPositive(new MaterialDialog.SingleButtonCallback() {
+            @Override
+            public void onClick(MaterialDialog dialog, DialogAction which) {
+                dialog.dismiss();
+                Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(apkUrl));
+                it.setClassName("com.android.browser", "com.android.browser.BrowserActivity");
+                mContext.startActivity(it);
+            }
+        });
+        if(!force){
+            builder.negativeText("以后再说");
+            builder.onNegative(new MaterialDialog.SingleButtonCallback() {
+                @Override
+                public void onClick(MaterialDialog dialog, DialogAction which) {
+                    dialog.dismiss();
+                }
+            });
+        }
+        builder.show();
+
+        /**
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
         builder.setTitle("软件版本更新");
         builder.setMessage(updateMsg);
@@ -184,6 +211,7 @@ public class LemonUpdate {
         }
         noticeDialog = builder.create();
         noticeDialog.show();
+         */
     }
 
     /**
