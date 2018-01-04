@@ -20,7 +20,5 @@ public class LemonApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        //init base module
-        ApplicationEngine.start(getApplicationContext());
     }
 }
