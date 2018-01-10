@@ -30,7 +30,7 @@ public class LemonGreenDaoDatabaseHelper {
     private DaoSession daoSession;
     public Context mContext;
 
-    private void init(){
+    public void init(){
         DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(mContext, Config.getDbName());
         Database db = ENCRYPTED ? helper.getEncryptedWritableDb("super-secret") : helper.getWritableDb();
         daoSession = new DaoMaster(db).newSession();
