@@ -46,7 +46,7 @@ public abstract class LemonActivity extends Activity {
 
     protected LemonCacheManager cacheManager;
     protected LemonApiManager apiManager;
-    protected LemonDaoManager daoManager;
+    protected LemonGreenDaoManager daoManager;
     protected LemonMessage lemonMessage;
 
     @Override
@@ -83,7 +83,7 @@ public abstract class LemonActivity extends Activity {
         EventBus.getDefault().post(new ActivityEvent(this));
         cacheManager = LemonContext.getBean(LemonCacheManager.class);
         apiManager = LemonContext.getBean(LemonApiManager.class);
-        daoManager = LemonContext.getBean(LemonDaoManager.class);
+        daoManager = LemonContext.getBean(LemonGreenDaoManager.class);
         lemonMessage = LemonContext.getBean(LemonMessage.class);
     }
 

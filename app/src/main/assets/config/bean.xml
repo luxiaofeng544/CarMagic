@@ -47,16 +47,11 @@
         </property>
     </bean>
 
-    <bean name="lemonDatabaseHelper" class="com.lemon.LemonDatabaseHelper" init-method="createTables">
+    <bean name="lemonGreenDaoDatabaseHelper" class="com.lemon.LemonGreenDaoDatabaseHelper" init-method="init">
         <constructor>
             <arg index="0" ref="true" type="android.content.Context" value="mContext"></arg>
         </constructor>
         <property name="mContext" value-ref="mContext"></property>
-        <property name="tables">
-            <list>
-
-            </list>
-        </property>
     </bean>
 
     <!--核心配置 end-->

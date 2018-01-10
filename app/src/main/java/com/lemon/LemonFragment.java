@@ -41,7 +41,7 @@ public abstract class LemonFragment extends Fragment {
     protected View rootView;
     protected int layout;
 
-    protected LemonDaoManager daoManager;
+    protected LemonGreenDaoManager daoManager;
     protected LemonCacheManager cacheManager;
     protected LemonApiManager apiManager;
     protected Fragment mFragment;
@@ -67,7 +67,7 @@ public abstract class LemonFragment extends Fragment {
         EventBus.getDefault().register(this);
         cacheManager = BeanFactory.getInstance().getBean(LemonCacheManager.class);
         apiManager = BeanFactory.getInstance().getBean(LemonApiManager.class);
-        daoManager = BeanFactory.getInstance().getBean(LemonDaoManager.class);
+        daoManager = BeanFactory.getInstance().getBean(LemonGreenDaoManager.class);
         lemonMessage = LemonContext.getBean(LemonMessage.class);
     }
 
