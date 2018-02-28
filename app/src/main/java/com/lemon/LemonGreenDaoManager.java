@@ -2,7 +2,6 @@ package com.lemon;
 
 import com.lemon.annotation.Autowired;
 import com.lemon.annotation.Component;
-import com.lemon.carmonitor.db.NoteDao;
 
 import org.greenrobot.greendao.AbstractDao;
 import org.greenrobot.greendao.Property;
