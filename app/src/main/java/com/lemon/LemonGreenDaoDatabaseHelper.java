@@ -2,11 +2,8 @@ package com.lemon;
 
 import android.content.Context;
 
-import com.lemon.annotation.Autowired;
-import com.lemon.annotation.Component;
-import com.lemon.annotation.InitMethod;
-import com.lemon.carmonitor.db.DaoMaster;
-import com.lemon.carmonitor.db.DaoSession;
+import com.lemon.carmonitor.db.gd.DaoMaster;
+import com.lemon.carmonitor.db.gd.DaoSession;
 import com.lemon.config.Config;
 
 import org.greenrobot.greendao.AbstractDao;
@@ -32,7 +29,7 @@ public class LemonGreenDaoDatabaseHelper {
 
     public void init(){
         DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(mContext, Config.getDbName());
-        Database db = ENCRYPTED ? helper.getEncryptedWritableDb("super-secret") : helper.getWritableDb();
+        Database db = ENCRYPTED ? helper.getEncryptedWritableDb(Config.getDbName()) : helper.getWritableDb();
         daoSession = new DaoMaster(db).newSession();
     }
 

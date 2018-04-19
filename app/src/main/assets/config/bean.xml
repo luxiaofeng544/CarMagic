@@ -48,9 +48,6 @@
     </bean>
 
     <bean name="lemonGreenDaoDatabaseHelper" class="com.lemon.LemonGreenDaoDatabaseHelper" init-method="init">
-        <constructor>
-            <arg index="0" ref="true" type="android.content.Context" value="mContext"></arg>
-        </constructor>
         <property name="mContext" value-ref="mContext"></property>
     </bean>
 
