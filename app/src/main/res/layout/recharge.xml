@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/relativeLayout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_gravity="bottom"
+        android:background="@color/blue_color"
+        android:padding="0.0dip">
+
+        <TextView
+            android:id="@id/textView_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/recharge"
+            android:textColor="#ffffffff"
+            android:textSize="22.0sp" />
+
+        <Button
+            android:id="@id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back"
+            android:onClick="backClick" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white_color"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:text="用户名："
+            android:textColor="@color/black"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="0dp"
+            android:layout_height="40.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_weight="8"
+            android:gravity="right"
+            android:text="13850046527"
+            android:textColor="@color/black"
+            android:textSize="16.0sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:background="#ff909090" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white_color"
+        android:id="@+id/ll_sms"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:text="剩余短信："
+            android:textColor="@color/black"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/tv_sms"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="8"
+            android:gravity="right"
+            android:text="1000"
+            android:textColor="@color/black"
+            android:textSize="16.0sp" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="30.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10.0dip"
+            android:layout_weight="1"
+            android:background="@drawable/next" />
+    </LinearLayout>
+
+    <View
+        android:id="@id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:background="#ff909090" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white_color"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:text="支付方式："
+            android:textColor="@color/black"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/tvPayType"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="8"
+            android:gravity="right"
+            android:text="支付宝"
+            android:textColor="@color/black"
+            android:textSize="16.0sp" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="30.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10.0dip"
+            android:layout_weight="1"
+            android:background="@drawable/next" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:background="#ff909090" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white_color"
+        android:onClick="packageClick"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:text="选择套餐："
+            android:textColor="@color/black"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/tvPackage"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="8"
+            android:gravity="right"
+            android:text="9元套餐"
+            android:textColor="@color/black"
+            android:textSize="16.0sp" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="30.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10.0dip"
+            android:layout_weight="1"
+            android:background="@drawable/next" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:background="#ff909090" />
+    <Button
+        android:id="@id/btn_recharge"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:onClick="payClick"
+        android:text="@string/recharge" />
+
+    <Button
+        android:id="@id/btn_recharge_record"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:onClick="rechargeRecordClick"
+        android:text="@string/recharge_record" />
+
+</LinearLayout>

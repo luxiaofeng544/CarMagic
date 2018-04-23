@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+    <RelativeLayout
+        android:id="@+id/pano_title_view"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@color/blue_color"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/fence_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:background="@drawable/selector_back"
+            android:onClick="backClick" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/blue_color"
+            android:gravity="center"
+            android:text="街景视图"
+            android:textColor="@color/white_color"
+            android:textSize="18.0sp"
+            android:id="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/fence_btn_add"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:gravity="center"
+            android:text="保存"
+            android:visibility="gone"
+            android:textColor="@color/white_color"
+            android:textSize="14.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pano_title_view" >
+
+        <com.baidu.lbsapi.panoramaview.PanoramaView
+            android:id="@+id/panorama"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

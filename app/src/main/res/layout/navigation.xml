@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffececec">
+
+    <RelativeLayout
+        android:id="@id/relativeLayout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_gravity="bottom"
+        android:background="@color/blue_color"
+        android:padding="0.0dip">
+
+        <TextView
+            android:id="@id/textView_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/Navigation"
+            android:textColor="#ffffffff"
+            android:textSize="22.0sp" />
+
+        <Button
+            android:id="@id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="backClick"
+            android:background="@drawable/back" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/RelativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/relativeLayout_title"
+        android:layout_marginTop="20.0dip">
+
+        <RelativeLayout
+            android:id="@id/relativeLayout_parkinglot"
+            android:layout_width="80.0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30.0dip">
+
+            <Button
+                android:id="@id/button_parkinglot"
+                android:layout_width="60.0dip"
+                android:layout_height="60.0dip"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/parkinglot"
+                android:onClick="parkinglotClick"/>
+
+            <TextView
+                android:id="@id/textview_parkinglot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_parkinglot"
+                android:layout_centerHorizontal="true"
+                android:text="@string/Parkinglot"
+                android:textColor="@color/black"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/relativeLayout_bank"
+            android:layout_width="80.0dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativeLayout_parkinglot"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginTop="20.0dip">
+
+            <TextView
+                android:id="@id/textView_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_bank"
+                android:layout_centerHorizontal="true"
+                android:text="@string/Bank"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@id/button_bank"
+                android:layout_width="60.0dip"
+                android:layout_height="60.0dip"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bank"
+                android:onClick="bankClick"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/relativeLayout_food"
+            android:layout_width="80.0dip"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/relativeLayout_bank"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@id/textView_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_food"
+                android:layout_centerHorizontal="true"
+                android:text="@string/Food"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@id/button_food"
+                android:layout_width="60.0dip"
+                android:layout_height="60.0dip"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/food"
+                android:onClick="foodClick"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/relativeLayout_hotel"
+            android:layout_width="80.0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/relativeLayout_food"
+            android:layout_alignTop="@id/relativeLayout_bank">
+
+            <TextView
+                android:id="@id/textView_hotel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_hotel"
+                android:layout_centerHorizontal="true"
+                android:text="@string/Hotel"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@id/button_hotel"
+                android:layout_width="60.0dip"
+                android:layout_height="60.0dip"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/hotel"
+                android:onClick="hotelClick"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/relativeLayout_stations"
+            android:layout_width="80.0dip"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/relativeLayout_bank"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30.0dip">
+
+            <TextView
+                android:id="@id/textview_stations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_stations"
+                android:layout_centerHorizontal="true"
+                android:text="@string/Stations"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@id/button_stations"
+                android:layout_width="60.0dip"
+                android:layout_height="60.0dip"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/stations"
+                android:onClick="stationClick"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/relativeLayout_hospital"
+            android:layout_width="80.0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/relativeLayout_stations"
+            android:layout_alignTop="@id/relativeLayout_hotel">
+
+            <TextView
+                android:id="@id/textview_hospital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_hospital"
+                android:layout_centerHorizontal="true"
+                android:text="@string/Hospital"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@id/button_hospital"
+                android:layout_width="60.0dip"
+                android:layout_height="60.0dip"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/hospital"
+                android:onClick="hospitalClick"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/relativeLayout_bus"
+            android:layout_width="80.0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/relativeLayout_parkinglot"
+            android:layout_below="@id/relativeLayout_hotel"
+            android:layout_marginTop="20.0dip">
+
+            <TextView
+                android:id="@id/textView_bus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_bus"
+                android:layout_centerHorizontal="true"
+                android:text="@string/Bus"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@id/button_bus"
+                android:layout_width="60.0dip"
+                android:layout_height="60.0dip"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bus"
+                android:onClick="busClick"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/relativeLayout_supermarket"
+            android:layout_width="90.0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/relativeLayout_bus"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@id/textView_supermarket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_supermarket"
+                android:layout_centerHorizontal="true"
+                android:text="@string/Supermarket"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@id/button_supermarket"
+                android:layout_width="60.0dip"
+                android:layout_height="60.0dip"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/supermarket"
+                android:onClick="supermarketClick"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/relativeLayout_resort"
+            android:layout_width="80.0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/relativeLayout_hospital"
+            android:layout_alignTop="@id/relativeLayout_supermarket">
+
+            <TextView
+                android:id="@id/textView_resort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_resort"
+                android:layout_centerHorizontal="true"
+                android:text="@string/Resort"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@id/button_resort"
+                android:layout_width="60.0dip"
+                android:layout_height="60.0dip"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/resort"
+                android:onClick="resortClick"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@null"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/home_main_top"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/blue_color">
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10.0dip"
+            android:src="@drawable/avatar_default"
+            android:onClick="userInfoClick"/>
+
+        <TextView
+            android:id="@+id/home_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="首页"
+            android:textColor="#ffffffff"
+            android:textSize="22.0sp" />
+
+        <Button
+            android:id="@+id/btn_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:onClick="settingClick"
+            android:background="@drawable/setting"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <GridView
+        android:id="@+id/list_found"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:cacheColorHint="@null"
+        android:listSelector="@drawable/grid_view_selector"
+        android:background="@drawable/main_bg"
+        android:numColumns="3"
+        />
+
+
+</LinearLayout>

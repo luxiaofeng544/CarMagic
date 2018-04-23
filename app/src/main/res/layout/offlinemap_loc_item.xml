@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="已下载城市 " android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <TextView android:textColor="#ffff0000" android:id="@id/update" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="最新" android:layout_toRightOf="@id/title" android:layout_centerVertical="true" />
+    <TextView android:id="@id/ratio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="100%" android:layout_toRightOf="@id/update" android:layout_centerVertical="true" />
+    <Button android:id="@id/remove" android:layout_width="wrap_content" android:layout_height="35.0dip" android:layout_marginRight="10.0dip" android:text="删除" android:layout_weight="1.0" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <Button android:id="@id/start" android:layout_width="wrap_content" android:layout_height="35.0dip" android:layout_marginRight="10.0dip" android:text="开始" android:layout_weight="1.0" android:layout_toLeftOf="@id/remove" android:layout_alignBaseline="@id/remove" android:layout_alignBottom="@id/remove" />
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/list_item_textView_SendTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="Time" android:layout_alignTop="@id/list_item_textView_Name" android:layout_alignParentRight="true" />
+    <TextView android:textSize="16.0sp" android:id="@id/list_item_textView_Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="Name" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <TextView android:id="@id/list_item_textView_Status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TextView" android:layout_below="@id/list_item_textView_Name" android:layout_alignLeft="@id/list_item_textView_Name" />
+    <TextView android:id="@id/list_item_textView_ReTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Time" android:layout_alignBaseline="@id/list_item_textView_Status" android:layout_alignLeft="@id/list_item_textView_SendTime" android:layout_alignBottom="@id/list_item_textView_Status" />
+    <TextView android:textSize="10.0sp" android:ellipsize="end" android:id="@id/list_item_textView_Command" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TextView" android:singleLine="true" android:layout_below="@id/list_item_textView_Status" android:layout_alignLeft="@id/list_item_textView_Status" android:layout_alignRight="@id/list_item_textView_ReTime" />
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="300dip"
+        android:layout_height="300dip"
+        android:layout_gravity="center"
+        android:background="@drawable/qrcode"
+        android:layout_margin="60dip" />
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="fill_parent"
+        android:layout_height="35.0dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:background="@drawable/bg_button_blue_selector"
+        android:text="分享扫描"
+        android:textColor="#ffffffff"/>
+</LinearLayout>

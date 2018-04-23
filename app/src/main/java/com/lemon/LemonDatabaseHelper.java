@@ -33,7 +33,7 @@ public class LemonDatabaseHelper extends OrmLiteSqliteOpenHelper {
     public List<String> tables;
 
     public LemonDatabaseHelper(Context context) {
-        super(context.getApplicationContext(), Config.getDbName(), null, Config.getVersion());
+        super(context.getApplicationContext(), Config.getDbName(), null, Config.getDbVersion());
     }
 
     @Override

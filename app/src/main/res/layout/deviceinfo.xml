@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/blue_color">
+
+        <Button
+            android:id="@id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back"
+            android:onClick="backClick" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="设备信息"
+            android:textColor="@color/white_color"
+            android:textSize="22.0sp" />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20.0dip"
+            android:background="@drawable/edit"
+            android:onClick="editClick" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginTop="40.0dip"
+        android:background="@color/line_h_color" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white_color"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:gravity="center_vertical"
+            android:text="@string/devicename"
+            android:textColor="@color/black"
+            android:textSize="16.0sp" />
+
+        <EditText
+            android:id="@+id/et_devicename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:textSize="12.0sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/line_h_color" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white_color">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:gravity="center_vertical"
+            android:text="@string/devicesn"
+            android:textColor="@color/black"
+            android:textSize="16.0sp" />
+
+        <EditText
+            android:id="@+id/et_devicesn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:textSize="12.0sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/line_h_color" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white_color">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:gravity="center_vertical"
+            android:text="@string/deviceexpreid"
+            android:textColor="@color/black"
+            android:textSize="16.0sp" />
+
+        <EditText
+            android:id="@+id/et_deviceexpreid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:textSize="12.0sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/line_h_color" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white_color">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:gravity="center_vertical"
+            android:text="@string/devicecarno"
+            android:textColor="@color/black"
+            android:textSize="16.0sp" />
+
+        <EditText
+            android:id="@+id/et_devicecarno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:textSize="12.0sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/line_h_color" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white_color">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:gravity="center_vertical"
+            android:text="@string/devicemodel"
+            android:textColor="@color/black"
+            android:textSize="16.0sp" />
+
+        <EditText
+            android:id="@+id/et_devicemodel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:textSize="12.0sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/line_h_color" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white_color"
+        android:visibility="gone"
+        android:id="@+id/llDevicePhone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:gravity="center_vertical"
+            android:text="@string/devicephone"
+            android:textColor="@color/black"
+            android:textSize="16.0sp" />
+
+        <EditText
+            android:id="@+id/et_devicephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:textSize="12.0sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/line_h_color" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white_color">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:gravity="center_vertical"
+            android:text="联  系  人"
+            android:textColor="@color/black"
+            android:textSize="16.0sp" />
+
+        <EditText
+            android:id="@+id/et_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:textSize="12.0sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/line_h_color" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white_color">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:gravity="center_vertical"
+            android:text="@string/contactphone"
+            android:textColor="@color/black"
+            android:textSize="16.0sp" />
+
+        <EditText
+            android:id="@+id/et_contactphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:textSize="12.0sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/line_h_color" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10.0dip"
+        android:onClick="unbindClick"
+        android:text="解除绑定"/>
+</LinearLayout>

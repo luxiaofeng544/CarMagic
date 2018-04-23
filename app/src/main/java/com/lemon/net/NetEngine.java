@@ -2,10 +2,13 @@ package com.lemon.net;
 
 import android.content.Context;
 
+import com.lemon.annotation.InvokeMethod;
+import com.lemon.annotation.MethodName;
 import com.lemon.annotation.Module;
 import com.lemon.annotation.ParamType;
 import com.lemon.annotation.ReturnType;
 import com.lemon.bean.BeanFactory;
+import com.lemon.carmonitor.contant.StatusCode;
 import com.lemon.config.Config;
 import com.lemon.converter.BaseParamConverter;
 import com.lemon.converter.BaseResultConverter;
@@ -16,8 +19,8 @@ import com.lemon.event.ParamErrorEvent;
 import com.lemon.event.ServerErrorEvent;
 import com.lemon.exception.AppException;
 import com.lemon.model.BaseParam;
+import com.lemon.carmonitor.race.model.result.BaseRaceResult;
 import com.lemon.model.BaseResult;
-import com.lemon.model.StatusCode;
 import com.lemon.util.Inflector;
 import com.lemon.util.LogUtils;
 import com.lemon.util.MethodUtil;
@@ -35,7 +38,7 @@ import java.util.Map;
 
 
 /**
- * 项目名称:  [Lemon]
+ * 项目名称:  [CarMonitor]
  * 包:        [com.lemon.net]
  * 类描述:    [简要描述]
  * 创建人:    [xflu]
@@ -77,6 +80,10 @@ public class NetEngine {
 
         String website,params,strResult="";
 
+        if(!ParamUtils.isNull(param.getClass().getAnnotation(MethodName.class))){
+            methodName = param.getClass().getAnnotation(MethodName.class).name();
+        }
+
         //通过参数,获取参数对应注解上的模块名称
         Module paramModule = param.getClass().getAnnotation(Module.class);
         if(ParamUtils.isNull(paramModule)){
@@ -100,10 +107,15 @@ public class NetEngine {
             throw new AppException("NetEngine invoke returnType error,className:"+className+",param:"+param.getClass().getName()+",methodName:"+methodName);
         }
 
+        InvokeMethod invokeMethod = method.getAnnotation(InvokeMethod.class);
+        if(!ParamUtils.isNull(invokeMethod)){
+            methodName = invokeMethod.methodName();
+        }
+
         website = serverPath+"/"+module+"/"+methodName;
         params = getParamConverter(param.getClass().getSimpleName()).convert(param);
 
-        LemonThread lemonThread = new LemonThread(param,website,params,strHttpMethod,returnType.value());
+        LemonThread lemonThread = new LemonThread(website,params,strHttpMethod,returnType.value(),param);
         lemonThread.start();
     }
 
@@ -174,7 +186,7 @@ public class NetEngine {
      * @return
      */
     private BaseParamConverter getParamConverter(String type) {
-        String name = Inflector.getInstance().camelCase(type,false)+ Config.getConvertExt();
+        String name = Inflector.getInstance().camelCase(type,false)+Config.getConvertExt();
         return paramConverterMap.containsKey(name)?paramConverterMap.get(type):paramConverterMap.get("baseParamConverter");
     }
 
@@ -183,7 +195,7 @@ public class NetEngine {
      * @return
      */
     private BaseResultConverter getResultConverter(String type) {
-        String name = Inflector.getInstance().camelCase(type,false)+ Config.getConvertExt();
+        String name = Inflector.getInstance().camelCase(type,false)+Config.getConvertExt();
         return resultConverterMap.containsKey(name)?resultConverterMap.get(type):resultConverterMap.get("baseResultParamConverter");
     }
 
@@ -226,16 +238,35 @@ public class NetEngine {
         return true;
     }
 
+    /**
+     * 返回数据处理
+     * @param result
+     * @return
+     */
+    private boolean handleAfter(BaseRaceResult result) {
+        eventBus.post(new NetStopEvent());
+        if (ParamUtils.isNull(result)) {
+            eventBus.post(new ServerErrorEvent("Can not get result from server"));
+            return false;
+        }
+        if(ParamUtils.isNull(result)){
+            eventBus.post(new ServerErrorEvent("Can not get result from server"));
+            return true;
+        }
+        eventBus.post(result);//send result to bus
+        return true;
+    }
+
     public class LemonThread extends Thread{
+        BaseParam baseParam;
         Class  returnType;
         String website, params, httpMethod,strResult;
-        BaseParam param;
-        public LemonThread(BaseParam param,String website,String params,String httpMethod,Class returnType){
+        public LemonThread(String website,String params,String httpMethod,Class returnType,BaseParam baseParam){
             this.httpMethod = httpMethod;
             this.params = params;
             this.website = website;
             this.returnType = returnType;
-            this.param = param;
+            this.baseParam = baseParam;
         }
 
         @Override
@@ -250,9 +281,15 @@ public class NetEngine {
                 eventBus.post(new ServerErrorEvent("Can not get result from server"));
                 return;
             }
-            BaseResult baseResult = (BaseResult)getResultConverter(returnType.getSimpleName()).convert(strResult,returnType);
-            baseResult.setParam(param);
-            handleAfter(baseResult);
+            Object baseResult = getResultConverter(returnType.getSimpleName()).convert(strResult,returnType);
+            if(baseParam.getRaceInterface()){
+                handleAfter((BaseRaceResult)baseResult);
+            }else {
+                if(baseResult instanceof BaseResult){
+                    ((BaseResult)baseResult).setBaseParam(baseParam);
+                }
+                handleAfter((BaseResult)baseResult);
+            }
         }
     }
 }

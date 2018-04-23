@@ -13,6 +13,10 @@ import com.lemon.annotation.FieldView;
 import com.lemon.annotation.Layout;
 import com.lemon.annotation.OnClick;
 import com.lemon.bean.BeanFactory;
+import com.lemon.carmonitor.api.ApiManager;
+import com.lemon.carmonitor.model.bean.UserLoginBean;
+import com.lemon.carmonitor.util.AppCacheManager;
+import com.lemon.config.Config;
 import com.lemon.model.BaseResult;
 import com.lemon.util.ParamUtils;
 
@@ -42,8 +46,8 @@ public abstract class LemonFragment extends Fragment {
     protected int layout;
 
     protected LemonGreenDaoManager daoManager;
-    protected LemonCacheManager cacheManager;
-    protected LemonApiManager apiManager;
+    protected AppCacheManager cacheManager;
+    protected ApiManager apiManager;
     protected Fragment mFragment;
     protected LemonMessage lemonMessage;
 
@@ -65,8 +69,8 @@ public abstract class LemonFragment extends Fragment {
 
     private void parentInit() {
         EventBus.getDefault().register(this);
-        cacheManager = BeanFactory.getInstance().getBean(LemonCacheManager.class);
-        apiManager = BeanFactory.getInstance().getBean(LemonApiManager.class);
+        cacheManager = BeanFactory.getInstance().getBean(AppCacheManager.class);
+        apiManager = BeanFactory.getInstance().getBean(ApiManager.class);
         daoManager = BeanFactory.getInstance().getBean(LemonGreenDaoManager.class);
         lemonMessage = LemonContext.getBean(LemonMessage.class);
     }
@@ -170,6 +174,13 @@ public abstract class LemonFragment extends Fragment {
 
     protected void toast(String msg) {
         Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
+    }
+
+    protected boolean isUseYingyanService(){
+        if(cacheManager.containBean(UserLoginBean.class)){
+            return cacheManager.getBean(UserLoginBean.class).isYingYanService();
+        }
+        return Config.getBooleanValue("is_use_baidu_yingyan");
     }
 
     @Override

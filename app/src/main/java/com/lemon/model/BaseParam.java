@@ -1,7 +1,7 @@
 package com.lemon.model;
 
 /**
- * 项目名称:  [Lemon]
+ * 项目名称:  [CarMonitor]
  * 包:        [com.lemon.model]
  * 类描述:    [简要描述]
  * 创建人:    [xflu]
@@ -13,6 +13,8 @@ package com.lemon.model;
  */
 public class BaseParam {
     public boolean showDialog = true;
+    protected boolean raceInterface = false;//尚锐接口
+    private String invokeType;
 
     public void setShowDialog(boolean showDialog) {
         this.showDialog = showDialog;
@@ -20,5 +22,21 @@ public class BaseParam {
 
     public boolean getShowDialog(){
         return showDialog;
+    }
+
+    public boolean getRaceInterface() {
+        return raceInterface;
+    }
+
+    public void setRaceInterface(boolean raceInterface) {
+        this.raceInterface = raceInterface;
+    }
+
+    public String getInvokeType() {
+        return invokeType;
+    }
+
+    public void setInvokeType(String invokeType) {
+        this.invokeType = invokeType;
     }
 }

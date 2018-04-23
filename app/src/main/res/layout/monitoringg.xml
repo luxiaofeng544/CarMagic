@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffececec" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/title_bg" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <TextView android:textSize="22.0sp" android:textColor="#ffffffff" android:id="@id/textView_Title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Monitoring" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <Button android:id="@id/button_refresh" android:background="@drawable/refresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/linearLayout_address" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:id="@id/textView_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="2.0dip" android:text="" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/relativeLayout_map" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/relativeLayout1" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <fragment android:id="@id/map" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.google.android.gms.maps.SupportMapFragment" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+            <TextView android:textSize="12.0sp" android:textColor="#ff000000" android:id="@id/textView_timeout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/refresh_timeout" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/linearLayout3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+            <CheckBox android:id="@id/checkBox_maptype" android:background="@drawable/maptype" android:layout_width="40.0dip" android:layout_height="40.0dip" android:button="@null" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginBottom="20.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+            <Button android:id="@id/button_location" android:background="@drawable/location_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

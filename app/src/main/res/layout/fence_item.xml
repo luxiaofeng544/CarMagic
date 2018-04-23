@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_gray_color" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_color"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip" >
+
+            <TextView
+                android:id="@+id/fence_title_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="2.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:text="安全区域"
+                android:textSize="14.0sp" />
+
+            <Button
+                android:id="@+id/fence_edit"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="2.0dip"
+                android:layout_marginRight="60.0dip"
+                android:background="#00000000"
+                android:gravity="bottom"
+                android:text="编辑"
+                android:textColor="@color/blue_color"
+                android:textSize="14.0sp" />
+
+            <Button
+                android:id="@+id/fence_delete"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="2.0dip"
+                android:layout_marginRight="10.0dip"
+                android:background="#00000000"
+                android:gravity="bottom"
+                android:text="删除"
+                android:textColor="@color/blue_color"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_marginLeft="52.0dip"
+            android:background="@color/line_h_color" />
+
+        <RelativeLayout
+            android:id="@+id/fence_rl_time"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:background="@color/white_color"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="32.0dip"
+                android:layout_height="32.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:background="@drawable/fence_time" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="52.0dip"
+                android:text="编号"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/fence_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10.0dip"
+                android:text="1"
+                android:textColor="@color/light_gray_color"
+                android:textSize="15.0sp" />
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="@color/line_h_color" />
+
+        <RelativeLayout
+            android:id="@+id/fence_rl_name"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:background="@color/white_color"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="32.0dip"
+                android:layout_height="32.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:background="@drawable/fence_name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="52.0dip"
+                android:text="@string/fence_name_string"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/fence_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10.0dip"
+                android:text="公司"
+                android:textColor="@color/light_gray_color"
+                android:textSize="15.0sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_marginLeft="52.0dip"
+            android:background="@color/line_h_color" />
+
+        <RelativeLayout
+            android:id="@+id/fence_rl_center"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:background="@color/white_color"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="32.0dip"
+                android:layout_height="32.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:background="@drawable/fence_center" />
+
+            <TextView
+                android:id="@+id/fence_tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="52.0dip"
+                android:text="区域类型"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/fence_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_toRightOf="@+id/fence_tv_type"
+                android:gravity="right"
+                android:text="公司"
+                android:textColor="@color/light_gray_color"
+                android:textSize="13.0sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_marginLeft="52.0dip"
+            android:background="@color/line_h_color"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/fence_rl_date"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:background="@color/white_color"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="32.0dip"
+                android:layout_height="32.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:background="@drawable/fence_center" />
+
+            <TextView
+                android:id="@+id/fence_tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="52.0dip"
+                android:text="有效时间"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/fence_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_toRightOf="@+id/fence_tv_date"
+                android:gravity="right"
+                android:text="一、二、三 08:00-22:00"
+                android:textColor="@color/light_gray_color"
+                android:textSize="13.0sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_marginLeft="52.0dip"
+            android:background="@color/line_h_color" />
+
+        <RelativeLayout
+            android:id="@+id/fence_rl_radius"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:background="@color/white_color"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="32.0dip"
+                android:layout_height="32.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:background="@drawable/fence_r" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="52.0dip"
+                android:text="@string/fence_radius_string"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/fence_radius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10.0dip"
+                android:text="3000m"
+                android:textColor="@color/light_gray_color"
+                android:textSize="15.0sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="@color/line_h_color" />
+    </LinearLayout>
+
+</FrameLayout>

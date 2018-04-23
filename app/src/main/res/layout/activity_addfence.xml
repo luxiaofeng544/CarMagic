@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_gray_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/fence_title_view"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@color/blue_color"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/fence_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:background="@drawable/selector_back"
+            android:onClick="backClick" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/blue_color"
+            android:gravity="center"
+            android:text="添加围栏"
+            android:textColor="@color/white_color"
+            android:textSize="18.0sp"
+            android:id="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/fence_btn_add"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/white_color"
+            android:textSize="14.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:padding="0.0dip">
+
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/map"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:apiKey="AIzaSyCSMVwoz09zB_3Pn2N0ssXh0c97HaD5ACM"
+                android:clickable="true"
+                android:enabled="true" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_marka"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/fence_panel_view"
+            android:layout_width="fill_parent"
+            android:layout_height="150.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="5.0dip"
+            android:layout_marginTop="10.0dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/fence_panel_view_inner"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_fence">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="10.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/name_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:text="名称"
+                        android:textColor="@color/white_color"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/area_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:text="@string/fence_area_string"
+                        android:textColor="@color/white_color"
+                        android:textSize="16.0sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/radius_name_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:text="半径"
+                        android:textColor="@color/white_color"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:text="@string/week"
+                        android:textColor="@color/white_color"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:text="时间"
+                        android:textColor="@color/white_color"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="10.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="1.0">
+
+                        <EditText
+                            android:id="@+id/name_edittext"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginBottom="5.0dip"
+                            android:layout_marginTop="5.0dip"
+                            android:background="@drawable/fance_shape_bg"
+                            android:gravity="center"
+                            android:text="家"
+                            android:textColor="@color/white_color"
+                            android:textSize="16.0sp" />
+                    </FrameLayout>
+
+                    <RadioGroup
+                        android:id="@+id/fence_typeSwitch"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="1.0"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <RadioButton
+                            android:id="@+id/fence_danger"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1.0"
+                            android:button="@drawable/button_checkbox"
+                            android:checked="true"
+                            android:text="@string/fence_danger"
+                            android:textColor="@color/white_color"
+                            android:textSize="16.0sp"
+                            android:visibility="gone" />
+
+                        <RadioButton
+                            android:id="@+id/fence_safe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1.0"
+                            android:background="#00000000"
+                            android:button="@drawable/button_checkbox"
+                            android:checked="true"
+                            android:text="@string/fence_safe"
+                            android:textColor="@color/white_color"
+                            android:textSize="16.0sp"
+                            android:visibility="gone" />
+                    </RadioGroup>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_marginLeft="0.0dip"
+                        android:layout_marginRight="0.0dip"
+                        android:layout_weight="1.0"
+                        android:orientation="horizontal">
+
+                        <SeekBar
+                            android:id="@+id/radius_seekbar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/layout_uuu"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/bg_bar"
+                            android:thumb="@drawable/thumb" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_uuu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true">
+
+                            <TextView
+                                android:id="@+id/radius_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5.0dip"
+                                android:text="200"
+                                android:textColor="@color/white_color"
+                                android:textSize="16.0sp" />
+
+                            <TextView
+                                android:id="@+id/radius_meter_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="米"
+                                android:textColor="@color/white_color"
+                                android:textSize="16.0sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.0"
+                        android:gravity="left|center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_sun"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:background="@drawable/week_cricle_bg"
+                            android:gravity="center"
+                            android:text="@string/week_sun"
+                            android:textColor="@color/white"
+                            android:textSize="12.0sp" />
+
+                        <TextView
+                            android:id="@+id/tv_mon"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/week_cricle_bg"
+                            android:gravity="center"
+                            android:text="@string/week_mon"
+                            android:textColor="@color/white"
+                            android:textSize="12.0sp" />
+
+                        <TextView
+                            android:id="@+id/tv_tue"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/week_cricle_bg"
+                            android:gravity="center"
+                            android:text="@string/week_tue"
+                            android:textColor="@color/white"
+                            android:textSize="12.0sp" />
+
+                        <TextView
+                            android:id="@+id/tv_wed"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/week_cricle_bg"
+                            android:gravity="center"
+                            android:text="@string/week_wed"
+                            android:textColor="@color/white"
+                            android:textSize="12.0sp" />
+
+                        <TextView
+                            android:id="@+id/tv_thu"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/week_cricle_bg"
+                            android:gravity="center"
+                            android:text="@string/week_thu"
+                            android:textColor="@color/white"
+                            android:textSize="12.0sp" />
+
+                        <TextView
+                            android:id="@+id/tv_fri"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/week_cricle_bg"
+                            android:gravity="center"
+                            android:text="@string/week_fri"
+                            android:textColor="@color/white"
+                            android:textSize="12.0sp" />
+
+                        <TextView
+                            android:id="@+id/tv_sat"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/week_cricle_bg"
+                            android:gravity="center"
+                            android:text="@string/week_sat"
+                            android:textColor="@color/white"
+                            android:textSize="12.0sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/time_seekbar_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.0"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/tv_min"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="00:00"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <com.lemon.carmonitor.component.MaterialRangeSlider
+                            android:id="@+id/time_seekbar"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            app:insideRangeLineColor="@color/tms_blue"
+                            app:insideRangeLineStrokeWidth="4dp"
+                            app:outsideRangeLineColor="@color/tms_gray"
+                            app:outsideRangeLineStrokeWidth="4dp"
+                            app:pressedTargetRadius="12dp"
+                            app:targetColor="@color/tms_blue"
+                            app:unpressedTargetRadius="4dp" />
+
+                        <TextView
+                            android:id="@+id/tv_max"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="23:59"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5.0dip"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imageView1_hidden"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="showClick"
+                    android:src="@drawable/arrow_right"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

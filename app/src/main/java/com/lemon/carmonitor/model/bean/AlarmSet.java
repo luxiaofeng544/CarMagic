@@ -39,6 +39,10 @@ public class AlarmSet {
     private boolean overSpeed;
     private boolean expire;
     private boolean dropped;
+    private boolean close;
+    private boolean sound;
+    private boolean antiDismantle;
+    private boolean stay;
     private boolean inFence;
     private boolean outFence;
 
@@ -128,5 +132,37 @@ public class AlarmSet {
 
     public void setOutFence(boolean outFence) {
         this.outFence = outFence;
+    }
+
+    public boolean isStay() {
+        return stay;
+    }
+
+    public void setStay(boolean stay) {
+        this.stay = stay;
+    }
+
+    public boolean isClose() {
+        return close;
+    }
+
+    public void setClose(boolean close) {
+        this.close = close;
+    }
+
+    public boolean isSound() {
+        return sound;
+    }
+
+    public void setSound(boolean sound) {
+        this.sound = sound;
+    }
+
+    public boolean isAntiDismantle() {
+        return antiDismantle;
+    }
+
+    public void setAntiDismantle(boolean antiDismantle) {
+        this.antiDismantle = antiDismantle;
     }
 }

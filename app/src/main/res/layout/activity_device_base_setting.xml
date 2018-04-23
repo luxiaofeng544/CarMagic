@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_gray_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/blue_color">
+
+        <Button
+            android:id="@id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back"
+            android:onClick="backClick" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="通用设置"
+            android:textColor="@color/white_color"
+            android:textSize="22.0sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginTop="40.0dip"
+        android:background="@color/line_h_color" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white_color"
+        android:onClick="factoryResetClick">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:gravity="center_vertical"
+            android:text="恢复出厂设置"
+            android:textSize="16.0sp"
+            android:textColor="@color/black" />
+
+        <ImageButton
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/next" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/line_h_color" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white_color"
+        android:onClick="editPasswdClick">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:gravity="center_vertical"
+            android:text="修改设备密码"
+            android:textSize="16.0sp"
+            android:textColor="@color/black" />
+
+        <ImageButton
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/next" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/line_h_color" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white_color"
+        android:onClick="restartClick">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:gravity="center_vertical"
+            android:text="重新启动"
+            android:textSize="16.0sp"
+            android:textColor="@color/black" />
+
+        <ImageButton
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/next" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/line_h_color" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginTop="40dip"
+        android:background="@color/line_h_color" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white_color"
+        android:onClick="setLangClick">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:gravity="center_vertical"
+            android:text="语言设置"
+            android:textSize="16.0sp"
+            android:textColor="@color/black" />
+
+        <ImageButton
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/next" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/line_h_color" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white_color"
+        android:onClick="setTimeZoneClick">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:gravity="center_vertical"
+            android:text="时区设置"
+            android:textSize="16.0sp"
+            android:textColor="@color/black" />
+
+        <ImageButton
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/next" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/line_h_color" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/line_h_color" />
+
+</LinearLayout>

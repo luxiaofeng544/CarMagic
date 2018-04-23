@@ -34,6 +34,8 @@ public class HistoryTrackData {
         public double speed; // GPS速度当service的type是1，且创建该track的时候输入了这个字段才会返回。
         public int gpsValid;
         public int rectification;
+        private String alarmType = "";
+        private String isSessionPoint = "";
 
         public String getLoc_time() {
             return loc_time;
@@ -113,6 +115,22 @@ public class HistoryTrackData {
 
         public void setRectification(int rectification) {
             this.rectification = rectification;
+        }
+
+        public String getAlarmType() {
+            return alarmType;
+        }
+
+        public void setAlarmType(String alarmType) {
+            this.alarmType = alarmType;
+        }
+
+        public String getIsSessionPoint() {
+            return isSessionPoint;
+        }
+
+        public void setIsSessionPoint(String isSessionPoint) {
+            this.isSessionPoint = isSessionPoint;
         }
     }
 

@@ -14,6 +14,11 @@ import android.widget.Toast;
 import com.lemon.annotation.FieldView;
 import com.lemon.annotation.Layout;
 import com.lemon.annotation.OnClick;
+import com.lemon.carmonitor.api.ApiManager;
+import com.lemon.carmonitor.model.bean.UserLoginBean;
+import com.lemon.carmonitor.old.ui.AddDeviceActivity;
+import com.lemon.carmonitor.util.AppCacheManager;
+import com.lemon.config.Config;
 import com.lemon.event.ActivityEvent;
 import com.lemon.event.StartLocationEvent;
 import com.lemon.event.ToastEvent;
@@ -44,9 +49,9 @@ public abstract class LemonActivity extends Activity {
     protected int layout;
     protected Context mContext;
 
-    protected LemonCacheManager cacheManager;
-    protected LemonApiManager apiManager;
-    protected LemonGreenDaoManager daoManager;
+    protected AppCacheManager cacheManager;
+    protected ApiManager apiManager;
+    protected LemonDaoManager daoManager;
     protected LemonMessage lemonMessage;
 
     @Override
@@ -81,9 +86,9 @@ public abstract class LemonActivity extends Activity {
         mContext = this;
         EventBus.getDefault().register(this);
         EventBus.getDefault().post(new ActivityEvent(this));
-        cacheManager = LemonContext.getBean(LemonCacheManager.class);
-        apiManager = LemonContext.getBean(LemonApiManager.class);
-        daoManager = LemonContext.getBean(LemonGreenDaoManager.class);
+        cacheManager = LemonContext.getBean(AppCacheManager.class);
+        apiManager = LemonContext.getBean(ApiManager.class);
+        daoManager = LemonContext.getBean(LemonDaoManager.class);
         lemonMessage = LemonContext.getBean(LemonMessage.class);
     }
 
@@ -257,6 +262,23 @@ public abstract class LemonActivity extends Activity {
      */
     protected void getLocation() {
         EventBus.getDefault().post(new StartLocationEvent());
+    }
+
+    protected boolean checkDevice(){
+        if(ParamUtils.isEmpty(cacheManager.getCurrentDevSn())){
+            EventBus.getDefault().post(new ToastEvent("未绑定设备,请先绑定"));
+            startNextActivity(AddDeviceActivity.class, true);
+            return false;
+        }
+        return true;
+    }
+
+
+    protected boolean isUseYingyanService(){
+        if(cacheManager.containBean(UserLoginBean.class)){
+            return cacheManager.getBean(UserLoginBean.class).isYingYanService();
+        }
+        return Config.getBooleanValue("is_use_baidu_yingyan");
     }
 
     @Override

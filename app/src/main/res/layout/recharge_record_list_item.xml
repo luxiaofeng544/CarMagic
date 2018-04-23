@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5.0dip"
+    android:background="@color/white"
+    android:paddingTop="5.0dip">
+
+    <TextView
+        android:id="@id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.0dip"
+        android:text="@string/sim"
+        android:textSize="16.0sp" />
+
+    <TextView
+        android:id="@id/tv_sim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv1"
+        android:layout_marginLeft="5.0dip"
+        android:layout_toRightOf="@id/tv1"
+        android:text="123456" />
+
+    <TextView
+        android:id="@id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_sim"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginTop="5.0dip"
+        android:text="2015-03-19 16：15"
+        android:textSize="13.0sp" />
+
+    <TextView
+        android:id="@id/tv_payment_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5.0dip"
+        android:text="已支付" />
+
+    <TextView
+        android:id="@+id/tv_recharge_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_time"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5.0dip"
+        android:text="88888" />
+
+    <TextView
+        android:id="@id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_time"
+        android:layout_marginRight="5.0dip"
+        android:layout_toLeftOf="@id/tv_recharge_money"
+        android:text="@string/rmb" />
+</RelativeLayout>

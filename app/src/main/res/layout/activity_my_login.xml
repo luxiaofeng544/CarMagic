@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff0eff4">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="180.0dip"
+            android:background="#fff0eff4"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/login_head" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="#66aaaaaa"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_gravity="center_horizontal"
+            android:background="#ffffffff"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10.0dip"
+                android:background="@drawable/my_login_user" />
+
+            <EditText
+                android:id="@+id/etMobile"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20.0dip"
+                android:layout_weight="1.0"
+                android:background="#ffffffff"
+                android:hint="手机号码"
+                android:inputType="phone"
+                android:scrollbars="horizontal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="1.0dip"
+            android:background="#ffffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10.0dip"
+                android:background="@drawable/my_login_lock" />
+
+            <EditText
+                android:id="@+id/etPass"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20.0dip"
+                android:layout_weight="1.0"
+                android:background="#ffffffff"
+                android:hint="密码"
+                android:inputType="textPassword"
+                android:scrollbars="horizontal"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="fill_parent"
+            android:layout_height="35.0dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="30.0dip"
+            android:background="@drawable/bg_button_blue_selector"
+            android:text="登录"
+            android:textColor="#ffffffff"
+            android:onClick="loginClick" />
+
+        <RelativeLayout
+            android:layout_width="300.0dip"
+            android:layout_height="30.0dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20.0dip"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnReg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="#fff0eff4"
+                    android:text="立即注册"
+                    android:textColor="#ff4eb8e5"
+                    android:onClick="registerClick" />
+
+                <View
+                    android:layout_width="1.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:background="#ffaaaaaa" />
+
+                <Button
+                    android:id="@+id/btnForgetPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="#fff0eff4"
+                    android:text="忘记密码"
+                    android:textColor="#ff4eb8e5"
+                    android:onClick="forgetPasswordClick" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

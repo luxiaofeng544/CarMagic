@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_gray_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/blue_color">
+
+        <Button
+            android:id="@id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back"
+            android:onClick="backClick" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="命令分类"
+            android:textColor="@color/white_color"
+            android:textSize="22.0sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/ll_alarm"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:background="@color/white_color"
+            android:orientation="horizontal"
+            android:onClick="alarmClick">
+
+            <TextView
+                android:id="@+id/tv_command_name"
+                android:layout_width="0dp"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_weight="6"
+                android:gravity="center_vertical"
+                android:text="报警开关"
+                android:textColor="@color/black"
+                android:textSize="16.0sp" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="30.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10.0dip"
+                android:layout_weight="1"
+                android:background="@drawable/next" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="@color/line_h_color" />
+
+        <ListView
+            android:id="@+id/lv_command"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="@color/line_h_color" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:background="@color/white_color"
+            android:orientation="horizontal"
+            android:onClick="updateClick" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_weight="6"
+                android:gravity="center_vertical"
+                android:text="检测更新"
+                android:textColor="@color/black"
+                android:textSize="16.0sp" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="30.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10.0dip"
+                android:layout_weight="1"
+                android:background="@drawable/next" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

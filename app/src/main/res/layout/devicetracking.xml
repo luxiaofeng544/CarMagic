@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffececec"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/monitoring_main_top"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/blue_color">
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10.0dip"
+            android:onClick="userInfoClick"
+            android:src="@drawable/avatar_default" />
+
+        <TextView
+            android:id="@+id/monitoring_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="监控中心"
+            android:textColor="#ffffffff"
+            android:textSize="22.0sp" />
+
+        <Button
+            android:id="@+id/monitoring_button_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/refresh"
+            android:visibility="visible"
+            android:onClick="refreshClick" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/relativeLayout_map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/relativeLayout1">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@id/bmapsView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="5.0dip"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_timeout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/refresh_timeout"
+                android:textColor="#ff000000"
+                android:textSize="12.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="20.0dip"
+            android:layout_marginLeft="20.0dip"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_pano"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pano"
+                android:visibility="gone"
+                android:onClick="panoClick" />
+
+            <Button
+                android:id="@+id/button_activate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/location_active_p"
+                android:onClick="activateClick" />
+
+            <Button
+                android:id="@+id/button_carandperson"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/location_carandperson"
+                android:onClick="navClick" />
+
+            <Button
+                android:id="@+id/button_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/location_person"
+                android:onClick="locationClick" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/linearLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20.0dip"
+            android:layout_marginTop="20.0dip"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/checkBox_maptype"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                android:background="@drawable/maptype"
+                android:button="@null" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@id/linearLayout_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/linearLayout1"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textView_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="50dip"
+                android:text="人车相距"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

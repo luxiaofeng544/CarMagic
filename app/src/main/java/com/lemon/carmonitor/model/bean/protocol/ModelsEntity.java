@@ -1,5 +1,7 @@
 package com.lemon.carmonitor.model.bean.protocol;
 
+import com.lemon.util.ParamUtils;
+
 import java.util.List;
 
 /**
@@ -66,4 +68,15 @@ public class ModelsEntity {
         return alarm_type;
     }
 
+    public String getAlarmTypeName(String status){
+        String result = "";
+        if(!ParamUtils.isEmpty(alarm_type)){
+            for (AlarmTypeEntity item:alarm_type){
+                if(item.getStatus().equals(status)){
+                    return item.getName();
+                }
+            }
+        }
+        return result;
+    }
 }

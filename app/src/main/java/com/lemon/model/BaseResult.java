@@ -1,7 +1,7 @@
 package com.lemon.model;
 
 /**
- * 项目名称:  [Lemon]
+ * 项目名称:  [CarMonitor]
  * 包:        [com.lemon.model]
  * 类描述:    [简要描述]
  * 创建人:    [xflu]
@@ -15,7 +15,8 @@ public class BaseResult<T> {
     protected String retMsg;
     protected String retCode;
     protected T retData;
-    protected BaseParam param;
+
+    private BaseParam baseParam;
 
     public String getRetMsg() {
         return retMsg;
@@ -41,12 +42,12 @@ public class BaseResult<T> {
         this.retData = retData;
     }
 
-    public BaseParam getParam() {
-        return param;
+    public BaseParam getBaseParam() {
+        return baseParam;
     }
 
-    public void setParam(BaseParam param) {
-        this.param = param;
+    public void setBaseParam(BaseParam baseParam) {
+        this.baseParam = baseParam;
     }
 
     @Override
@@ -55,7 +56,6 @@ public class BaseResult<T> {
                 "retMsg='" + retMsg + '\'' +
                 ", retCode='" + retCode + '\'' +
                 ", retData=" + retData +
-                ", param=" + param +
                 '}';
     }
 }

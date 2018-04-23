@@ -1,33 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lemon.carmonitor.ui.MainActivity">
+    android:background="#fcfcfc">
 
-    <android.support.design.widget.AppBarLayout
+    <LinearLayout
+        android:id="@+id/main_bottom"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="#2D2F31"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <RelativeLayout
+            android:id="@+id/btn_container_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-    </android.support.design.widget.AppBarLayout>
+            <Button
+                android:id="@+id/btn_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_bottom_item_bg"
+                android:drawableTop="@drawable/main_tab_home"
+                android:onClick="onBottomClick"
+                android:paddingBottom="2dip"
+                android:paddingTop="7dip"
+                android:scaleType="matrix"
+                android:text="@string/Home"
+                android:textColor="@color/main_botton_text_color"
+                android:textSize="12sp" />
+        </RelativeLayout>
 
-    <include layout="@layout/content_main" />
+        <RelativeLayout
+            android:id="@+id/btn_container_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+            <Button
+                android:id="@+id/btn_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_bottom_item_bg"
+                android:drawableTop="@drawable/main_tab_list"
+                android:onClick="onBottomClick"
+                android:paddingBottom="2dip"
+                android:paddingTop="7dip"
+                android:scaleType="matrix"
+                android:text="@string/DeviceList"
+                android:textColor="@color/main_botton_text_color"
+                android:textSize="12sp" />
+        </RelativeLayout>
 
-</android.support.design.widget.CoordinatorLayout>
+        <RelativeLayout
+            android:id="@+id/btn_container_tracking"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn_tracking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_bottom_item_bg"
+                android:drawableTop="@drawable/main_tab_tracking"
+                android:onClick="onBottomClick"
+                android:paddingBottom="2dip"
+                android:paddingTop="7dip"
+                android:scaleType="matrix"
+                android:text="@string/Monitoring"
+                android:textColor="@color/main_botton_text_color"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_container_message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_bottom_item_bg"
+                android:drawableTop="@drawable/main_tab_message"
+                android:onClick="onBottomClick"
+                android:paddingBottom="2dip"
+                android:paddingTop="7dip"
+                android:scaleType="matrix"
+                android:text="@string/Message"
+                android:textColor="@color/main_botton_text_color"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/main_bottom"/>
+</RelativeLayout>

@@ -28,6 +28,10 @@ public class SetDevAlarmParam extends BaseParam {
     private boolean move;
     private boolean overSpeed;
     private boolean dropped;
+    private boolean close;
+    private boolean sound;
+    private boolean antiDismantle;
+    private boolean stay;
     private boolean enableAlarm;
     private boolean enableRingtone;
     private boolean enableVibrate;
@@ -169,6 +173,38 @@ public class SetDevAlarmParam extends BaseParam {
 
     public void setOutFence(boolean outFence) {
         this.outFence = outFence;
+    }
+
+    public String getStay() {
+        return Boolean.toString(stay);
+    }
+
+    public void setStay(boolean stay) {
+        this.stay = stay;
+    }
+
+    public String getClose() {
+        return Boolean.toString(close);
+    }
+
+    public void setClose(boolean close) {
+        this.close = close;
+    }
+
+    public String getSound() {
+        return Boolean.toString(sound);
+    }
+
+    public void setSound(boolean sound) {
+        this.sound = sound;
+    }
+
+    public String getAntiDismantle() {
+        return Boolean.toString(antiDismantle);
+    }
+
+    public void setAntiDismantle(boolean antiDismantle) {
+        this.antiDismantle = antiDismantle;
     }
 
     @Override

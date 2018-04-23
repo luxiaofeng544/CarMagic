@@ -39,6 +39,9 @@ public class LemonCacheManager {
     public boolean containBean(String key) {
         return cacheMap.containsKey(key);
     }
+    public boolean containBean(Class cls){
+        return cacheMap.containsKey(cls.getSimpleName());
+    }
 
     public void putBean(Class cls, Object object) {
         cacheMap.put(cls.getSimpleName(), object);
@@ -57,4 +60,84 @@ public class LemonCacheManager {
             cacheMap.remove(key);
         }
     }
+
+
+    public void setCurrentToken(String token) {
+        SettingUtils.set(mContext, "token", token);
+    }
+
+    public String getCurrentToken() {
+        return SettingUtils.get(mContext, "token", "");
+    }
+    public void setCurrentMobile(String mobile) {
+        SettingUtils.set(mContext, "mobile", mobile);
+    }
+
+    public String getCurrentMobile() {
+        return SettingUtils.get(mContext, "mobile", "");
+    }
+    public void setCurrentServiceId(String serviceId) {
+        SettingUtils.set(mContext, "serviceId", serviceId);
+    }
+
+    public String getCurrentServiceId() {
+        return SettingUtils.get(mContext, "serviceId", "");
+    }
+
+    public void setCurrentPassword(String password) {
+        SettingUtils.set(mContext, "password", password);
+    }
+
+    public String getCurrentPassword() {
+        return SettingUtils.get(mContext, "password", "");
+    }
+
+    public void setShowStationNode(String stationNode) {
+        SettingUtils.set(mContext, "stationNode", stationNode);
+    }
+
+    public String getShowStationNode() {
+        return SettingUtils.get(mContext, "stationNode", "true");
+    }
+
+    public void setCurrentDevSn(String devSn) {
+        cacheMap.put( "devSn", devSn);
+    }
+
+    public String getCurrentDevSn() {
+        if(cacheMap.containsKey("devSn")){
+            return cacheMap.get("devSn").toString();
+        }
+        return "";
+    }
+
+    public void setCurrentProType(String proType) {
+        cacheMap.put("proType", proType);
+    }
+
+    public String getCurrentProType() {
+        if(cacheMap.containsKey("proType")){
+            return cacheMap.get("proType").toString();
+        }
+        return "";
+    }
+
+    public void setCurrentEntityName(String entityName) {
+        cacheMap.put("entityName", entityName);
+    }
+
+    public String getCurrentEntityName() {
+        if(cacheMap.containsKey("entityName")){
+            return cacheMap.get("entityName").toString();
+        }
+        return "";
+    }
+
+    public void cleanCache() {
+        cacheMap.remove("token");
+        SettingUtils.remove(mContext, "mobile");
+        SettingUtils.remove(mContext, "password");
+        cacheMap.remove("devSn");
+    }
+
 }

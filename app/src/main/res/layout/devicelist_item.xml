@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5.0dip"
+    android:paddingTop="5.0dip">
+
+    <RelativeLayout
+        android:id="@+id/rl_device_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@id/devicelist_item_textView_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@id/devicelist_item_textView_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/devicelist_item_textView_name"
+            android:layout_alignBottom="@id/devicelist_item_textView_name"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16.0dip"
+            android:text="Status"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="0.0dip">
+
+    <RelativeLayout
+        android:id="@id/relativeLayout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/blue_color">
+
+        <Button
+            android:id="@id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back"
+            android:onClick="backClick" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="提醒设置"
+            android:textColor="@color/white_color"
+            android:textSize="22.0sp" />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20.0dip"
+            android:background="@drawable/edit"
+            android:onClick="editClick" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/alarmType"
+                        android:textColor="@color/black"
+                        android:textSize="14.0sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_alarmSOS"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="@string/alarmSOS"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@id/checkBox_alarmSOS"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_alarmVibration"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="@string/alarmVibration"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@id/checkBox_alarmVibration"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_alarmOffline"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="@string/alarmOffline"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@id/checkBox_alarmOffline"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_alarmLowPower"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="@string/alarmLowPower"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@id/checkBox_alarmLowPower"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_alarmDisPower"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="@string/alarmDisPower"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@id/checkBox_alarmDisPower"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_alarmZoneIn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="@string/alarmZoneIn"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@id/checkBox_alarmZoneIn"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_alarmZoneOut"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="@string/alarmZoneOut"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@id/checkBox_alarmZoneOut"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_alarmExpire"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="@string/alarmExpire"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@id/checkBox_alarmExpire"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_move"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="移动报警设置"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_move"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_overSpeed"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="超速报警设置"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_overSpeed"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_dropped"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="掉落报警设置"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_dropped"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_stay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="停留报警"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_stay"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_close"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="关机报警"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_close"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_sound"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="声控报警"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_sound"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_antiDismantle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="防拆报警"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_antiDismantle"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/alarmAlert"
+                        android:textColor="@color/black"
+                        android:textSize="14.0sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_alarmAlert"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="@string/enable"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@id/checkBox_alarmAlert"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_alertSound"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="@string/alertSound"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@id/checkBox_alertSound"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_alertVibration"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="@string/alertVibration"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@id/checkBox_alertVibration"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_enableSms"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="短信报警"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_enableSms"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_enableShowStation"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="8"
+                            android:text="显示基站点"
+                            android:textColor="@color/black" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_enableShowStation"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="2"
+                            android:background="@drawable/alarm_enable"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="5dip"
+                        android:background="#ff909090" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
