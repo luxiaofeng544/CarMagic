@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.baidu.trace.LBSTraceClient;
 import com.lemon.annotation.FieldView;
 import com.lemon.annotation.Layout;
 import com.lemon.annotation.OnClick;
@@ -53,6 +54,7 @@ public abstract class LemonActivity extends Activity {
     protected ApiManager apiManager;
     protected LemonDaoManager daoManager;
     protected LemonMessage lemonMessage;
+    protected LBSTraceClient lbsTraceClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +90,7 @@ public abstract class LemonActivity extends Activity {
         EventBus.getDefault().post(new ActivityEvent(this));
         cacheManager = LemonContext.getBean(AppCacheManager.class);
         apiManager = LemonContext.getBean(ApiManager.class);
+        lbsTraceClient = LemonContext.getBean(LBSTraceClient.class);
         daoManager = LemonContext.getBean(LemonDaoManager.class);
         lemonMessage = LemonContext.getBean(LemonMessage.class);
     }

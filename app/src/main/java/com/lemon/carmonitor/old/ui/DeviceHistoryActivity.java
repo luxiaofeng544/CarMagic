@@ -29,7 +29,7 @@ import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.map.PolylineOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.model.LatLngBounds;
-import com.baidu.trace.OnTrackListener;
+import com.baidu.trace.api.track.OnTrackListener;
 import com.lemon.LemonActivity;
 import com.lemon.LemonLocation;
 import com.lemon.bean.BeanFactory;

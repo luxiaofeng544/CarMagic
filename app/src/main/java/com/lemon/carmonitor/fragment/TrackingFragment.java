@@ -30,6 +30,7 @@ import com.baidu.mapapi.search.geocode.OnGetGeoCoderResultListener;
 import com.baidu.mapapi.search.geocode.ReverseGeoCodeOption;
 import com.baidu.mapapi.search.geocode.ReverseGeoCodeResult;
 import com.baidu.trace.LBSTraceClient;
+import com.baidu.trace.api.entity.OnEntityListener;
 import com.lemon.LemonFragment;
 import com.lemon.LemonLocation;
 import com.lemon.bean.BeanFactory;
@@ -211,6 +212,23 @@ public class TrackingFragment extends LemonFragment {
     private void queryEntityListByYingyan(int serviceId, String entityName, String columnKey, int returnType, int activeTime, int pageSize, int pageIndex){
         entityListener.setType("trackCenter");
         lbsTraceClient.queryEntityList(serviceId, entityName, columnKey, returnType, activeTime, pageSize, pageIndex, entityListener);
+        //查询实时轨迹
+        OnEntityListener entityListener = new OnEntityListener() {
+            // 查询失败回调接口
+            @Override
+            public void onRequestFailedCallback(String arg0) {
+                System.out.println("entity请求失败回调接口消息 : " + arg0);
+            }
+
+            // 查询entity回调接口，返回查询结果列表
+            @Override
+            public void onQueryEntityListCallback(String arg0) {
+                System.out.println("entity回调接口消息 : " + arg0);
+            }
+        };
+
+        lbsTraceClient.queryEntityList(serviceId, entityName, columnKey, returnType, activeTime, pageSize,
+                pageIndex, entityListener);
     }
 
     private void queryEntityListByServer(int serviceId, String entityName, String columnKey, int returnType, int activeTime, int pageSize, int pageIndex){
